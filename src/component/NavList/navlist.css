@@ -1,4 +1,4 @@
-*{
+﻿*{
   margin:0;
   padding:0;
 }
@@ -19,8 +19,7 @@ li{
   width:1056px;
   border: 1px solid #e6e6e6;
   margin:0 auto;
-  position: relative;
-  line-height: 26px;
+ position: relative;  line-height: 26px;
   padding: 10px 10px 10px 7em;
   background-color: #fff;
   min-height: 100px;

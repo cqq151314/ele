@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './store.css';
+import './navlist.css';
 import data from '../ProductList/menu.json';
 
 export default class Store extends Component {
@@ -16,7 +16,6 @@ export default class Store extends Component {
     }
     DetailData(datapic){
         this.setState({twodata2: datapic});
-        return twodata2;
     }
     render() {
         return (

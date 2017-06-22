@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-require('es6-promise').polyfill();
-require('isomorphic-fetch');
-require('../../fetch-npm-node');
 import './productlist.css';
 import data from './picdata.json';
-import   '../Store/Store.jsx';
+import   '../NavList/NavList.jsx';
 export default class ProductList extends Component {
     constructor(props){
         super(props);
@@ -13,17 +10,12 @@ export default class ProductList extends Component {
 
         }
     }
-    // fetch('../../../picdata.json')
-    //    .then(function(response) {
-    //     console.log(response); // data 就是一个JavaScript object
-    //    });
     render() {
 ;        return (
             <div>
                 <div className="box .clearfix">
                     {
                      data.data.map(item=>{
-                         console.log(this.props.twodata2)
                          return (
                             <a href="###" target="_blank" className="rstblock" id={item.id}>
                                 <div className="rstblock-logo">
