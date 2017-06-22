@@ -1,0 +1,130 @@
+*{
+  margin:0;
+  padding:0;
+}
+html,body{
+    font-family: '微软雅黑';
+}
+a{
+  text-decoration: none;
+  color:#000;
+}
+img{
+  display: block;
+}
+li{
+  list-style: none;
+}
+.box{
+  width:1180px;
+  margin-top: 20px!important;
+  background: #fff;
+  margin:0 auto;
+  height:100px;
+  height:auto!important;
+  min-height: 100px;
+  border: 1px solid #e6e6e6;
+  overflow: auto;
+}
+.box-list{
+  width:1180px;
+}
+.clearfix:after{
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.rstblock {
+  width: 25%;
+  display: block;
+  float: left;
+}
+.rstblock-logo {
+  padding: 20px;
+  color: #999;
+  text-align: center;
+  float: left;
+  font-size: 12px;
+  position: relative;
+  color: #999;
+  text-align: center;
+}
+.rstblock-logo-icon{
+  display: block;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 10px;
+}
+.rstblock-logo-premiumsign {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 20px;
+  left: 40px;
+  z-index: 1;
+  background-position: 4px -487px;
+}
+.rstblock-content {
+  padding: 20px;
+  overflow-x: hidden;
+  padding-left: 0;
+}
+.rstblock-title {
+  font-size: 16px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #333;
+  text-align: left;
+}
+.starrating {
+  color: #ccc;
+  text-align: left;
+}
+.rstblock-monthsales {
+  color: #999;
+  margin-left: 10px;
+  font-size:12px;
+}
+.rstblock-cost {
+  color: #999;
+  margin-top: 3px;
+  font-size:12px;
+  text-align: left;
+}
+.rstblock-activity {
+  margin-top: 9px;
+  text-align: left;
+}
+.rstblock-activity i {
+  display: inline-block;
+  vertical-align: middle;
+  color: #fff;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 17px;
+  overflow: hidden;
+  text-align: center;
+  width: 18px;
+  border-radius: 2px;
+  margin-right: 3px;
+  padding: 1px;
+  background-color: #f63;
+  white-space: nowrap;
+  background:#fff;
+  color:#999999;
+  border:1px solid;
+}
+.mycolor{
+  background: #57A9FF!important;
+  color:#fff!important;
+}
+span.fa-star{
+  color: #ffc30c;
+  white-space: nowrap;
+  font-size: 10px;
+  margin-right:0;
+}

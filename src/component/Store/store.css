@@ -1,0 +1,68 @@
+*{
+  margin:0;
+  padding:0;
+}
+html,body{
+    font-family: '微软雅黑';
+}
+a{
+  text-decoration: none;
+  color:#000;
+}
+img{
+  display: block;
+}
+li{
+  list-style: none;
+}
+.store{
+  width:1056px;
+  border: 1px solid #e6e6e6;
+  margin:0 auto;
+  position: relative;
+  line-height: 26px;
+  padding: 10px 10px 10px 7em;
+  background-color: #fff;
+  min-height: 100px;
+    height:auto!important;
+  height:100px;
+}
+.excavator-filter-name{
+  position: absolute;
+  left: 10px;
+  top: 13px;
+  color: #999;
+  padding: 0 10px;
+  margin-right: 8px;
+  font-size: 14px;
+}
+.excavator-filter-item.active{
+  background-color: #0089dc;
+  color: #fff;
+  border-radius: 3px;
+}
+.excavator-filter-item {
+  white-space: nowrap;
+  display: inline-block;
+  margin: 5px 6px;
+  text-align: left;
+ float: left;
+  font-size: 14px;
+  padding: 0 10px;
+   color: #666;
+}
+
+.store .list-top{
+  height:74px;
+  width:100%;
+  margin-left:-20px;
+}
+.store .list-top:after{
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.store .twonav{
+margin-left:-20px;
+}
