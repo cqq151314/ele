@@ -1,4 +1,4 @@
-﻿*{
+*{
   margin:0;
   padding:0;
 }
@@ -19,12 +19,11 @@ li{
   width:1056px;
   border: 1px solid #e6e6e6;
   margin:0 auto;
- position: relative;  line-height: 26px;
+  position: relative;
+  line-height: 26px;
   padding: 10px 10px 10px 7em;
   background-color: #fff;
-  min-height: 100px;
-    height:auto!important;
-  height:100px;
+  height:auto;
 }
 .excavator-filter-name{
   position: absolute;
@@ -35,7 +34,7 @@ li{
   margin-right: 8px;
   font-size: 14px;
 }
-.excavator-filter-item.active{
+.store .list-bottom .active{
   background-color: #0089dc;
   color: #fff;
   border-radius: 3px;
@@ -44,17 +43,24 @@ li{
   white-space: nowrap;
   display: inline-block;
   margin: 5px 6px;
-  text-align: left;
- float: left;
+  text-align: left;;
   font-size: 14px;
   padding: 0 10px;
    color: #666;
+  float: left;
 }
-
+.list-bottom a{
+  margin: 5px 6px;
+  text-align: left;;
+  font-size: 14px;
+  padding: 0 10px;
+  color: #666;
+  display: inline-block;
+}
 .store .list-top{
   height:74px;
   width:100%;
-  margin-left:-20px;
+  margin-left: -20px;
 }
 .store .list-top:after{
   content: "";
@@ -62,6 +68,8 @@ li{
   height: 0;
   clear: both;
 }
-.store .twonav{
-margin-left:-20px;
+.store .list-bottom {
+  text-align: left;
+  margin-left: -20px;
+  ;
 }
