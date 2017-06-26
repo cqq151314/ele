@@ -2,10 +2,14 @@
 require('es6-promise').polyfill();
 require('isomorphic-fetch');
 var realFetch = require('node-fetch');
-    class BsStore {
-       getData(id){
-          return  fetch(`shops/${typeof id !== 'undefined' ? '?id='+ id : ''}`);
-       }
+class BsStore {
+    getData(type){
+        return  fetch(`shops/${typeof type !== 'undefined' ? '?type='+ type : ''}`);
     }
-    const bsStore = new BsStore();
-    export default bsStore;
+    getTypes(type2){
+        return  fetch('types');
+    }
+}
+
+const bsStore = new BsStore();
+export default bsStore;

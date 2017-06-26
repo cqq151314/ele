@@ -13,14 +13,6 @@ class App extends Component {
 
         // this.initData();
     }
-    // initData(){
-    //     bsStore.getData()
-    //         .then(res =>{
-    //             res.json().then(data => {
-    //                 this.setState({'dataSource': data});
-    //             });
-    //         })
-    // }
     render() {
         return (
           <div className="App">

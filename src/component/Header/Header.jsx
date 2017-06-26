@@ -19,9 +19,14 @@ export default class Header extends Component {
                         <div className="App-header-con-r">
                             <nav>
                                 <div>
-                                    <a href="###" className="server"><span className="fa fa-star"></span>服务中心</a>
-                                <a href="###">规则中心</a>
-                                <a href="###"><span  className='fa fa-mobile'></span>手机应用</a>
+                                    <a href="###" className="server"><span className="fa fa-futbol-o"></span>服务中心</a>
+                                    <a href="###">规则中心</a>
+                                    <a href="###" className="mashow"><span  className='fa fa-mobile'></span>手机应用
+                                        <div className="dropbox topbar-mobile-dropbox">
+                                            <span>扫一扫, 手机订餐更方便</span>
+                                            <img  src={require("../../images/ma.png")}  class="topbar-nav-qrcode" alt="扫一扫下载饿了么手机 App" />
+                                        </div>
+                                    </a>
                                 </div>
                                 <a href="###" className="header-login"><span className='fa fa-user'></span>登录/注册</a>
                             </nav>
