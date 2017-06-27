@@ -9,6 +9,9 @@ class BsStore {
     getTypes(type2){
         return  fetch('types');
     }
+    getKwordsData(keywords){
+        return  fetch(`shops/${typeof keywords !== 'undefined' ? '?keywords='+ keywords : ''}`);
+    }
 }
 
 const bsStore = new BsStore();

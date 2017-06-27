@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import './search.css';
 import '../../fonts/font-awesome.min.css';
 import katong from '../../images/katong.png';
+import bsStore from '../../store/fetch-npm-node'
 export default class Search extends Component {
     constructor(props) {
         super(props);
     }
-  componentDidMount(){
-  }
 
     render() {
         return (
@@ -20,8 +19,8 @@ export default class Search extends Component {
                 </div>
                 <div className="seach-r">
                     <div className="place-search">
-                        <a className="place-search-btn"><span className="fa fa-search"></span></a>
-                        <input placeholder="搜索商家,美食..." className="place-search-input" />
+                        <a className="place-search-btn"><span className="fa fa-search" onClick={this.props.onClick.bind(this)}></span></a>
+                        <input placeholder="搜索商家,美食..." value={this.props.value} className="place-search-input" onChange={this.props.onChange.bind(this)}/>
                     </div>
                 </div>
                 </div>
@@ -33,4 +32,5 @@ export default class Search extends Component {
             </div>
         );
     }
+    return
 }
