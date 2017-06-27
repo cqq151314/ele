@@ -103,7 +103,7 @@ export default class Store extends Component {
                     </div>
                 </div>
                 {/*第三层数据*/}
-                <div className="box .clearfix">
+                <div className="box clearfix">
                     {
                         this.state.boxData.map(item=>{
                             return (
