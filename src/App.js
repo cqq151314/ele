@@ -10,16 +10,13 @@ import bsStore from './store/fetch-npm-node'
 class App extends Component {
     constructor(props){
         super(props);
-
-        // this.initData();
     }
     render() {
         return (
           <div className="App">
             <Header />
-            <Search />
+              <Search />
               <NavList/>
-              {/*<ProductList/>*/}
              <Footer/>
           </div>
         );

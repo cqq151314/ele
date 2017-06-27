@@ -22,6 +22,12 @@ export default class Store extends Component {
             index:'',
             types:[],
             sub_types:[],
+            // 导航选中颜色切花
+            background:"#fff",
+            // 字体颜色
+            color:"#666",
+            //控制导航的显示隐藏
+            display:'block',
         };
         this.initData();
     }
@@ -49,6 +55,21 @@ export default class Store extends Component {
             .then(res =>{
                 res.json().then(data => {
                     this.setState({'boxData': data});
+                    this.setState({"background":'#fff'});
+                    this.setState({"color":'#666'});
+                    this.setState({'display':'block'})
+                });
+            })
+    }
+    //点击获取全部数据
+    getData2(type){
+        bsStore.getData(type)
+            .then(res =>{
+                res.json().then(data => {
+                    this.setState({'boxData': data});
+                    this.setState({"background":'#0089dc'});
+                    this.setState({"color":'#fff'});
+                    this.setState({'display':'none'})
                 });
             })
     }
@@ -61,7 +82,7 @@ export default class Store extends Component {
                 <div className="store">
                     <span className="excavator-filter-name">商品分类:</span>
                     <div className="list-top">
-                        <a className="excavator-filter-item" href="javascript:">全部商家</a>
+                        <a className="excavator-filter-item" href="javascript:" style={{"background":this.state.background,"color":this.state.color}} onClick={() =>{this.getData2()}}>全部商家</a>
                         {
                             this.state.types.map((item,index) =>{
                                 return (
@@ -71,11 +92,11 @@ export default class Store extends Component {
                         }
                     </div>
                     {/*第二层数据*/}
-                    <div className="list-bottom">
+                    <div className="list-bottom" style={{'display':this.state.display}}>
                         {
                             this.state.sub_types.map(item =>{
                                 return (
-                                    <a  href="javascript:" id={item.id}  onClick={() =>{this.getData(item.id)}}>{item.name}</a>
+                                    <a  href="javascript:" id={item.id} className="changecolor" onClick={() =>{this.getData(item.id)}}>{item.name}</a>
                                 )
                             })
                         }

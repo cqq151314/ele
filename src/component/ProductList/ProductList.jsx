@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './productlist.css';
 import data from './picdata.json';
-import   '../NavList/NavList.1.jsx';
+import   '../NavList/NavList.jsx';
 export default class ProductList extends Component {
     constructor(props){
         super(props);
