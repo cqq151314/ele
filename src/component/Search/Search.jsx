@@ -2,12 +2,7 @@ import React, { Component } from 'react';
 import './search.css';
 import '../../fonts/font-awesome.min.css';
 import katong from '../../images/katong.png';
-import bsStore from '../../store/fetch-npm-node'
 export default class Search extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div >

@@ -24,7 +24,7 @@ export default class Header extends Component {
                                     <a href="###" className="mashow"><span  className='fa fa-mobile'></span>手机应用
                                         <div className="dropbox topbar-mobile-dropbox">
                                             <span>扫一扫, 手机订餐更方便</span>
-                                            <img  src={require("../../images/ma.png")}  class="topbar-nav-qrcode" alt="扫一扫下载饿了么手机 App" />
+                                            <img  src={require("../../images/ma.png")} alt="扫一扫下载饿了么手机 App" />
                                         </div>
                                     </a>
                                 </div>

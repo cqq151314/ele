@@ -5,7 +5,6 @@ import bsStore from '../../store/fetch-npm-node'
 export default class Store extends Component {
     static propType = {
         dataSource: PropTypes.array,
-        // boxData: PropTypes.array,
     };
     constructor(props){
         super(props);
@@ -82,11 +81,11 @@ export default class Store extends Component {
                 <div className="store">
                     <span className="excavator-filter-name">商品分类:</span>
                     <div className="list-top">
-                        <a className="excavator-filter-item" href="javascript:" style={{"background":this.state.background,"color":this.state.color}} onClick={() =>{this.getData2()}}>全部商家</a>
+                        <a className="excavator-filter-item" href="###" style={{"background":this.state.background,"color":this.state.color}} onClick={() =>{this.getData2()}}>全部商家</a>
                         {
                             this.state.types.map((item,index) =>{
                                 return (
-                                    <a className="excavator-filter-item" href="javascript:" id={item.id}  onClick={() =>{this.getSubType(item),this.getData(parseInt(item.id+''+index))}}>{item.name}</a>
+                                    <a className="excavator-filter-item" href="###" id={item.id} key={item.id} onClick={() =>{this.getSubType(item);this.getData(parseInt(item.id+''+index))}}>{item.name}</a>
                                 )
                             })
                         }
@@ -96,7 +95,7 @@ export default class Store extends Component {
                         {
                             this.state.sub_types.map(item =>{
                                 return (
-                                    <a  href="javascript:" id={item.id} className="changecolor" onClick={() =>{this.getData(item.id)}}>{item.name}</a>
+                                    <a  href="###" id={item.id} key={item.id} className="changecolor" onClick={() =>{this.getData(item.id)}}>{item.name}</a>
                                 )
                             })
                         }
@@ -107,7 +106,7 @@ export default class Store extends Component {
                     {
                         this.state.boxData.map(item=>{
                             return (
-                                <a href="###" target="_blank" className="rstblock" id={item.id}>
+                                <a href="###"  className="rstblock" key={item.id} id={item.id}>
                                     <div className="rstblock-logo">
                                         <img width="70" height="70" alt="汉堡王（西安高新店）" src={require("../../images/hbw.jpg")} className="rstblock-logo-icon" />
                                         <span>{item.time}分钟</span>

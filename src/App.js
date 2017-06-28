@@ -31,8 +31,8 @@ class App extends Component {
         this.getData(e, e.target.value);
     }
     //点击事件
-    onClick(){
-    this.state.value==""? this.setState({"display":"block"}): this.setState({"display":"none"});
+    onClick(e){
+    this.state.value===""? this.setState({"display":"block"}): this.setState({"display":"none"}); this.getData(e,this.state.value);
     }
     /**
      *  获取数据
@@ -53,7 +53,7 @@ class App extends Component {
                         <Header />
                         <Search onChange={this.onChange.bind(this)} onClick={this.onClick.bind(this)} value={this.state.value}/>
                         {
-                            this.state.display=='block'? <NavList style={{"display":"none"}}/> :<SearchList listData={this.state.listData} style={{"display":"none"}}/>
+                            this.state.display==='block'? <NavList style={{"display":"none"}}/> :<SearchList listData={this.state.listData} style={{"display":"none"}} display={this.state.display}/>
                         }
                         {/*<NavList style={{"display":"none"}}/>*/}
                         {/*<SearchList listData={this.state.listData} style={{"display":"none"}}/>*/}
