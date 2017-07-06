@@ -1,0 +1,26 @@
+*{
+  margin:0;
+  padding:0;
+}
+html,body{
+    font-family: '微软雅黑';
+}
+a{
+  text-decoration: none;
+  color:#000;
+}
+img{
+  display: block;
+}
+li{
+  list-style: none;
+}
+.loadding{
+  width:1180px;
+  margin: 0 auto;
+  height:500px;
+  background:#fff;
+  font-size: 40px;
+  line-height: 500px;
+  text-align: center;
+}

@@ -1,0 +1,82 @@
+*{
+  margin:0;
+  padding:0;
+}
+html,body{
+    font-family: '微软雅黑';
+}
+a{
+  text-decoration: none;
+  color:#000;
+}
+img{
+  display: block;
+}
+li{
+  list-style: none;
+}
+.profile-sidebar{
+    float: left;
+    margin-top:26px;
+    width: 170px;
+    color: #333;
+}
+.profile-sidebar-section{
+    margin-bottom: 32px;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.profile-sidebar-sectiontitle{
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 18px;
+}
+.active{
+    color: #0089dc;
+}
+li span.fa-file-text-o{
+    display: inline-block;
+    width: 30px;
+    color: #aaa;
+    font-size: 16px;
+    line-height: 26px;
+}
+li span.fa-home{
+    display: inline-block;
+    width: 30px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #aaa;
+}
+li span.fa-money{
+    display: inline-block;
+    width: 30px;
+    color: #aaa;
+    font-size: 16px;
+    line-height: 26px;
+}
+li span.fa-star-o{
+    display: inline-block;
+    width: 30px;
+    color: #aaa;
+    font-size: 16px;
+    line-height: 26px;
+}
+li span.fa-user-md{
+    display: inline-block;
+    width: 30px;
+    color: #aaa;
+    font-size: 16px;
+    height:20px;
+    line-height: 26px;
+}
+.profile-sidebar ul li a {
+    color: #666;
+    font-size:14px;
+}
+.profile-sidebar ul li{
+    padding: 4px 0;
+}
+.profile-sidebar ul{
+    padding-left: 30px;
+}
