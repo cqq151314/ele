@@ -27,10 +27,10 @@ export default class Userright extends Component {
 
     // 点击前一页
     PreClick(){
-        console.log(1);
      if(this.state.currentPage > 1){
          this.setState({'currentPage':this.state.currentPage-1});
-         bsStore.getOrder(this.state.pageSize,this.state.currentPage)
+         let page=this.state.currentPage-1;
+         bsStore.getOrder(this.state.pageSize,page)
              .then(res =>{
                  res.json().then(data => {
                      console.log(data);
@@ -41,10 +41,10 @@ export default class Userright extends Component {
 
     // 点击后一页
     NextClick(){
-        console.log(2);
-    if(this.state.pageLength<10){
+    if(this.state.currentPage < 10){
+        let page=this.state.currentPage+1;
         this.setState({'currentPage':this.state.currentPage+1});
-        bsStore.getOrder(this.state.pageSize,this.state.currentPage)
+        bsStore.getOrder(this.state.pageSize,page)
             .then(res =>{
                 res.json().then(data => {
                     console.log(data);
