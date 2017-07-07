@@ -197,3 +197,214 @@ li{
     right: 0;
     color: #666;
 }
+.orderblock{
+    display: table;
+    padding: 20px 0 15px;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+.orderblock-item{
+    vertical-align: middle;
+    font-size: 12px;
+    text-align: left;
+    width: 100%;;
+    height:72px;
+    margin: 20px 0 15px;
+}
+.orderblock-shop{
+    width:593px;
+    height:72px;
+    float: left;
+}
+.orderblock-time{
+    width: 85px;
+    color: #999;
+    height:52px;
+    float: left;
+    padding-top: 20px;
+}
+.orderblock-money{
+    width: 190px;
+    height: 55px;
+    float: left;
+    padding-top: 17px;
+    line-height: 20px;
+}
+.orderblock-detail{
+    width: 142px;
+    height: 52px;
+    float: right;
+    padding-top: 15px;
+    line-height: 20px;
+}
+.orderblock-shop-l{
+    width:72px;
+    height:72px;
+    border-radius: 72px;
+    -moz-border-radius: 72px;
+    -webkit-border-radius: 72px;
+    float: left;
+
+}
+orderblock-shop-l img{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+.orderblock-shop-r{
+    width:507px;
+    height:72px;
+    float: right;
+}
+.orderblock-shop-r h2{
+    font-size: 16px;
+    /*font-weight: 100;*/
+}
+.shop-detail{
+    font-size:12px;
+    color:#999;
+    margin:9px 0;
+}
+.shop-total a{
+    font-size:12px;
+    color:#999;
+}
+.shop-total a span{
+    color:#ff0000;
+}
+.orderblock-time p{
+    font-size:12px;
+    color:#999;
+    text-align: center;
+}
+.orderblock-money p:nth-child(1){
+    font-size:16px;
+    color:#000;
+    text-align:center;
+}
+.orderblock-money p:nth-child(2){
+    font-size:12px;
+    color:#999;
+    text-align: center;
+    cursor: pointer;
+}
+.orderblock-detail p:nth-child(1){
+    font-size: 16px;
+    color:#999;
+    text-align: center;
+    cursor: pointer;
+}
+.orderblock-detail p:nth-child(2) a{
+    font-size: 12px;
+    color:#0089dc;
+    text-align: center;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+.chart-page{
+    width:100%;
+    height:20px;
+}
+.many-span{
+    width:100px;
+    height:20px;
+    float: right;
+}
+.chart-page span:nth-child(1){
+    color:#000;
+    font-size:12px;
+}
+.chart-page span:nth-child(2){
+    color:#ccc;
+    font-size:14px;
+    margin:0 10px;
+    display: inline-block;
+    width:20px;
+    height:20px;
+    text-align: center;
+    line-height: 20px;
+}
+.chart-page span:nth-child(3){
+    color:#ccc;
+    font-size:16px;
+    display: inline-block;
+    width:20px;
+    height:20px;
+    text-align: center;
+    line-height: 20px;
+}
+.food-footprint{
+    width:1010px;
+    height:200px;
+    margin-top:30px;
+}
+.collect{
+    margin-left:10px;
+}
+.nearest-goods{
+    width:1100px;
+    height:100px;
+    padding: 20px 0 0 15px;
+}
+.nearest-goods-pic{
+    width:70px;
+    height:100px;
+    float: left;
+}
+.nearest-goods-pic img{
+    display: block;
+    width:70px;
+    height:70px;
+}
+.nearest-goods-pic p{
+    text-align: center;
+    font-size: 12px;
+    color:#999;
+    width:70px;
+    height:20px;
+    line-height: 20px;
+}
+.nearest-goods-detail{
+    width:300px;
+    height:100px;
+    float: left;
+    margin-left: 20px;
+    display: block;
+}
+.nearest-goods-detail h2{
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+span.fa-star{
+    color: #ffc30c;
+    white-space: nowrap;
+    font-size: 10px;
+    margin-right:0;
+}
+.shownum{
+    font-size: 12px;
+    color:#999;
+    margin-left: 10px;
+}
+.Delivery-fee{
+    font-size: 13px;
+    color:#999;
+    text-align: left;
+    margin:4px 0;
+}
+.shop-zhun{
+    font-size: 12px;
+    padding: 1px 2px;
+    background: #57A9FF;
+    color: #fff;
+}
+.shop-bao{
+    font-size: 12px;
+    padding: 1px 2px;
+    color: #999;
+    border:1px solid #ccc;
+    margin-left:5px;
+}
+

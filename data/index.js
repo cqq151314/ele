@@ -24,6 +24,8 @@ module.exports = () => {
             sales: '月销1211单',
             Deliveryfee: '配送费¥3',
             time: '34',
+            pageSize:3,
+            currentPage:i,
             zhun: '准',
             bao: '保',
             piao: '票',
