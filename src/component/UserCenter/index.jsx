@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import bsStore from '../../store/fetch-npm-node';
 import './index.css';
-import logo from '../../images/logo.jpg';
 import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
 import '../../fonts/font-awesome.min.css';
 import Search from '../Search/Search'
 import UserLeft from '../UserLeft/index'
-import Userright from '../UserRight/index'
+import Right from '../UserRight/index'
 export default class profile extends Component {
     static propType = {
         listData: PropTypes.array,
@@ -58,8 +58,9 @@ export default class profile extends Component {
                 <Search onChange={this.onChange.bind(this)} onClick={this.onClick.bind(this)} value={this.state.value} show={this.state.show}/>
                 <div className="userCenter">
                     <UserLeft />
-                    <Userright />
+                    <Right />
                 </div>
+                <Footer />
             </div>
         );
     }

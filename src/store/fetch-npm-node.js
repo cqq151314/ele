@@ -11,8 +11,8 @@ class BsStore {
     getKwordsData(keywords){
         return  fetch(`shops/${typeof keywords !== 'undefined' ? '?keywords='+ keywords : ''}`);
     }
-    getOrder(pageSize,currentPage){
-        return  fetch(`shops/${'?pageSize='+ pageSize+'&currentPage='+currentPage}`);
+    getOrder(_page,_limit){
+        return  fetch(`shops/${'?_page='+ _page+'&_limit='+_limit}`);
     }
 }
 const bsStore = new BsStore();
