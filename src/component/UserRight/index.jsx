@@ -6,17 +6,17 @@ export default class Userright extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            // pageSize 个数
-            pageSize:3,
-            // currentPage 页码
-            currentPage:1,
-            // pageLength 总页码
-            pageLength:15,
-            // 数据
-            dataSource:[],
-        };
-        this.initData(this.state.pageSize,this.state.currentPage);
-    }
+        // pageSize 个数
+        pageSize:3,
+        // currentPage 页码
+        currentPage:1,
+        // pageLength 总页码
+        pageLength:15,
+        // 数据
+        dataSource:[],
+    };
+    this.initData(this.state.pageSize,this.state.currentPage);
+}
     //初始化
     initData(pageSize,currentPage){
         bsStore.getOrder(this.state.currentPage,pageSize)

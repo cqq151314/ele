@@ -1,0 +1,199 @@
+*{
+  margin:0;
+  padding:0;
+}
+html,body{
+    font-family: '微软雅黑';
+}
+a{
+  text-decoration: none;
+  color:#000;
+}
+img{
+  display: block;
+}
+li{
+  list-style: none;
+}
+.threeOrder-title{
+    font-size: 18px;
+    font-weight: 700;
+}
+.profile-three{
+    border: none;
+    overflow: hidden;
+    width:1010px;
+    float: left;
+    min-height: 600px;
+    padding-top: 27px;
+}
+.order-pic{
+    width:1010px;
+    height: 54px;
+    background:url("../../images/katong.png") no-repeat right top;
+}
+.pic-title{
+    text-align: right;
+    font-size: 14px;
+    color:#999;
+}
+.order-list{
+    width:1010px;
+    height:auto;
+}
+.shoplist-title{
+    width:1010px;
+    height:30px;
+    line-height: 30px;
+    background: #eee;
+    font-size: 12px;
+}
+.shoplist-title li:nth-child(1){
+    width:80px;
+    line-height: 30px;
+    text-align: right;
+    float: left;
+    margin-right: 30px;
+}
+.shoplist-title li:nth-child(2){
+    width:124px;
+    line-height: 30px;
+    float: left;
+    text-align: left;
+}
+.shoplist-title li:nth-child(3){
+    width:384px;
+    height: 30px;
+    float: left;
+}
+.shoplist-title li:nth-child(4),.shoplist-title li:nth-child(5),.shoplist-title li:nth-child(6){
+    width:130px;
+    line-height: 30px;
+    text-align: center;
+    float: left;
+}
+.shop-item{
+    width:1010px;
+    height:114px;
+    padding-top: 20px;
+}
+.shop-item-even{
+    width:1010px;
+    height:94px;
+}
+.shop-item-even li{
+    float: left;
+}
+.shop-item-even .order-time{
+    width:70px;
+    height:74px;
+    text-align: right;
+    background: #fff;
+    padding-top: 20px;
+}
+.order-time p:nth-child(1){
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.order-time p:nth-child(2){
+    font-size: 12px;
+    color:#999;
+}
+.order-icon{
+    width:130px;
+    background: indianred;
+    height:94px;
+    background: url(../../images/list-q.png)no-repeat 10px 25px;
+    padding-right: 10px;
+}
+.order-icon img{
+    width: 70px;
+    height: 70px;
+    display: block;
+    float: right;
+    margin-top:10px;
+}
+.order-detail{
+    width:410px;
+    height:94px;
+}
+.order-detail h3{
+    font-size: 14px;
+    margin:10px 0px;
+}
+.order-detail p{
+    font-size: 12px;
+    color:#999;
+    line-height: 20px;
+}
+.order-money{
+    width:130px;
+    height:94px;
+    text-align: center;
+}
+.order-money h3{
+    font-size:16px;
+    margin-top: 20px;
+    text-align: center;
+}
+.order-money p{
+    font-size:12px;
+    color:#999;
+    margin-top: 6px;
+}
+.order-status{
+    width:130px;
+    height:94px;
+    text-align: center;
+}
+.order-status p{
+    width: 100%;
+    line-height: 82px;
+    text-align: center;
+    color:#999;
+    font-size: 14px;
+}
+.order-backagain{
+    width:130px;
+    height:94px;
+}
+.order-backagain p:nth-child(1){
+    font-size: 12px;
+    text-align: center;
+    margin:10px 0;
+}
+.order-backagain p:nth-child(1) a{
+     padding:4px 6px;
+}
+.order-backagain p:nth-child(1):hover a{
+    border:1px solid #0089dc;
+    color:#0089dc;
+}
+.order-backagain p:nth-child(2){
+    font-size: 12px;
+    text-align: center;
+}
+.order-backagain p:nth-child(2) a:hover{
+    color:#0089dc;
+}
+.order-page{
+    height:25px;
+    width: 1010px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-right: 0;
+}
+.order-page ul{
+    width:70px;
+    float: right;
+}
+.order-page li{
+    float: left;
+    padding:4px 7px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.active{
+    background:#0089dc;
+    color: #fff;
+}

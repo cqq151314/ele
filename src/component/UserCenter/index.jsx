@@ -8,6 +8,7 @@ import '../../fonts/font-awesome.min.css';
 import '../UserLeft/index.css'
 import Search from '../Search/Search'
 import UserRight from '../UserRight/index'
+import orderThree from '../OrderThree/index'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 export default class profile extends Component {
     static propType = {
@@ -61,7 +62,7 @@ export default class profile extends Component {
                     <ul className="profile-sidebar" style={{'marginTop':"0"}} >
                         <li className="profile-sidebar">
                             <h2 className="profile-sidebar-sectiontitle">
-                                <Link to="/center"><span className="fa fa-home"></span>个人中心</Link>
+                                <Link to="/profile/center/"><span className="fa fa-home"></span>个人中心</Link>
                             </h2>
                         </li>
                         <li  className="profile-sidebar">
@@ -69,9 +70,9 @@ export default class profile extends Component {
                                 <span className="fa fa-file-text-o"></span>我的订单
                             </h2>
                             <ul>
-                                <li><Link to="/orderThree">近三个月订单</Link></li>
-                                <li><Link to="/untated">待评价订单</Link></li>
-                                <li><Link to="/refused">退单记录</Link></li>
+                                <li><Link to="/profile/orderThree/">近三个月订单</Link></li>
+                                <li><Link to="/profile/untated/">待评价订单</Link></li>
+                                <li><Link to="/profile/refused/">退单记录</Link></li>
                             </ul>
                         </li>
                         <li  className="profile-sidebar">
@@ -102,10 +103,10 @@ export default class profile extends Component {
                         </li>
                     </ul>
                     <Route exact path="/profile" component={UserRight}/>
-                    <Route  path="/center" component={UserRight}/>
-                    <Route  path="/orderThree" component={UserRight}/>
-                    <Route path="/untated" component={Footer}/>
-                    <Route path="/refused" component={Footer}/>
+                    <Route  path="/profile/center/" component={UserRight}/>
+                    <Route  path="/profile/orderThree/" component={orderThree}/>
+                    <Route path="/profile/untated/" component={Footer}/>
+                    <Route path="/profile/refused/" component={Footer}/>
                 </div>
                 <Footer />
                 </div>
