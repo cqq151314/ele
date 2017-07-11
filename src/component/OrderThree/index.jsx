@@ -14,6 +14,10 @@ export default class Userright extends Component {
             datalength:3,
             // 数据
             data:[],
+            // 分页列表
+            pageList:[],
+            // 当前页码
+            currentPage:0,
         };
         this.initData(this.state.currentPage,this.state.pageSize);
     }
@@ -24,9 +28,23 @@ export default class Userright extends Component {
                 res.json().then(data => {
                     this.setState({"data":data});
                 });
-            })
+            });
+        for(let i=1;i<=this.state.datalength;i++){
+            this.setState({pageList:this.state.pageList.push(i)});
+        }
+    }
+    // 点击分页获取数据   item 第几页   this.state.pageSize  一页显示几个
+    getPageData(item,index){
+        this.setState({"currentPage":index})
+        bsStore.getOrder(item,this.state.pageSize)
+            .then(res =>{
+                res.json().then(data => {
+                    this.setState({"data":data});
+                });
+            });
     }
     render() {
+        {console.log(this.state.pageList)}
         return (
             <div className="profile-three">
                 <h2 className="threeOrder-title">近三个月订单</h2>
@@ -78,13 +96,17 @@ export default class Userright extends Component {
                     </ul>
                     <div className="order-page">
                         <ul>
-                            <li className="active">1</li>
-                            <li>2</li>
-                            <li>3</li>
+                            {
+                                this.state.pageList.map((item, index) =>{
+                                    return (
+                                        <li style={{"background":this.state.currentPage == index ? "#0089dc":"#FFF","color":this.state.currentPage == index ? "#fff":"#000"}} onClick={()=>{this.getPageData(item,index)}}>{item}</li>
+                                    )
+                                })
+                            }
                         </ul>
                     </div>
                 </div>
-                </div>
+            </div>
         );
     }
 }
