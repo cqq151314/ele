@@ -19,23 +19,23 @@ export default class Userright extends Component {
 }
     //初始化
     initData(pageSize,currentPage){
-        bsStore.getOrder(this.state.currentPage,pageSize)
-            .then(res =>{
-                res.json().then(data => {
-                this.setState({"dataSource":data});
-                });
-            })
-    }
+            bsStore.getOrder(this.state.currentPage, pageSize)
+                .then(res => {
+                    res.json().then(data => {
 
+                        this.setState({"dataSource": data});
+                    });
+                })
+    }
     // 点击前一页
     PreClick(){
-     if(this.state.currentPage > 1){
-         this.setState({'currentPage':this.state.currentPage-1});
-         let page=this.state.currentPage-1;
-         bsStore.getOrder(page,this.state.pageSize)
-             .then(res =>{
+     if(this.state.currentPage > 1) {
+         this.setState({'currentPage': this.state.currentPage - 1});
+         let page = this.state.currentPage - 1;
+         bsStore.getOrder(page, this.state.pageSize)
+             .then(res => {
                  res.json().then(data => {
-                     this.setState({"dataSource":data});
+                         this.setState({"dataSource": data});
                  });
              })
      }
@@ -43,18 +43,17 @@ export default class Userright extends Component {
 
     // 点击后一页
     NextClick(){
-    if(this.state.currentPage < this.state.pageLength){
-        let page=this.state.currentPage+1;
-        this.setState({'currentPage':this.state.currentPage+1});
-        bsStore.getOrder(page,this.state.pageSize)
-            .then(res =>{
-                res.json().then(data => {
-                    this.setState({"dataSource":data});
-                });
-            })
+    if(this.state.currentPage < this.state.pageLength) {
+        let page = this.state.currentPage + 1;
+        this.setState({'currentPage': this.state.currentPage + 1});
+            bsStore.getOrder(page, this.state.pageSize)
+                .then(res => {
+                    res.json().then(data => {
+                        this.setState({"dataSource": data});
+                    });
+                })
+        }
     }
-    }
-
     render() {
         return (
             <div className="profile-panel">
@@ -101,7 +100,7 @@ export default class Userright extends Component {
                         {
                             this.state.dataSource.map(item =>{
                                 return (
-                                    <li  className="orderblock-item" key={item.id} id={item.id}>
+                                    <li  className="orderblock-item" id={item.id} key={item.id}>
                                         <div className="orderblock-shop">
                                             <div className="orderblock-shop-l"><a href={item.id}><img src={require("../../images/w.png")} alt=""/></a></div>
                                             <div className="orderblock-shop-r">
@@ -120,7 +119,7 @@ export default class Userright extends Component {
                                         </div>
                                         <div className="orderblock-detail">
                                             <p>订单已支付</p>
-                                            <p><a href={'shops/'+item.id}>订单详情</a></p>
+                                            <p><a href={'/profile/order/id/'+item.id}>订单详情</a></p>
                                         </div>
                                     </li>
                                 )

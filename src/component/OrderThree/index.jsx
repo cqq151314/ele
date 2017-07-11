@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './index.css';
 import '../../fonts/font-awesome.min.css';
-import bsStore from '../../store/fetch-npm-node'
-export default class Userright extends Component {
+import bsStore from '../../store/fetch-npm-node';
+import {Link} from 'react-router-dom'
+export default class UserRight extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -20,6 +21,7 @@ export default class Userright extends Component {
             currentPage:0,
         };
         this.initData(this.state.currentPage,this.state.pageSize);
+        this.lock = false;
     }
     //初始化
     initData(currentPage,pageSize){
@@ -29,9 +31,10 @@ export default class Userright extends Component {
                     this.setState({"data":data});
                 });
             });
-        for(let i=1;i<=this.state.datalength;i++){
-            this.setState({pageList:this.state.pageList.push(i)});
-        }
+
+            for(let i=1;i<=this.state.datalength;i++){
+                // this.setState({pageList:this.state.pageList.push(i)});
+            }
     }
     // 点击分页获取数据   item 第几页   this.state.pageSize  一页显示几个
     getPageData(item,index){
@@ -43,8 +46,16 @@ export default class Userright extends Component {
                 });
             });
     }
+    // 根据ID获取具体的商品信息 id 商品ID
+    getDataDetail(id){
+        bsStore.getIDData(id)
+            .then(res =>{
+                res.json().then(data => {
+                 console.log(data);
+                });
+            });
+    }
     render() {
-        {console.log(this.state.pageList)}
         return (
             <div className="profile-three">
                 <h2 className="threeOrder-title">近三个月订单</h2>
@@ -85,11 +96,12 @@ export default class Userright extends Component {
                                                 <p>订单已取消</p>
                                             </li>
                                             <li className="order-backagain">
-                                                <p><a href="###">订单详情</a></p>
+                                                <p><Link to={"/profile/orderThree/"+ item.id } onClick={()=>{this.getDataDetail(item.id)}}>订单详情</Link></p>
                                                 <p><a href="###">再来一份</a></p>
                                             </li>
                                         </ul>
                                     </li>
+
                                 )
                             })
                         }
@@ -99,7 +111,7 @@ export default class Userright extends Component {
                             {
                                 this.state.pageList.map((item, index) =>{
                                     return (
-                                        <li style={{"background":this.state.currentPage == index ? "#0089dc":"#FFF","color":this.state.currentPage == index ? "#fff":"#000"}} onClick={()=>{this.getPageData(item,index)}}>{item}</li>
+                                        <li  style={{"background":this.state.currentPage === index ? "#0089dc":"#FFF","color":this.state.currentPage === index ? "#fff":"#000"}} onClick={()=>{this.getPageData(item,index)}}>{item}</li>
                                     )
                                 })
                             }

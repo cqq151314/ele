@@ -5,6 +5,8 @@ import './index.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import '../../fonts/font-awesome.min.css';
+import Test from '../Test/index';
+import OrderDetail from '../OrderDetail/index'
 import '../UserLeft/index.css'
 import Search from '../Search/Search'
 import UserRight from '../UserRight/index'
@@ -103,10 +105,11 @@ export default class profile extends Component {
                         </li>
                     </ul>
                     <Route exact path="/profile" component={UserRight}/>
-                    <Route  path="/profile/center/" component={UserRight}/>
-                    <Route  path="/profile/orderThree/" component={orderThree}/>
-                    <Route path="/profile/untated/" component={Footer}/>
-                    <Route path="/profile/refused/" component={Footer}/>
+                    <Route path="/profile/center/" component={UserRight}/>
+                    <Route exact path="/profile/orderThree/" component={orderThree}/>
+                    <Route path="/profile/untated/" component={Test}/>
+                    <Route path="/profile/refused/" component={Test}/>
+                    <Route exact path="/profile/orderThree/:id" component={OrderDetail}/>
                 </div>
                 <Footer />
                 </div>
