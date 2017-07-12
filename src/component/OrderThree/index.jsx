@@ -3,6 +3,7 @@ import './index.css';
 import '../../fonts/font-awesome.min.css';
 import bsStore from '../../store/fetch-npm-node';
 import {Link} from 'react-router-dom'
+import Loadding from '../Loadding/Loadding';
 export default class UserRight extends Component {
     constructor(props) {
         super(props);
@@ -19,6 +20,8 @@ export default class UserRight extends Component {
             pageList:[],
             // 当前点击的索引
             currentIndex:1,
+            // loadding显示隐藏
+            loaddingDisplay:"block",
         };
     }
 
@@ -33,40 +36,35 @@ export default class UserRight extends Component {
             listData.push(i);
             this.setState({pageList:listData});
         }
-        bsStore.getOrder(this.state.currentPage,pageSize)
-            .then(res =>{
-                res.json().then(data => {
-                    this.setState({"data":data});
+        this.setState({"loaddingDisplay":'block'});
+        setTimeout(()=>{
+            bsStore.getOrder(this.state.currentPage,pageSize)
+                .then(res =>{
+                    res.json().then(data => {
+                        this.setState({"data":data});
+                    });
+                    this.setState({"loaddingDisplay":'none'});
                 });
-            });
+        },500)
     }
-
     /**
      *  点击分页获取数据
      *  @param  currentPage  第几页
      */
     getPageData(currentPage){
         this.setState({"currentIndex":currentPage});
-        bsStore.getOrder(currentPage,this.state.pageSize)
-            .then(res =>{
-                res.json().then(data => {
-                    this.setState({"data":data});
+        this.setState({"loaddingDisplay":'block'});
+        setTimeout(()=>{
+            bsStore.getOrder(currentPage,this.state.pageSize)
+                .then(res =>{
+                    res.json().then(data => {
+                        this.setState({"data":data});
+                    });
+                    this.setState({"loaddingDisplay":'none'});
                 });
-            });
+        },500)
     }
 
-    /**
-     *  根据ID获取具体的商品信息
-     *  @param id   商品ID
-     */
-    getDataDetail(id){
-        bsStore.getIDData(id)
-            .then(res =>{
-                res.json().then(data => {
-                 // console.log(data);
-                });
-            });
-    }
      // 组件渲染后初始化数据
     componentDidMount(){
         this.initData(this.state.currentPage,this.state.pageSize);
@@ -74,7 +72,8 @@ export default class UserRight extends Component {
 
     render() {
         return (
-            <div className="profile-three">
+            <div>
+            <div className="profile-three" style={{"display":this.state.loaddingDisplay === 'none'?'block':'none'}}>
                 <h2 className="threeOrder-title">近三个月订单</h2>
                 <div className="order-pic"></div>
                 <p className="pic-title">热门话题，随时关注订单状态</p>
@@ -144,6 +143,9 @@ export default class UserRight extends Component {
                     </div>
                 </div>
             </div>
+                <Loadding style={this.state.loaddingDisplay} />
+            </div>
+
         );
     }
 }

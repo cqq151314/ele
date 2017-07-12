@@ -16,11 +16,19 @@ li{
   list-style: none;
 }
 .loadding{
-  width:1180px;
+  width:350px;
   margin: 0 auto;
   height:500px;
-  background:#fff;
-  font-size: 40px;
+  background:#fff url(../../images/bg.png) no-repeat left center;
+  font-size: 14px;
   line-height: 500px;
   text-align: center;
+  color:#999;
+}
+.loaddingBox{
+  width:1180px;
+  height:500px;
+  margin: 0 auto;
+  margin-left: 100px;
+  margin: 0 auto;
 }
