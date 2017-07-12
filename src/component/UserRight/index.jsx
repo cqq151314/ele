@@ -18,12 +18,15 @@ export default class Userright extends Component {
     };
     this.initData(this.state.pageSize,this.state.currentPage);
 }
-    //初始化
+    /**
+     *  初始化,根据页码和每页显示的个数请求数据
+     *  @param currentPage  当前页码
+     *  @param pageSize  每页显示商品个数
+     */
     initData(pageSize,currentPage){
             bsStore.getOrder(this.state.currentPage, pageSize)
                 .then(res => {
                     res.json().then(data => {
-
                         this.setState({"dataSource": data});
                     });
                 })

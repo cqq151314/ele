@@ -6,14 +6,20 @@ export default class OrderDetail extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            // 数据
+            detailData:[],
         };
         this.initData(window.location.pathname.split('id/')[1]);
     }
+    /**
+     *  初始化商品数据
+     *  @param  id  商品ID
+     */
     initData(id){
         bsStore.getIDData(id)
             .then(res =>{
                 res.json().then(data => {
-                    console.log(data);
+                    this.setState({"detailData":data[0]})
                 });
             });
         }
@@ -41,7 +47,7 @@ export default class OrderDetail extends Component {
                     <div className="detail-products-l">
                         <img  src={require("../../images/small.png")} alt=""/>
                         <div className="detail-products-l-title">
-                            <p>阿香米线（西安大润发店</p>
+                            <p>{this.state.detailData.title}</p>
                             <p>订单号：1210220373998275</p>
                         </div>
                     </div>
@@ -74,6 +80,6 @@ export default class OrderDetail extends Component {
                 </div>
                 <div className="footer-xian"></div>
             </div>
-        );
+        )
     }
 }

@@ -18,11 +18,15 @@ export default class UserRight extends Component {
             // 分页列表
             pageList:[],
             // 当前点击的索引
-            currentIndex:0,
+            currentIndex:1,
         };
-
     }
-    //初始化
+
+    /**
+     *  初始化,根据页码和每页显示的个数请求数据
+     *  @param currentPage  当前页码
+     *  @param pageSize  每页显示商品个数
+     */
     initData(currentPage,pageSize){
         let listData=[];
         for(let i=1;i<=this.state.datalength;i++){
@@ -36,17 +40,25 @@ export default class UserRight extends Component {
                 });
             });
     }
-    // 点击分页获取数据   item 第几页   this.state.pageSize  一页显示几个
-    getPageData(item,index){
-        this.setState({"currentPage":index})
-        bsStore.getOrder(item,this.state.pageSize)
+
+    /**
+     *  点击分页获取数据
+     *  @param  currentPage  第几页
+     */
+    getPageData(currentPage){
+        this.setState({"currentIndex":currentPage});
+        bsStore.getOrder(currentPage,this.state.pageSize)
             .then(res =>{
                 res.json().then(data => {
                     this.setState({"data":data});
                 });
             });
     }
-    // 根据ID获取具体的商品信息 id 商品ID
+
+    /**
+     *  根据ID获取具体的商品信息
+     *  @param id   商品ID
+     */
     getDataDetail(id){
         bsStore.getIDData(id)
             .then(res =>{
@@ -114,9 +126,9 @@ export default class UserRight extends Component {
                     <div className="order-page">
                         <ul>
                             {
-                                this.state.pageList.map((item, index) =>{
+                                this.state.pageList.map((item) =>{
                                     return (
-                                        <li  key={item} style={{"background":this.state.currentPage === index ? "#0089dc":"#FFF","color":this.state.currentIndex === index ? "#fff":"#000"}} onClick={()=>{this.getPageData(item,index)}}>{item}</li>
+                                        <li  key={item} style={{"background":this.state.currentIndex === item ? "#0089dc":"#FFF","color":this.state.currentIndex === item ? "#fff":"#000"}} onClick={()=>{this.getPageData(item)}}>{item}</li>
                                     )
                                 })
                             }

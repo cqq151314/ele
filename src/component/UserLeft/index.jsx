@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import './index.css';
 import '../../fonts/font-awesome.min.css';
 export default class UserLeft extends Component {
-    // static propType = {
-    //     listData: PropTypes.array,
-    // };
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return (
             <div >
