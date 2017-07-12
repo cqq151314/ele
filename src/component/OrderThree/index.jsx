@@ -9,7 +9,7 @@ export default class UserRight extends Component {
         this.state = {
             // pageSize 个数
             pageSize:10,
-            // currentPage 页码
+            // 页码
             currentPage:1,
             // 数据长度
             datalength:3,
@@ -17,24 +17,24 @@ export default class UserRight extends Component {
             data:[],
             // 分页列表
             pageList:[],
-            // 当前页码
-            currentPage:0,
+            // 当前点击的索引
+            currentIndex:0,
         };
-        this.initData(this.state.currentPage,this.state.pageSize);
-        this.lock = false;
+
     }
     //初始化
     initData(currentPage,pageSize){
+        let listData=[];
+        for(let i=1;i<=this.state.datalength;i++){
+            listData.push(i);
+            this.setState({pageList:listData});
+        }
         bsStore.getOrder(this.state.currentPage,pageSize)
             .then(res =>{
                 res.json().then(data => {
                     this.setState({"data":data});
                 });
             });
-
-            for(let i=1;i<=this.state.datalength;i++){
-                // this.setState({pageList:this.state.pageList.push(i)});
-            }
     }
     // 点击分页获取数据   item 第几页   this.state.pageSize  一页显示几个
     getPageData(item,index){
@@ -51,10 +51,15 @@ export default class UserRight extends Component {
         bsStore.getIDData(id)
             .then(res =>{
                 res.json().then(data => {
-                 console.log(data);
+                 // console.log(data);
                 });
             });
     }
+     // 组件渲染后初始化数据
+    componentDidMount(){
+        this.initData(this.state.currentPage,this.state.pageSize);
+    }
+
     render() {
         return (
             <div className="profile-three">
@@ -96,7 +101,7 @@ export default class UserRight extends Component {
                                                 <p>订单已取消</p>
                                             </li>
                                             <li className="order-backagain">
-                                                <p><Link to={"/profile/orderThree/"+ item.id } onClick={()=>{this.getDataDetail(item.id)}}>订单详情</Link></p>
+                                                <p><Link to={"/profile/orderThree/id/"+ item.id } onClick={()=>{this.getDataDetail(item.id)}}>订单详情</Link></p>
                                                 <p><a href="###">再来一份</a></p>
                                             </li>
                                         </ul>
@@ -111,7 +116,7 @@ export default class UserRight extends Component {
                             {
                                 this.state.pageList.map((item, index) =>{
                                     return (
-                                        <li  style={{"background":this.state.currentPage === index ? "#0089dc":"#FFF","color":this.state.currentPage === index ? "#fff":"#000"}} onClick={()=>{this.getPageData(item,index)}}>{item}</li>
+                                        <li  key={item} style={{"background":this.state.currentPage === index ? "#0089dc":"#FFF","color":this.state.currentIndex === index ? "#fff":"#000"}} onClick={()=>{this.getPageData(item,index)}}>{item}</li>
                                     )
                                 })
                             }

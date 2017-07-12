@@ -6,7 +6,7 @@ class BsStore {
         return  fetch(`shops/${typeof type !== 'undefined' ? '?type='+ type : ''}`);
     }
     getIDData(id){
-        return  fetch(`shops/${'?id='+ id}`);
+        return  fetch(`/shops/${'?id='+ id}`);
     }
     getTypes(type2){
         return  fetch('types');

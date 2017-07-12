@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './index.css';
 import '../../fonts/font-awesome.min.css';
-import bsStore from '../../store/fetch-npm-node'
+import bsStore from '../../store/fetch-npm-node';
+import { Link } from 'react-router-dom'
 export default class Userright extends Component {
     constructor(props) {
         super(props);
@@ -119,7 +120,7 @@ export default class Userright extends Component {
                                         </div>
                                         <div className="orderblock-detail">
                                             <p>订单已支付</p>
-                                            <p><a href={'/profile/order/id/'+item.id}>订单详情</a></p>
+                                            <p><Link to={'/profile/order/id/'+item.id}>订单详情</Link></p>
                                         </div>
                                     </li>
                                 )

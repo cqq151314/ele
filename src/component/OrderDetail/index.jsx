@@ -2,12 +2,21 @@ import React, { Component } from 'react';
 import './index.css';
 import '../../fonts/font-awesome.min.css';
 import bsStore from '../../store/fetch-npm-node'
-export default class Userright extends Component {
+export default class OrderDetail extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+        };
+        this.initData(window.location.pathname.split('id/')[1]);
     }
-
+    initData(id){
+        bsStore.getIDData(id)
+            .then(res =>{
+                res.json().then(data => {
+                    console.log(data);
+                });
+            });
+        }
     render() {
         return (
             <div className="Order-detail">
@@ -30,7 +39,7 @@ export default class Userright extends Component {
                 </div>
                 <div className="detail-products">
                     <div className="detail-products-l">
-                        <img  src={require("../../images/small.png")} />
+                        <img  src={require("../../images/small.png")} alt=""/>
                         <div className="detail-products-l-title">
                             <p>阿香米线（西安大润发店</p>
                             <p>订单号：1210220373998275</p>

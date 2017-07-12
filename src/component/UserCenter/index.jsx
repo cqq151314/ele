@@ -109,7 +109,8 @@ export default class profile extends Component {
                     <Route exact path="/profile/orderThree/" component={orderThree}/>
                     <Route path="/profile/untated/" component={Test}/>
                     <Route path="/profile/refused/" component={Test}/>
-                    <Route exact path="/profile/orderThree/:id" component={OrderDetail}/>
+                    <Route exact path="/profile/orderThree/id/:id" component={OrderDetail}/>
+                    <Route exact path="/profile/order/id/:id" component={OrderDetail}/>
                 </div>
                 <Footer />
                 </div>
