@@ -2,7 +2,7 @@
  * Created by qingqing.chen on 2017/6/23.
  */
 module.exports = () => {
-    const data = { shops: [], types:[] };
+    const data = { shops: [], types:[],orders:[] };
 
     let shop = {};
     const titleList = ['霸王牛肉面·专业面食外卖', '鸡将军黄焖鸡（高新店)', '赵家腊汁肉（高新旗舰店', '这家店不错牛肉面', '神龙冒菜', '川魂冒牌冒菜', '小竹签烤肉（枫韵蓝湾店）', '大自在火锅（丰庆店）', '老碗（太白店）', '乍见之欢炒菜馆','麻辣私厨','一品小厨','川湘源川菜馆',
@@ -112,6 +112,32 @@ module.exports = () => {
             ]
         }
     ];
+    // order 订单
+    const time=['07-07','01-27','11-5','02-08','12-04','03-17','07-07','01-27','11-5','02-08','12-04','03-17','07-07','01-27','11-5','02-08','12-04','03-17',
+                '07-07','01-27','11-5','02-08','12-04','03-17','07-07','01-27','11-5','02-08','12-04','03-17','07-07','01-27','11-5','02-08','12-04','03-17',
+                '07-07','01-27','11-5','02-08','12-04','03-17','07-07','01-27','11-5','02-08','12-04','03-17','07-07','01-27','11-5','02-08','12-04','03-17'];
+    for (let i = 1; i < 50; i++) {
+        order = {
+            id: i,
+            title: titleList[i],
+            url: '../../images/6.jpg',
+            orderDay:time[i],
+            orderTime:"11:10",
+            orderNumber:Math.ceil(Math.random()*100000000000000000000),
+            Merchant:Math.ceil(Math.random()*100000000),
+            goods:[{name:"阿香番茄米线", num:1,smalltotal:31.00},{name:"肉价馍", num:2,smalltotal:17.00}],
+            total:54.00,
+            totalnum:3,
+            lunchBox: 3.00,
+            Deliveryfee: 3.00,
+            Buyers: "陈清清女士",
+            Buyerstell:'18729316055',
+            Buyersadress:'	蓝溪国际大厦20楼',
+            Remarks:'无备注',
+        };
+
+        data.orders.push(order);
+    }
     data.types = types;
     return data
 }

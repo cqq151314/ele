@@ -10,7 +10,8 @@ export default class Search extends Component {
                 <div className="seach-l">
                     <span>当前位置:</span>
                     <span className="address"><a href="###">雁塔区高新九号广场(西北大学桃园校区东)</a></span>
-                    <span className="tapaddress"><a href="https://www.ele.me/home/">[切换地址]</a></span>
+                    <span className="tapaddress"><a href="https://www.ele.me/home/">[切换地址]&nbsp;&nbsp;</a></span>
+                    <span className="address">》&nbsp;&nbsp;{this.props.state}</span>
                 </div>
                 <div className="seach-r">
                     <div className="place-search" style={{"display":this.props.show}}>

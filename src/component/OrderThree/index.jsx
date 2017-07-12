@@ -94,23 +94,31 @@ export default class UserRight extends Component {
                                     <li className="shop-item" key={item.id} id={item.id}>
                                         <ul className="shop-item-even">
                                             <li className="order-time">
-                                                <p>07-07</p>
-                                                <p>11:10</p>
+                                                <p>{item.orderDay}</p>
+                                                <p>{item.orderTime}</p>
                                             </li>
                                             <li className="order-icon">
                                                 <img src={require("../../images/w.png")} alt=""/>
                                             </li>
                                             <li  className="order-detail" >
                                                 <h3>{item.title}</h3>
-                                                <p>腊肠1份 / 花甲1份 等 4 个菜品</p>
+                                                <p>
+                                                    {
+                                                        item.goods.map((item2,index)=>{
+                                                            return (
+                                                                <span key={index}>{item2.name}{item2.num}份&nbsp;/&nbsp;</span>
+                                                                )
+                                                        })
+                                                    }
+                                                    等 {item.totalnum} 个菜品</p>
                                                 <p>订单号: 1210029040805317659</p>
                                             </li>
                                             <li className="order-money">
-                                                <h3 >27.01</h3>
+                                                <h3 >{item.total}</h3>
                                                 <p>在线支付</p>
                                             </li>
                                             <li  className="order-status">
-                                                <p>订单已取消</p>
+                                                <p>订单已提交</p>
                                             </li>
                                             <li className="order-backagain">
                                                 <p><Link to={"/profile/orderThree/id/"+ item.id } onClick={()=>{this.getDataDetail(item.id)}}>订单详情</Link></p>

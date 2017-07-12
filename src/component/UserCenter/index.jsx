@@ -27,7 +27,12 @@ export default class profile extends Component {
             show:'none',
             //value的值
             value:"",
-        }
+            // 地址后面的状态
+            myState:'',
+            // 控制导航字体颜色变化
+            myClolor:"",
+        };
+        this.handClick = this.handClick.bind(this);
     }
     /**
      *  input框输入值发生改变获取数据
@@ -54,17 +59,22 @@ export default class profile extends Component {
                 });
             })
     }
+    // 处理点击事件
+    handClick(e){
+        this.setState({onClick:!this.state.onClick});
+        this.setState({myState:e.target.innerHTML});
+    }
     render() {
         return (
             <Router>
                 <div>
                 <Header />
-                <Search onChange={this.onChange.bind(this)} onClick={this.onClick.bind(this)} value={this.state.value} show={this.state.show}/>
+                <Search  state={this.state.myState} onChange={this.onChange.bind(this)} onClick={this.onClick.bind(this)} value={this.state.value} show={this.state.show}/>
                 <div className="userCenter">
                     <ul className="profile-sidebar" style={{'marginTop':"0"}} >
                         <li className="profile-sidebar">
                             <h2 className="profile-sidebar-sectiontitle">
-                                <Link to="/profile/center/"><span className="fa fa-home"></span>个人中心</Link>
+                                <Link to="/profile/center/" className="active"><span className="fa fa-home"></span><span onClick={(e)=>{this.handClick(e)}}>个人中心</span></Link>
                             </h2>
                         </li>
                         <li  className="profile-sidebar">
@@ -72,9 +82,9 @@ export default class profile extends Component {
                                 <span className="fa fa-file-text-o"></span>我的订单
                             </h2>
                             <ul>
-                                <li><Link to="/profile/orderThree/">近三个月订单</Link></li>
-                                <li><Link to="/profile/untated/">待评价订单</Link></li>
-                                <li><Link to="/profile/refused/">退单记录</Link></li>
+                                <li><Link to="/profile/orderThree/" onClick={(e)=>{this.handClick(e)}}>近三个月订单</Link></li>
+                                <li><Link to="/profile/untated/"    onClick={(e)=>{this.handClick(e)}}>待评价订单</Link></li>
+                                <li><Link to="/profile/refused/"    onClick={(e)=>{this.handClick(e)}}>退单记录</Link></li>
                             </ul>
                         </li>
                         <li  className="profile-sidebar">
@@ -82,7 +92,7 @@ export default class profile extends Component {
                                 <span className="fa fa-money"></span>我的资产
                             </h2>
                             <ul>
-                                <li><a href="###">我的红包</a></li>
+                                <li><a href="###" >我的红包</a></li>
                                 <li><a href="###">账户余额</a></li>
                                 <li><a href="###">我的积分</a></li>
                             </ul>

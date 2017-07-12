@@ -8,6 +8,8 @@ export default class OrderDetail extends Component {
         this.state = {
             // 数据
             detailData:[],
+            // 子商品数据
+            goodsData:[]
         };
         this.initData(window.location.pathname.split('id/')[1]);
     }
@@ -20,6 +22,7 @@ export default class OrderDetail extends Component {
             .then(res =>{
                 res.json().then(data => {
                     this.setState({"detailData":data[0]})
+                    this.setState({"goodsData":data[0].goods})
                 });
             });
         }
@@ -48,11 +51,11 @@ export default class OrderDetail extends Component {
                         <img  src={require("../../images/small.png")} alt=""/>
                         <div className="detail-products-l-title">
                             <p>{this.state.detailData.title}</p>
-                            <p>订单号：1210220373998275</p>
+                            <p>订单号：{this.state.detailData.orderNumber}</p>
                         </div>
                     </div>
                     <div className="detail-products-m">
-                        <p>商家电话：029-88691021</p>
+                        <p>商家电话：{this.state.detailData.Merchant}</p>
                     </div>
                     <div className="detail-products-r">
                         <a><span className="fa fa-star-o"></span>已收藏</a>
@@ -62,20 +65,27 @@ export default class OrderDetail extends Component {
                 <div className="orderprogress-cardlist">
                     <div className="orderprogress-cardlist-l">
                         <div className="orderprogress-item"><span>菜品</span><span>数量</span><span>小计(元)</span></div>
-                        <div className="orderprogress-item"><span>阿香番茄米线</span><span>1</span><span>31.00</span></div>
+                        {
+
+                            this.state.goodsData.map(item => {
+                                return (
+                                    <div className="orderprogress-item"><span>{item.name}</span><span>{item.num}</span><span>{item.smalltotal}.00</span></div>
+                                )
+                             })
+                        }
                         <div className="orderprogress-item"><span>餐盒</span><span>&nbsp;</span><span>3.00</span></div>
                         <div className="orderprogress-item"><span>配送费</span><span>&nbsp;</span><span>3.00</span></div>
-                        <p className="total"><span>实际支付：</span><span>37.00</span></p>
+                        <p className="total"><span>实际支付：</span><span>{this.state.detailData.total}.00</span></p>
                     </div>
                     <div className="orderprogress-cardlist-r">
                         <p className="deliverytitle">配送方式</p>
                         <p>配送方式：蜂鸟专送</p>
                         <p>送达时间：尽快送出</p>
-                        <p>联系人：陈清清女士</p>
-                        <p>联系电话：18729316055</p>
-                        <p>收货地址：蓝溪国际大厦20楼输运</p>
+                        <p>联系人：{this.state.detailData.Buyers}</p>
+                        <p>联系电话：{this.state.detailData.Buyerstell}</p>
+                        <p>收货地址：{this.state.detailData.Buyersadress}</p>
                         <p>发票信息：无发票</p>
-                        <p>备注信息：无备注</p>
+                        <p>备注信息：{this.state.detailData.Remarks}</p>
                     </div>
                 </div>
                 <div className="footer-xian"></div>
