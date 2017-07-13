@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1be4cf5e-ec2d-482c-98b7-7f93c32b3322" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/OrderDetail/index.jsx" afterPath="$PROJECT_DIR$/src/component/OrderDetail/index.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/UserCenter/index.jsx" afterPath="$PROJECT_DIR$/src/component/UserCenter/index.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -25,8 +24,8 @@
       <file leaf-file-name="index.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/component/UserCenter/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="122" column="74" lean-forward="true" selection-start-line="122" selection-start-column="74" selection-end-line="122" selection-end-column="74" />
+            <state relative-caret-position="497">
+              <caret line="117" column="53" lean-forward="false" selection-start-line="117" selection-start-column="53" selection-end-line="117" selection-end-column="53" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <element signature="e#308#347#0" expanded="true" />
@@ -358,12 +357,12 @@
       <workItem from="1499822880824" duration="13441000" />
       <workItem from="1499839864685" duration="18893000" />
       <workItem from="1499908379527" duration="7222000" />
-      <workItem from="1499919694412" duration="14639000" />
+      <workItem from="1499919694412" duration="14969000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116373000" />
+    <option name="totallyTimeSpent" value="116703000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -376,7 +375,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2156013" sideWeight="0.89989465" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3261105" sideWeight="0.89989465" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1601686" sideWeight="0.23037323" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -814,8 +813,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/component/UserCenter/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="122" column="74" lean-forward="true" selection-start-line="122" selection-start-column="74" selection-end-line="122" selection-end-column="74" />
+        <state relative-caret-position="497">
+          <caret line="117" column="53" lean-forward="false" selection-start-line="117" selection-start-column="53" selection-end-line="117" selection-end-column="53" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#308#347#0" expanded="true" />

@@ -97,9 +97,9 @@ export default class profile extends Component {
                                 <span className="fa fa-money"></span>我的资产
                             </h2>
                             <ul>
-                                <li><a href="###" >我的红包</a></li>
-                                <li><a href="###">账户余额</a></li>
-                                <li><a href="###">我的积分</a></li>
+                                <li><a>我的红包</a></li>
+                                <li><a>账户余额</a></li>
+                                <li><a>我的积分</a></li>
                             </ul>
                         </li>
                         <li  className="profile-sidebar">
@@ -107,10 +107,10 @@ export default class profile extends Component {
                                 <span className="fa fa-user-md"></span>我的资料
                             </h2>
                             <ul>
-                                <li><a href="###">个人资料</a></li>
-                                <li><a href="###">地址管理</a></li>
-                                <li><a href="###">安全中心</a></li>
-                                <li><a href="###">修改密码</a></li>
+                                <li><a>个人资料</a></li>
+                                <li><a>地址管理</a></li>
+                                <li><a>安全中心</a></li>
+                                <li><a>修改密码</a></li>
                             </ul>
                         </li>
                         <li  className="profile-sidebar">
