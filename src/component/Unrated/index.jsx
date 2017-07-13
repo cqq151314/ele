@@ -115,11 +115,11 @@ export default class UserRight extends Component {
                                                 <p>在线支付</p>
                                             </li>
                                             <li  className="order-status">
-                                                <p>订单已提交</p>
+                                                <p>订单已完成</p>
                                             </li>
                                             <li className="order-backagain">
                                                 <p><Link to={"/profile/orderThree/id/"+ item.id } onClick={()=>{this.getDataDetail(item.id)}}>订单详情</Link></p>
-                                                <p><a href="###">再来一份</a></p>
+                                                <p><a href="###" className="active-unrated">立即评价</a></p>
                                             </li>
                                         </ul>
                                     </li>

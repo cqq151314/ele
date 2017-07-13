@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import './index.css';
 import '../../fonts/font-awesome.min.css';
-import bsStore from '../../store/fetch-npm-node';
-import {Link} from 'react-router-dom'
-import Loadding from '../Loadding/Loadding';
 export default class Refused extends Component {
     constructor(props) {
         super(props);
@@ -15,7 +12,7 @@ export default class Refused extends Component {
             <div>
             <div className="refaused">
                 <h2 className="refaused-title">退单记录</h2>
-                <div className="refaused-box">暂无记录，现在就去<a href="###">订餐</a>吧</div>
+                <div className="refaused-box">暂无记录，现在就去<a href="/">订餐</a>吧</div>
             </div>
             </div>
 

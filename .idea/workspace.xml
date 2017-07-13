@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1be4cf5e-ec2d-482c-98b7-7f93c32b3322" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/images/10.jpg" afterPath="$PROJECT_DIR$/src/images/10.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/images/9.jpg" afterPath="$PROJECT_DIR$/src/images/9.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/index.js" afterPath="$PROJECT_DIR$/data/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/OrderThree/index.css" afterPath="$PROJECT_DIR$/src/component/OrderThree/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/OrderThree/index.jsx" afterPath="$PROJECT_DIR$/src/component/OrderThree/index.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/Refused/index.jsx" afterPath="$PROJECT_DIR$/src/component/Refused/index.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/Unrated/index.css" afterPath="$PROJECT_DIR$/src/component/Unrated/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/Unrated/index.jsx" afterPath="$PROJECT_DIR$/src/component/Unrated/index.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/UserRight/index.jsx" afterPath="$PROJECT_DIR$/src/component/UserRight/index.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/UserCenter/index.jsx" afterPath="$PROJECT_DIR$/src/component/UserCenter/index.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,10 +25,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.jsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/component/Unrated/index.jsx">
+        <entry file="file://$PROJECT_DIR$/src/component/UserRight/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="101" column="51" lean-forward="true" selection-start-line="101" selection-start-column="51" selection-end-line="101" selection-end-column="51" />
+            <state relative-caret-position="668">
+              <caret line="170" column="61" lean-forward="true" selection-start-line="170" selection-start-column="61" selection-end-line="170" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -63,17 +60,17 @@
         <option value="$PROJECT_DIR$/src/component/Loadding/Loadding.jsx" />
         <option value="$PROJECT_DIR$/src/component/Test/index.jsx" />
         <option value="$PROJECT_DIR$/src/component/UserLeft/index.css" />
-        <option value="$PROJECT_DIR$/src/component/UserCenter/index.jsx" />
-        <option value="$PROJECT_DIR$/src/component/Refused/index.jsx" />
         <option value="$PROJECT_DIR$/src/component/UserRight/index.css" />
         <option value="$PROJECT_DIR$/src/component/UserCenter/index.css" />
         <option value="$PROJECT_DIR$/src/component/Refused/index.css" />
-        <option value="$PROJECT_DIR$/src/component/Unrated/index.css" />
         <option value="$PROJECT_DIR$/src/component/NavList/NavList.jsx" />
-        <option value="$PROJECT_DIR$/data/index.js" />
         <option value="$PROJECT_DIR$/src/component/OrderThree/index.jsx" />
         <option value="$PROJECT_DIR$/src/component/OrderThree/index.css" />
         <option value="$PROJECT_DIR$/src/component/UserRight/index.jsx" />
+        <option value="$PROJECT_DIR$/src/component/Refused/index.jsx" />
+        <option value="$PROJECT_DIR$/src/component/UserCenter/index.jsx" />
+        <option value="$PROJECT_DIR$/data/index.js" />
+        <option value="$PROJECT_DIR$/src/component/Unrated/index.css" />
         <option value="$PROJECT_DIR$/src/component/Unrated/index.jsx" />
       </list>
     </option>
@@ -157,6 +154,10 @@
               <option name="myItemId" value="component" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserRight" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -173,10 +174,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="component" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Unrated" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -294,12 +291,12 @@
       <workItem from="1499822880824" duration="13441000" />
       <workItem from="1499839864685" duration="18893000" />
       <workItem from="1499908379527" duration="7222000" />
-      <workItem from="1499919694412" duration="7310000" />
+      <workItem from="1499919694412" duration="9135000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109044000" />
+    <option name="totallyTimeSpent" value="110869000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -312,7 +309,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2892741" sideWeight="0.89989465" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12567714" sideWeight="0.89989465" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1601686" sideWeight="0.23037323" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -399,6 +396,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#308#347#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -565,6 +563,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-73">
           <caret line="223" column="1" lean-forward="true" selection-start-line="223" selection-start-column="1" selection-end-line="223" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -609,24 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/UserCenter/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1854">
-          <caret line="126" column="26" lean-forward="true" selection-start-line="126" selection-start-column="26" selection-end-line="126" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/Refused/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/UserCenter/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -667,14 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/Unrated/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="200" column="21" lean-forward="false" selection-start-line="200" selection-start-column="21" selection-end-line="200" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -695,14 +668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="102" column="31" lean-forward="true" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -735,18 +700,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/UserRight/index.jsx">
+    <entry file="file://$PROJECT_DIR$/src/component/Refused/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2508">
-          <caret line="119" column="94" lean-forward="true" selection-start-line="119" selection-start-column="94" selection-end-line="119" selection-end-column="94" />
+        <state relative-caret-position="154">
+          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="130" column="97" lean-forward="true" selection-start-line="130" selection-start-column="97" selection-end-line="130" selection-end-column="97" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/UserCenter/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#308#347#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/component/Unrated/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="101" column="51" lean-forward="true" selection-start-line="101" selection-start-column="51" selection-end-line="101" selection-end-column="51" />
+        <state relative-caret-position="550">
+          <caret line="123" column="45" lean-forward="true" selection-start-line="123" selection-start-column="45" selection-end-line="123" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Unrated/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="202" column="13" lean-forward="false" selection-start-line="202" selection-start-column="1" selection-end-line="202" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/UserRight/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="170" column="61" lean-forward="true" selection-start-line="170" selection-start-column="61" selection-end-line="170" selection-end-column="61" />
           <folding />
         </state>
       </provider>

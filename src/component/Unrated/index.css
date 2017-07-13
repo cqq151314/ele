@@ -200,3 +200,8 @@ li{
     color: #999;
     margin-left: 3px;
 }
+.active-unrated{
+    border:1px solid #0089dc;
+    color:#0089dc;
+    padding: 1px 3px;
+}

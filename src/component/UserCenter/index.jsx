@@ -5,7 +5,7 @@ import './index.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import '../../fonts/font-awesome.min.css';
-import Test from '../Test/index';
+// import Test from '../Test/index';
 import Ubrated from '../Unrated/index';
 import Refused from '../Refused/index';
 import OrderDetail from '../OrderDetail/index'
@@ -13,7 +13,7 @@ import '../UserLeft/index.css'
 import Search from '../Search/Search'
 import UserRight from '../UserRight/index'
 import orderThree from '../OrderThree/index'
-import {BrowserRouter as Router, Route, Link,NavLink } from 'react-router-dom'
+import {BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
 export default class profile extends Component {
     static propType = {
         listData: PropTypes.array,
