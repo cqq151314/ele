@@ -1,0 +1,40 @@
+*{
+  margin:0;
+  padding:0;
+}
+html,body{
+    font-family: '微软雅黑';
+}
+a{
+  text-decoration: none;
+  color:#000;
+}
+img{
+  display: block;
+}
+li{
+  list-style: none;
+}
+.refaused-title{
+    font-size: 18px;
+    font-weight: 700;
+}
+.refaused{
+    border: none;
+    overflow: hidden;
+    width:980px;
+    float: left;
+    padding-top: 27px;
+    padding-left: 30px;
+}
+.refaused-box{
+    background: url(../../images/bg.png) no-repeat  300px center;
+    line-height: 300px;
+    text-align: center;
+    color:#999;
+    font-size: 14px;
+}
+.refaused-box a{
+    color: #0089dc;
+    margin: 0 5px;
+}

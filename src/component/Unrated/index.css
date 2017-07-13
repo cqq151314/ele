@@ -22,16 +22,14 @@ li{
 .profile-three{
     border: none;
     overflow: hidden;
-    width:980px;
+    width:1010px;
     float: left;
     min-height: 600px;
     padding-top: 27px;
-    padding-left: 30px;
 }
 .order-pic{
     width:1010px;
     height: 54px;
-    margin-bottom: 10px;
     background:url("../../images/katong.png") no-repeat right top;
 }
 .pic-title{
@@ -187,7 +185,7 @@ li{
     margin-right: 0;
 }
 .order-page ul{
-    width:100px;
+    width:70px;
     float: right;
 }
 .order-page li{
@@ -195,4 +193,10 @@ li{
     padding:4px 7px;
     font-size: 12px;
     cursor: pointer;
+}
+.threeOrder-title span{
+    font-size: 12px;
+    font-weight: 400;
+    color: #999;
+    margin-left: 3px;
 }

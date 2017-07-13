@@ -106,7 +106,7 @@ export default class Userright extends Component {
                 <div className="profile-order">
                     <div className="tabnavigation">
                         <a className="tabnavigation-navitem active">最近订单</a>
-                        <a className="tabnavigation-rightitem profile-allorder" href="javaScript():">查看全部订单</a>
+                        <a className="tabnavigation-rightitem profile-allorder" href="/profile/orderThree/">查看全部订单></a>
                     </div>
                     <ul className="orderblock">
                         {

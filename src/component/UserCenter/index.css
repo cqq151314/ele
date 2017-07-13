@@ -1,26 +1,26 @@
 *{
-  margin:0;
-  padding:0;
+    margin:0;
+    padding:0;
 }
 html,body{
     font-family: '微软雅黑';
 }
 a{
-  text-decoration: none;
-  color:#000;
+    text-decoration: none;
+    color:#000;
 }
 img{
-  display: block;
+    display: block;
 }
 li{
-  list-style: none;
+    list-style: none;
 }
 .App {
-  text-align: center;
+    text-align: center;
 }
 .userCenter{
     width:1180px;
-    min-height:800px;
+    min-height:610px;
     margin:0 auto;
     background: #fff!important;
 }

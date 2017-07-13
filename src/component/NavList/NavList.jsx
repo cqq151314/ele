@@ -95,7 +95,7 @@ export default class Store extends Component {
                         {
                             this.state.types.map((item,index) =>{
                                 return (
-                                    <a className="excavator-filter-item" href="###"  style={{"background": index === this.state.current ? '#000' : '#fff'}} id={item.id}  key={item.id}  onClick={(e) =>{this.setState({ current: index });this.getSubType(item,index);this.getData(item.id+''+index)}}>{item.name}</a>
+                                    <a className="excavator-filter-item" href="###"  style={{"color": index === this.state.current ? '#fff' : '#666'}} id={item.id}  key={item.id}  onClick={(e) =>{this.setState({ current: index });this.getSubType(item,index);this.getData(item.id+''+index)}}>{item.name}</a>
                                 )
                             })
                         }
@@ -114,11 +114,11 @@ export default class Store extends Component {
                 {/*第三层数据*/}
                 <div className="box clearfix" style={{"display":this.state.loaddingDisplay==='none'?'block':'none'}}>
                     {
-                        this.state.boxData.map(item=>{
+                        this.state.boxData.map((item,index)=>{
                             return (
                                 <a href="###"  className="rstblock" key={item.id} id={item.id}>
                                     <div className="rstblock-logo">
-                                        <img width="70" height="70" alt="汉堡王（西安高新店）" src={require("../../images/hbw.jpg")} className="rstblock-logo-icon" />
+                                        <img width="70" height="70" alt="汉堡王（西安高新店）" src={require("../../images/"+index+".jpg")} className="rstblock-logo-icon" />
                                         <span>{item.time}分钟</span>
                                         <div className="elemeicon elemeicon-premiumsign rstblock-logo-premiumsign"></div>
                                     </div>

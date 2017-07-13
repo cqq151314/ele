@@ -9,7 +9,7 @@ export default class UserRight extends Component {
         super(props);
         this.state = {
             // pageSize 个数
-            pageSize:8,
+            pageSize:5,
             // 页码
             currentPage:1,
             // 数据长度
@@ -72,7 +72,7 @@ export default class UserRight extends Component {
         return (
             <div>
             <div className="profile-three" style={{"display":this.state.loaddingDisplay === 'none'?'block':'none'}}>
-                <h2 className="threeOrder-title">近三个月订单</h2>
+                <h2 className="threeOrder-title">待评价定单<span>带(<a style={{"color":"#f00"}}>*</a>)标志为必填项</span></h2>
                 <div className="order-pic"></div>
                 <p className="pic-title">热门话题，随时关注订单状态</p>
                 <div className="order-list">
@@ -86,7 +86,7 @@ export default class UserRight extends Component {
                             <li>操作</li>
                         </ul>
                         {
-                            this.state.data.map((item,index) =>{
+                            this.state.data.map(item =>{
                                 return (
                                     <li className="shop-item" key={item.id} id={item.id}>
                                         <ul className="shop-item-even">
@@ -95,7 +95,7 @@ export default class UserRight extends Component {
                                                 <p>{item.orderTime}</p>
                                             </li>
                                             <li className="order-icon">
-                                                <img src={require("../../images/"+index+".jpg")} alt=""/>
+                                                <img src={require("../../images/w.png")} alt=""/>
                                             </li>
                                             <li  className="order-detail" >
                                                 <h3>{item.title}</h3>
@@ -119,7 +119,7 @@ export default class UserRight extends Component {
                                             </li>
                                             <li className="order-backagain">
                                                 <p><Link to={"/profile/orderThree/id/"+ item.id } onClick={()=>{this.getDataDetail(item.id)}}>订单详情</Link></p>
-                                                <p><a href="/">再来一份</a></p>
+                                                <p><a href="###">再来一份</a></p>
                                             </li>
                                         </ul>
                                     </li>

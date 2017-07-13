@@ -6,12 +6,14 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import '../../fonts/font-awesome.min.css';
 import Test from '../Test/index';
+import Ubrated from '../Unrated/index';
+import Refused from '../Refused/index';
 import OrderDetail from '../OrderDetail/index'
 import '../UserLeft/index.css'
 import Search from '../Search/Search'
 import UserRight from '../UserRight/index'
 import orderThree from '../OrderThree/index'
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Link,NavLink } from 'react-router-dom'
 export default class profile extends Component {
     static propType = {
         listData: PropTypes.array,
@@ -74,7 +76,7 @@ export default class profile extends Component {
                     <ul className="profile-sidebar" style={{'marginTop':"0"}} >
                         <li className="profile-sidebar">
                             <h2 className="profile-sidebar-sectiontitle">
-                                <Link to="/profile/center/" className="active"><span className="fa fa-home"></span><span onClick={(e)=>{this.handClick(e)}}>个人中心</span></Link>
+                                <NavLink to="/profile/center/" activeStyle={{color: '##0089dc'}}><span className="fa fa-home"></span><span onClick={(e)=>{this.handClick(e)}}>个人中心</span></NavLink>
                             </h2>
                         </li>
                         <li  className="profile-sidebar">
@@ -82,9 +84,9 @@ export default class profile extends Component {
                                 <span className="fa fa-file-text-o"></span>我的订单
                             </h2>
                             <ul>
-                                <li><Link to="/profile/orderThree/" onClick={(e)=>{this.handClick(e)}}>近三个月订单</Link></li>
-                                <li><Link to="/profile/untated/"    onClick={(e)=>{this.handClick(e)}}>待评价订单</Link></li>
-                                <li><Link to="/profile/refused/"    onClick={(e)=>{this.handClick(e)}}>退单记录</Link></li>
+                                <li><NavLink to="/profile/orderThree/"  activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>近三个月订单</NavLink></li>
+                                <li><NavLink to="/profile/untated/"  activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>待评价订单</NavLink></li>
+                                <li><NavLink to="/profile/refused/" activeStyle={{color: '#0089dc'}}  onClick={(e)=>{this.handClick(e)}}>退单记录</NavLink></li>
                             </ul>
                         </li>
                         <li  className="profile-sidebar">
@@ -117,8 +119,8 @@ export default class profile extends Component {
                     <Route exact path="/profile" component={UserRight}/>
                     <Route path="/profile/center/" component={UserRight}/>
                     <Route exact path="/profile/orderThree/" component={orderThree}/>
-                    <Route path="/profile/untated/" component={Test}/>
-                    <Route path="/profile/refused/" component={Test}/>
+                    <Route path="/profile/untated/" component={Ubrated}/>
+                    <Route path="/profile/refused/" component={Refused}/>
                     <Route exact path="/profile/orderThree/id/:id" component={OrderDetail}/>
                     <Route exact path="/profile/order/id/:id" component={OrderDetail}/>
                 </div>
