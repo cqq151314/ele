@@ -29,10 +29,12 @@ li{
     padding-left: 30px;
 }
 .order-pic{
-    width:1010px;
+    width: 946px;
     height: 54px;
     margin-bottom: 10px;
+    margin-top: -34px;
     background:url("../../images/katong.png") no-repeat right top;
+    padding-right: 30px;
 }
 .pic-title{
     text-align: right;

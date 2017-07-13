@@ -114,7 +114,7 @@ export default class Userright extends Component {
                                 return (
                                     <li  className="orderblock-item" id={item.id} key={item.id}>
                                         <div className="orderblock-shop">
-                                            <div className="orderblock-shop-l"><a href={item.id}><img src={require("../../images/w.png")} alt=""/></a></div>
+                                            <div className="orderblock-shop-l"><a href={item.id}><img src={require("../../images/"+item.id+".jpg")} alt=""/></a></div>
                                             <div className="orderblock-shop-r">
                                                 <h2><a href={item.id}>{item.title}</a></h2>
                                                 <p className="shop-detail">肉夹馍1份 / 皮蛋瘦肉粥1份</p>

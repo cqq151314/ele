@@ -19,7 +19,7 @@ module.exports = () => {
             id: i,
             type: typeList[j],
             title: titleList[i],
-            url: '../../images/6.jpg',
+            url: i,
             Praise: 10,
             sales: '月销1211单',
             Deliveryfee: '配送费¥3',

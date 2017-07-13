@@ -9,7 +9,7 @@ export default class UserRight extends Component {
         super(props);
         this.state = {
             // pageSize 个数
-            pageSize:8,
+            pageSize:10,
             // 页码
             currentPage:1,
             // 数据长度
@@ -95,7 +95,7 @@ export default class UserRight extends Component {
                                                 <p>{item.orderTime}</p>
                                             </li>
                                             <li className="order-icon">
-                                                <img src={require("../../images/"+index+".jpg")} alt=""/>
+                                                <img src={require("../../images/"+item.id+".jpg")} alt=""/>
                                             </li>
                                             <li  className="order-detail" >
                                                 <h3>{item.title}</h3>

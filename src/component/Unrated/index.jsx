@@ -95,7 +95,7 @@ export default class UserRight extends Component {
                                                 <p>{item.orderTime}</p>
                                             </li>
                                             <li className="order-icon">
-                                                <img src={require("../../images/w.png")} alt=""/>
+                                                <img src={require("../../images/"+item.id+".jpg")} alt=""/>
                                             </li>
                                             <li  className="order-detail" >
                                                 <h3>{item.title}</h3>
