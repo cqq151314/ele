@@ -17,6 +17,9 @@ class BsStore {
     getOrder(_page,_limit){
         return  fetch(`orders/${'?_page='+ _page+'&_limit='+_limit}`);
     }
+    refusedData(){
+        return  fetch('refused');
+    }
 }
 const bsStore = new BsStore();
 export default bsStore;
