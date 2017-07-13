@@ -17,7 +17,6 @@ li{
 }
 .Order-detail{
     width: 980px;
-    height:500px;
     float: left;
     padding-top:22px;
     padding-left: 30px;
@@ -212,6 +211,7 @@ li{
     width:53px;
     display: block;
     float: left;
+    text-align: center;
 }
 .orderprogress-item span:nth-child(3){
     width:161px;
@@ -262,4 +262,17 @@ li{
     width:1010px;
     height:7px;
     background: url(../../images/xian.png) repeat left bottom;
+}
+.detail-products-r a:nth-child(2):hover{
+    color:#ff9c00;
+}
+.noCollect{
+    display: none;
+}
+.detail-products-r:hover  .noCollect{
+     display: inline-block;
+      color:#ff9c00;
+ }
+.detail-products-r:hover  .Collect{
+    display: none;
 }

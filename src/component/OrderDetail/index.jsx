@@ -58,7 +58,7 @@ export default class OrderDetail extends Component {
                         <p>商家电话：{this.state.detailData.Merchant}</p>
                     </div>
                     <div className="detail-products-r">
-                        <a><span className="fa fa-star-o"></span>已收藏</a>
+                        <a ><span className="fa fa-star-o"></span><i className="Collect">已收藏</i><i className="noCollect">取消</i></a>
                         <a><span className="fa fa-star-o"></span>投诉</a>
                     </div>
                 </div>
