@@ -282,7 +282,7 @@ module.exports = () => {
         },
         {
             createtime:'2017-7-13',
-            datetime:"2017-7-7, 2017-7-14",
+            datetime:"1",
             trade_type:4,
             type:"支付失败退款",
             changemoney:'-',
@@ -291,7 +291,7 @@ module.exports = () => {
         },
         {
             createtime:'2017-7-14',
-            datetime:"2017-7-14, 2017-7-15",
+            datetime:"7",
             trade_type:5,
             type:"订单退款",
             changemoney:'-',
@@ -300,7 +300,7 @@ module.exports = () => {
         },
         {
             createtime:'2017-6-28',
-            datetime:"2017-7-7, 2017-7-14",
+            datetime:"1",
             trade_type:6,
             type:"提现",
             changemoney:'-',

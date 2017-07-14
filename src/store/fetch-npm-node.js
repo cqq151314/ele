@@ -36,7 +36,8 @@ class BsStore {
     }
     // 请求账户余额数据
     getBalance(trade_type,datetime){
-        return  fetch(`/balance/${typeof trade_type !== 'undefined' ? '?trade_type='+ trade_type : ''&typeof datetime !== 'undefined' ? '?datetime='+ datetime : ''}`);
+        // return  fetch(`balance/${typeof trade_type !== 'undefined' ? '?trade_type='+ trade_type : ''+'&datetime='+datetime}`);
+        return  fetch(`orders/${'?trade_type='+ trade_type+'&datetime='+datetime}`);
     }
 }
 const bsStore = new BsStore();

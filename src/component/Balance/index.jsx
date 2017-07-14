@@ -16,7 +16,7 @@ export default class Balance extends Component {
     }
     // 初始化
     initData(){
-        bsStore.getBalance()
+        bsStore.getBalance(1,1)
             .then(res =>{
                 res.json().then(data => {
                     this.setState({"data":data});
@@ -26,7 +26,7 @@ export default class Balance extends Component {
     // 点击分类，分类选项切换
     classcifyClick(e){
         this.setState({"checked":e.target.innerHTML});
-        bsStore.getBalance(1,15)
+        bsStore.getBalance(1,1)
             .then(res =>{
                 res.json().then(data => {
                    this.setState({"data":data});
@@ -36,7 +36,7 @@ export default class Balance extends Component {
     // 点击时间，时间切换
     timeClick(e){
         this.setState({"timeChecked":e.target.innerHTML});
-        bsStore.getBalance(1,15)
+        bsStore.getBalance(1,1)
             .then(res =>{
                 res.json().then(data => {
                     this.setState({"data":data});
