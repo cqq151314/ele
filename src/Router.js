@@ -15,6 +15,7 @@ class MyRouter extends Component {
                             <Route path="/profile/untated/" exact component={profile}/>
                             <Route path="/profile/refused/" exact component={profile}/>
                             <Route path="/profile/hongbao/" exact component={profile}/>
+                            <Route path="/profile/Balance/" exact component={profile}/>
                             <Route  path="/profile/orderThree/:id"  component={profile}/>
                         </div>
                     </Router>

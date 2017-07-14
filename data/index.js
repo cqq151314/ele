@@ -254,6 +254,6 @@ module.exports = () => {
 
     data.types = types;
     data.refused = refused;
-    data.hongbao=hongbao
+    data.hongbao=hongbao;
     return data
 }
