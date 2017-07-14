@@ -2,7 +2,7 @@
  * Created by qingqing.chen on 2017/6/23.
  */
 module.exports = () => {
-    const data = { shops: [], types:[],orders:[],refused:[],hongbao:[] };
+    const data = { shops: [], types:[],orders:[],refused:[],hongbao:[],balance:[],};
 
     let shop = {};
     const titleList = ['霸王牛肉面·专业面食外卖', '鸡将军黄焖鸡（高新店)', '赵家腊汁肉（高新旗舰店）', '这家店不错牛肉面', '神龙冒菜', '川魂冒牌冒菜', '小竹签烤肉（枫韵蓝湾店）', '大自在火锅（丰庆店）', '老碗（太白店）', '乍见之欢炒菜馆','麻辣私厨','一品小厨','川湘源川菜馆',
@@ -251,9 +251,67 @@ module.exports = () => {
             variety: null,
         }
     ];
+    // 账户余额数据
+    let balance = [
+        {
+            createtime:'2017-7-01',
+            datetime:"15",
+            trade_type:1,
+            type:"充值",
+            changemoney:'-',
+            totalmoney:'30.00',
+            id:"001",
+        },
+        {
+            createtime:'2017-5-30',
+            datetime:"30",
+            trade_type:2,
+            type:"余额消费",
+            changemoney:'-',
+            totalmoney:'70.00',
+            id:"002",
+        },
+        {
+            createtime:'2017-7-07',
+            datetime:"1",
+            trade_type:3,
+            type:"第三方支付消费",
+            changemoney:'-',
+            totalmoney:'100.00',
+            id:"003",
+        },
+        {
+            createtime:'2017-7-13',
+            datetime:"2017-7-7, 2017-7-14",
+            trade_type:4,
+            type:"支付失败退款",
+            changemoney:'-',
+            totalmoney:'10.00',
+            id:"004",
+        },
+        {
+            createtime:'2017-7-14',
+            datetime:"2017-7-14, 2017-7-15",
+            trade_type:5,
+            type:"订单退款",
+            changemoney:'-',
+            totalmoney:'5.00',
+            id:"005",
+        },
+        {
+            createtime:'2017-6-28',
+            datetime:"2017-7-7, 2017-7-14",
+            trade_type:6,
+            type:"提现",
+            changemoney:'-',
+            totalmoney:'300.00',
+            id:"006",
+        },
+    ];
 
     data.types = types;
     data.refused = refused;
-    data.hongbao=hongbao;
+    data.hongbao = hongbao;
+    data.balance = balance;
     return data
 }
