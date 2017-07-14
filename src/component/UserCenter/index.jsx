@@ -13,6 +13,7 @@ import '../UserLeft/index.css'
 import Search from '../Search/Search'
 import UserRight from '../UserRight/index'
 import orderThree from '../OrderThree/index'
+import HongBao from '../HongBao/index'
 import {BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
 export default class profile extends Component {
     static propType = {
@@ -97,7 +98,7 @@ export default class profile extends Component {
                                 <span className="fa fa-money"></span>我的资产
                             </h2>
                             <ul>
-                                <li><a>我的红包</a></li>
+                                <li><NavLink to="/profile/hongbao/" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>我的红包</NavLink></li>
                                 <li><a>账户余额</a></li>
                                 <li><a>我的积分</a></li>
                             </ul>
@@ -124,6 +125,7 @@ export default class profile extends Component {
                     <Route exact path="/profile/orderThree/" component={orderThree}/>
                     <Route path="/profile/untated/" component={Ubrated}/>
                     <Route path="/profile/refused/" component={Refused}/>
+                    <Route path="/profile/hongbao/" component={HongBao}/>
                     <Route exact path="/profile/orderThree/id/:id" component={OrderDetail}/>
                     <Route exact path="/profile/order/id/:id" component={OrderDetail}/>
                 </div>

@@ -2,7 +2,7 @@
  * Created by qingqing.chen on 2017/6/23.
  */
 module.exports = () => {
-    const data = { shops: [], types:[],orders:[],refused:[] };
+    const data = { shops: [], types:[],orders:[],refused:[],hongbao:[] };
 
     let shop = {};
     const titleList = ['霸王牛肉面·专业面食外卖', '鸡将军黄焖鸡（高新店)', '赵家腊汁肉（高新旗舰店）', '这家店不错牛肉面', '神龙冒菜', '川魂冒牌冒菜', '小竹签烤肉（枫韵蓝湾店）', '大自在火锅（丰庆店）', '老碗（太白店）', '乍见之欢炒菜馆','麻辣私厨','一品小厨','川湘源川菜馆',
@@ -144,9 +144,116 @@ module.exports = () => {
         data.orders.push(order);
     }
     // 退单表
-    let refused = []
+    let refused = [];
+
+    // 红包
+    let hongbao = [
+        {
+            amount:6,
+            begin_date:"2017-7-12T00:00:00+0800",
+            description: ["满6元可用", "限尾号 6055 的手机使用", "2017-07-12 至 2017-07-18"],
+            end_date: "2017-7-18T23:59:59+0800",
+            hongbao_type: "GENERAL",
+            id: 11,
+            name: "普通红包",
+            sn: "201707120207253677157166252406",
+            source: "walle_hongbao",
+            status: 0,
+            subscriber_line_number: "6055",
+            sum_condition: 6,
+            used_amount: 0,
+            used_at: "2017-07-12T02:07:09+0800",
+            variety: null,
+        },
+        {
+            amount:30,
+            begin_date:"2017-7-12T00:00:00+0800",
+            description: ["满30元可用", "限尾号 6055 的手机使用", "2017-07-12 至 2017-07-18"],
+            end_date: "2017-7-18T23:59:59+0800",
+            hongbao_type: "GENERAL",
+            id:12,
+            name: "普通红包",
+            sn: "201707120207253677157364366624",
+            source: "walle_hongbao",
+            status: 0,
+            subscriber_line_number: "6055",
+            sum_condition: 30,
+            used_amount: 0,
+            used_at: "2017-07-12T02:07:09+0800",
+            variety: null,
+        },
+        {
+            amount:10,
+            begin_date:"2017-7-12T00:00:00+0800",
+            description: ["满30元可用", "限尾号 6055 的手机使用", "2017-07-12 至 2017-07-18"],
+            end_date: "2017-7-17T00:00:00+0800",
+            hongbao_type: "GENERAL",
+            id:13,
+            name: "普通红包",
+            sn: "201707120207253677157364366624",
+            source: "walle_hongbao",
+            status: 0,
+            subscriber_line_number: "6055",
+            sum_condition: 30,
+            used_amount: 0,
+            used_at: "2017-07-12T02:07:09+0800",
+            variety: null,
+        },
+        {
+            amount:10,
+            begin_date:"2017-7-12T00:00:00+0800",
+            description: ["满30元可用", "限尾号 6055 的手机使用", "2017-07-12 至 2017-07-18"],
+            end_date: "2017-7-07T23:59:59+0800",
+            hongbao_type: "GENERAL",
+            id:14,
+            name: "普通红包",
+            sn: "201707120207253677157364366624",
+            source: "walle_hongbao",
+            status: 0,
+            subscriber_line_number: "6055",
+            sum_condition: 30,
+            used_amount: 0,
+            used_at: "2017-07-12T02:07:09+0800",
+            variety: null,
+        },
+        {
+            amount:20,
+            begin_date:"2017-7-12T00:00:00+0800",
+            description: ["满50元可用", "限尾号 6055 的手机使用", "2017-07-12 至 2017-07-18"],
+            end_date: "2017-7-07T23:59:59+0800",
+            hongbao_type: "GENERAL",
+            id:15,
+            name: "普通红包",
+            sn: "201707120207253677157364366624",
+            source: "walle_hongbao",
+            status: 0,
+            subscriber_line_number: "6055",
+            sum_condition: 30,
+            used_amount: 0,
+            used_at: "2017-07-12T02:07:09+0800",
+            variety: null,
+        },
+        {
+            amount:15,
+            begin_date:"2017-7-02T00:00:00+0800",
+            description: ["满70元可用", "限尾号 6055 的手机使用", "2017-07-02 至 2017-07-07"],
+            end_date: "2017-7-07T23:59:59+0800",
+            hongbao_type: "GENERAL",
+            id:16,
+            name: "普通红包",
+            sn: "201707120207253677157364366624",
+            source: "walle_hongbao",
+            status: 0,
+            subscriber_line_number: "6055",
+            sum_condition: 30,
+            used_amount: 0,
+            used_at: "2017-07-12T02:07:09+0800",
+            variety: null,
+        }
+    ];
 
     data.types = types;
     data.refused = refused;
+    data.hongbao=hongbao
     return data
 }

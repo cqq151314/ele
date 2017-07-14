@@ -1,0 +1,169 @@
+*{
+  margin:0;
+  padding:0;
+}
+html,body{
+    font-family: '微软雅黑';
+}
+a{
+  text-decoration: none;
+  color:#000;
+}
+img{
+  display: block;
+}
+li{
+  list-style: none;
+}
+.hongbao-box{
+    width:980px;
+    height:580px;
+    float: left;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+.hongbao-nav a{
+    display: inline-block;
+    margin-bottom: -2px;
+    padding: 0 10px;
+    height: 27px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #666;
+}
+.hongbao-nav{
+    margin-bottom: 20px;
+}
+.hongbao-active{
+    font-weight: 700;
+    border-bottom: 3px solid #0089dc;
+}
+.hongbao-list-available{
+    width:980px;
+    height:auto;
+    min-height: 100px;
+}
+.hongbao-list-available li{
+    width:306px;
+    height:94px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    float: left;
+}
+.hongbao-list-available .hongbao-li-left{
+    float: left;
+    width:105px;
+    height:94px;
+    background: url(../../images/hongbao.png) no-repeat left top;
+}
+.hongbao-list-available .hongbao-li-left span{
+    display: inline-block;
+    width: 105px;
+    padding-top: 14px;
+    line-height: 40px;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: arial;
+    white-space: nowrap;
+    word-spacing: -4px;
+    color:#fff;
+    text-align: center;
+}
+.hongbao-list-available .hongbao-li-left span i:nth-child(2){
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+}
+.hongbao-list-available .hongbao-li-left  p{
+    margin:0 auto;
+    width: 80px;
+    text-align: center;
+    line-height: 20px;
+    margin: 2px auto 0;
+    font-size: 12px;
+    background-color: #fff;
+    padding: 0 3px;
+    color:#f74342;
+}
+.hongbao-list-available .hongbao-li-right{
+    width:190px;
+    height: 94px;
+    float: right;
+    background: url(../../images/hongbao.png)no-repeat 130px -216px;
+}
+.hongbao-list-available .hongbao-name{
+    width:190px;
+    font-size: 14px;
+    line-height: 38px;
+    color: #333;
+    font-weight: normal;
+}
+.hongbao-list-available .hongbao-li-right p{
+    line-height: 18px;
+    color: #999;
+    font-size: 12px;
+}
+.hongbao-list-unavailable{
+    width:980px;
+    height:auto;
+    min-height: 100px;
+}
+.hongbao-list-unavailable li{
+    width:306px;
+    height:94px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    float: left;
+}
+.hongbao-list-unavailable .hongbao-li-left{
+    float: left;
+    width:105px;
+    height:94px;
+    background: url(../../images/hongbao.png) no-repeat left -105px;
+}
+.hongbao-list-unavailable .hongbao-li-left span{
+    display: inline-block;
+    width: 105px;
+    padding-top: 14px;
+    line-height: 40px;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: arial;
+    white-space: nowrap;
+    word-spacing: -4px;
+    color:#fff;
+    text-align: center;
+}
+.hongbao-list-unavailable .hongbao-li-left span i:nth-child(2){
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+}
+.hongbao-list-unavailable .hongbao-li-left  p{
+    margin:0 auto;
+    width: 80px;
+    text-align: center;
+    line-height: 20px;
+    margin: 2px auto 0;
+    font-size: 12px;
+    background-color: #fff;
+    padding: 0 3px;
+    color:#999;
+}
+.hongbao-list-unavailable .hongbao-li-right{
+    width:190px;
+    height: 94px;
+    float: right;
+}
+.hongbao-list-unavailable .hongbao-name{
+    width:190px;
+    font-size: 14px;
+    line-height: 38px;
+    color: #333;
+    font-weight: normal;
+}
+.hongbao-list-unavailable .hongbao-li-right p{
+    line-height: 18px;
+    color: #999;
+    font-size: 12px;
+}
