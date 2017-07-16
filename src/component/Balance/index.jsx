@@ -8,7 +8,7 @@ export default class Balance extends Component {
             // 是否选中
             checked:"全部",
             // 时间 是否选中
-            timeChecked:'全部',
+            timeChecked:'',
             // 数据
             data:[],
         }
@@ -16,7 +16,7 @@ export default class Balance extends Component {
     }
     // 初始化
     initData(){
-        bsStore.getBalance(1,1)
+        bsStore.getBalance()
             .then(res =>{
                 res.json().then(data => {
                     this.setState({"data":data});
@@ -26,19 +26,31 @@ export default class Balance extends Component {
     // 点击分类，分类选项切换
     classcifyClick(e){
         this.setState({"checked":e.target.innerHTML});
-        bsStore.getBalance(1,1)
-            .then(res =>{
-                res.json().then(data => {
-                   this.setState({"data":data});
+        if(e.target.innerHTML === "全部"){
+            this.setState({"timeChecked":""});
+            bsStore.getBalance()
+                .then(res =>{
+                    res.json().then(data => {
+                        this.setState({"data":data});
+                    });
                 });
-            });
+        }else{
+            bsStore.getBalance(e.target.innerHTML)
+                .then(res =>{
+                    res.json().then(data => {
+                        console.log(data);
+                        this.setState({"data":data});
+                    });
+                });
+        }
     }
     // 点击时间，时间切换
     timeClick(e){
         this.setState({"timeChecked":e.target.innerHTML});
-        bsStore.getBalance(1,1)
+        bsStore.getBalance(this.state.checked,e.target.innerHTML)
             .then(res =>{
                 res.json().then(data => {
+                    console.log(data);
                     this.setState({"data":data});
                 });
             });

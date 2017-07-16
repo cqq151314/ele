@@ -35,9 +35,14 @@ class BsStore {
         return  fetch(`/hongbao/${'?_sort=end_date&_order=end_date'}`);
     }
     // 请求账户余额数据
-    getBalance(trade_type,datetime){
-        // return  fetch(`balance/${typeof trade_type !== 'undefined' ? '?trade_type='+ trade_type : ''+'&datetime='+datetime}`);
-        return  fetch(`orders/${'?trade_type='+ trade_type+'&datetime='+datetime}`);
+    getBalance(type,datetime){
+        if(type === undefined && datetime === undefined){
+            return  fetch('balance');
+        } else if(type != undefined && datetime === undefined ){
+            return  fetch(`balance/${'?type='+ type}`);
+        }else{
+            return  fetch(`balance/${'?type='+ type+'&datetime='+datetime}`);
+        }
     }
 }
 const bsStore = new BsStore();

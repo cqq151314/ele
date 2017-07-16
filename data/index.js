@@ -255,7 +255,7 @@ module.exports = () => {
     let balance = [
         {
             createtime:'2017-7-01',
-            datetime:"15",
+            datetime:"近15天",
             trade_type:1,
             type:"充值",
             changemoney:'-',
@@ -264,7 +264,7 @@ module.exports = () => {
         },
         {
             createtime:'2017-5-30',
-            datetime:"30",
+            datetime:"1个月",
             trade_type:2,
             type:"余额消费",
             changemoney:'-',
@@ -273,8 +273,8 @@ module.exports = () => {
         },
         {
             createtime:'2017-7-07',
-            datetime:"1",
-            trade_type:3,
+            datetime:"今天",
+            trade_type:1,
             type:"第三方支付消费",
             changemoney:'-',
             totalmoney:'100.00',
@@ -282,8 +282,8 @@ module.exports = () => {
         },
         {
             createtime:'2017-7-13',
-            datetime:"1",
-            trade_type:4,
+            datetime:"今天",
+            trade_type:1,
             type:"支付失败退款",
             changemoney:'-',
             totalmoney:'10.00',
@@ -291,7 +291,7 @@ module.exports = () => {
         },
         {
             createtime:'2017-7-14',
-            datetime:"7",
+            datetime:"近7天",
             trade_type:5,
             type:"订单退款",
             changemoney:'-',
@@ -300,7 +300,7 @@ module.exports = () => {
         },
         {
             createtime:'2017-6-28',
-            datetime:"1",
+            datetime:"近7天",
             trade_type:6,
             type:"提现",
             changemoney:'-',
