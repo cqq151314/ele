@@ -35,10 +35,15 @@ class BsStore {
         return  fetch(`/hongbao/${'?_sort=end_date&_order=end_date'}`);
     }
     // 请求账户余额数据
+    /**
+     *  请求账户余额数据
+     *  @param type  账户类型
+     *  @param _limit  选择的时间
+     */
     getBalance(type,datetime){
         if(type === undefined && datetime === undefined){
             return  fetch('balance');
-        } else if(type != undefined && datetime === undefined ){
+        } else if(type !== undefined && datetime === undefined ){
             return  fetch(`balance/${'?type='+ type}`);
         }else{
             return  fetch(`balance/${'?type='+ type+'&datetime='+datetime}`);

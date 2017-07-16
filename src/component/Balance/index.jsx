@@ -23,6 +23,7 @@ export default class Balance extends Component {
                 });
             });
     }
+
     // 点击分类，分类选项切换
     classcifyClick(e){
         this.setState({"checked":e.target.innerHTML});
@@ -38,24 +39,22 @@ export default class Balance extends Component {
             bsStore.getBalance(e.target.innerHTML)
                 .then(res =>{
                     res.json().then(data => {
-                        console.log(data);
                         this.setState({"data":data});
                     });
                 });
         }
     }
+
     // 点击时间，时间切换
     timeClick(e){
         this.setState({"timeChecked":e.target.innerHTML});
         bsStore.getBalance(this.state.checked,e.target.innerHTML)
             .then(res =>{
                 res.json().then(data => {
-                    console.log(data);
                     this.setState({"data":data});
                 });
             });
     }
-
     render() {
         return (
             <div>

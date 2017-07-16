@@ -307,6 +307,15 @@ module.exports = () => {
             totalmoney:'300.00',
             id:"006",
         },
+        {
+            createtime:'2017-6-28',
+            datetime:"今天",
+            trade_type:6,
+            type:"提现",
+            changemoney:'-',
+            totalmoney:'300.00',
+            id:"007",
+        }
     ];
 
     data.types = types;
