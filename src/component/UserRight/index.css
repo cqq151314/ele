@@ -175,6 +175,7 @@ li{
 .tabnavigation {
     border-bottom: 2px solid #f4f4f4;
     position: relative;
+    text-align: left;
 }
 .tabnavigation-navitem.active {
     font-weight: 700;

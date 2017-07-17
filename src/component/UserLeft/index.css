@@ -76,6 +76,8 @@ li span.fa-user-md{
 }
 .profile-sidebar ul li{
     padding: 4px 0;
+    text-align: left;
+    padding-left: 31px;
 }
 .profile-sidebar ul{
     padding-left: 30px;

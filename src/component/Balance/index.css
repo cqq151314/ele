@@ -24,11 +24,13 @@ li{
 }
 .balance-title{
     font-size: 18px;
+    text-align: left;
 }
 .count-money{
     width:980px;
     height:76px;
     margin:20px 0;
+    text-align: left;
 }
 .count-detail span:nth-child(1){
     display: inline-block;
@@ -62,6 +64,7 @@ li{
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 14px;
+    text-align: left;
 }
 .classification{
     width:980px;

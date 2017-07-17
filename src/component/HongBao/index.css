@@ -33,6 +33,7 @@ li{
 }
 .hongbao-nav{
     margin-bottom: 20px;
+    text-align: left;
 }
 .hongbao-active{
     font-weight: 700;
@@ -97,11 +98,13 @@ li{
     line-height: 38px;
     color: #333;
     font-weight: normal;
+    text-align: left;
 }
 .hongbao-list-available .hongbao-li-right p{
     line-height: 18px;
     color: #999;
     font-size: 12px;
+    text-align: left;
 }
 .hongbao-list-unavailable{
     width:980px;
@@ -142,13 +145,13 @@ li{
 .hongbao-list-unavailable .hongbao-li-left  p{
     margin:0 auto;
     width: 80px;
-    text-align: center;
     line-height: 20px;
     margin: 2px auto 0;
     font-size: 12px;
     background-color: #fff;
     padding: 0 3px;
     color:#999;
+    text-align: left;
 }
 .hongbao-list-unavailable .hongbao-li-right{
     width:190px;
@@ -161,9 +164,11 @@ li{
     line-height: 38px;
     color: #333;
     font-weight: normal;
+    text-align: left;
 }
 .hongbao-list-unavailable .hongbao-li-right p{
     line-height: 18px;
     color: #999;
     font-size: 12px;
+    text-align: left;
 }

@@ -19,10 +19,10 @@ li{
     text-align: center;
 }
 .userCenter{
-    width:1180px;
-    min-height:610px;
-    margin:0 auto;
+    width: 170PX;
+    min-height: 610px;
     background: #fff!important;
+    FLOAT: LEFT;
 }
 .active{
     color:#0089dc;

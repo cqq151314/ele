@@ -66,9 +66,6 @@ export default class UserRight extends Component {
     componentDidMount(){
         this.initData(this.state.currentPage,this.state.pageSize);
     }
-    componentWillUnmount(){
-        this.clear(this.state.dataSource);
-    }
     render() {
         return (
             <div>

@@ -13,7 +13,7 @@ export default class Header extends Component {
                                 <img src={logo} className="App-logo" alt="logo" />
                             </h1>
                             <a href="/"  className="header-a  header-hover">首页</a>
-                            <a href="/profile"  className="header-a">我的订单</a>
+                            <a href="/profile/orderThree/"  className="header-a">我的订单</a>
                             <a href="/"  className="header-a">加盟合作</a>
                         </div>
                         <div className="App-header-con-r">
