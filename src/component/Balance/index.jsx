@@ -23,6 +23,7 @@ export default class Balance extends Component {
                 });
             });
     }
+
     // 点击分类，分类选项切换
     classcifyClick(e){
         this.setState({"checked":e.target.innerHTML});
@@ -43,6 +44,7 @@ export default class Balance extends Component {
                 });
         }
     }
+
     // 点击时间，时间切换
     timeClick(e){
         this.setState({"timeChecked":e.target.innerHTML});

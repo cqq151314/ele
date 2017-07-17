@@ -34,6 +34,7 @@ class BsStore {
     getHongBao(){
         return  fetch(`/hongbao/${'?_sort=end_date&_order=end_date'}`);
     }
+    // 请求账户余额数据
     /**
      *  请求账户余额数据
      *  @param type  账户类型
