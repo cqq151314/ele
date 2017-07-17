@@ -64,7 +64,7 @@ export default class Balance extends Component {
     }
     // 组件渲染后初始化数据
     componentDidMount(){
-        this.initData();
+    this.initData();
     }
 
     render() {

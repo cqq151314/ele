@@ -61,7 +61,6 @@ export default class UserRight extends Component {
                 });
         },500)
     }
-
      // 组件渲染后初始化数据
     componentDidMount(){
         this.initData(this.state.currentPage,this.state.pageSize);

@@ -25,7 +25,7 @@ export default class UserRight extends Component {
      *  @param currentPage  当前页码
      *  @param pageSize  每页显示商品个数
      */
-    initData(currentPage,pageSize){
+   initData(currentPage,pageSize){
         bsStore.getOrder(currentPage, pageSize)
             .then(res => {
                 res.json().then(data => {
@@ -35,37 +35,39 @@ export default class UserRight extends Component {
     }
     // 点击前一页
     PreClick(){
-     if(this.state.currentPage > 1) {
-         this.setState({'currentPage': this.state.currentPage - 1});
-         let page = this.state.currentPage - 1;
-         this.setState({"loaddingDisplay":'block'});
-         bsStore.getOrder(page, this.state.pageSize)
-             .then(res => {
-                 res.json().then(data => {
-                         this.setState({"dataSource": data});
-                 });
-                 this.setState({"loaddingDisplay":'none'});
-             })
-     }
+         if(this.state.currentPage > 1) {
+             this.setState({'currentPage': this.state.currentPage - 1});
+             let page = this.state.currentPage - 1;
+             this.setState({"loaddingDisplay":'block'});
+             bsStore.getOrder(page, this.state.pageSize)
+                 .then(res => {
+                     res.json().then(data => {
+                             this.setState({"dataSource": data});
+                     });
+                     this.setState({"loaddingDisplay":'none'});
+                 })
+         }
     }
-
     // 点击后一页
     NextClick(){
-    if(this.state.currentPage < this.state.pageLength){
-        let page = this.state.currentPage + 1;
-        this.setState({"loaddingDisplay":'block'});
-        this.setState({'currentPage': this.state.currentPage + 1});
-            bsStore.getOrder(page, this.state.pageSize)
-                .then(res => {
-                    res.json().then(data => {
-                        this.setState({"dataSource": data});
-                    });
-                    this.setState({"loaddingDisplay":'none'});
-                })
-        }
+        if(this.state.currentPage < this.state.pageLength){
+            let page = this.state.currentPage + 1;
+            this.setState({"loaddingDisplay":'block'});
+            this.setState({'currentPage': this.state.currentPage + 1});
+                bsStore.getOrder(page, this.state.pageSize)
+                    .then(res => {
+                        res.json().then(data => {
+                            this.setState({"dataSource": data});
+                        });
+                        this.setState({"loaddingDisplay":'none'});
+                    })
+            }
     }
     componentDidMount(){
         this.initData(this.state.currentPage,this.state.pageSize);
+    }
+    componentWillUnmount(){
+        this.clear(this.state.dataSource);
     }
     render() {
         return (
