@@ -36,7 +36,8 @@ export default class Balance extends Component {
                     });
                 });
         }else{
-            bsStore.getBalance(e.target.innerHTML)
+            this.setState({timeChecked:"今天"});
+            bsStore.getBalance(e.target.innerHTML,this.state.timeChecked)
                 .then(res =>{
                     res.json().then(data => {
                         this.setState({"data":data});
@@ -44,7 +45,6 @@ export default class Balance extends Component {
                 });
         }
     }
-
     // 点击时间，时间切换
     timeClick(e){
         this.setState({"timeChecked":e.target.innerHTML});

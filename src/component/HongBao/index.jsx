@@ -5,8 +5,10 @@ export default class HongBao extends Component {
     constructor(props){
         super(props);
         this.state={
-            // 显示/隐藏
-            isShow:true,
+            // 可用红包
+            effective:true,
+            // 过期红包
+            unavailableClick:false,
             // 可用红包数据
             data:[],
             // 过期红包数据
@@ -37,18 +39,24 @@ export default class HongBao extends Component {
 
     }
     // 可用红包和历史红包进行切换
-    onClick(){
-        this.setState({"isShow":!this.state.isShow});
+    effectiveClick(){
+        this.setState({"effective":true});
+        this.setState({"unavailableClick":false});
+    }
+    // 不可用红包
+    unavailableClick(){
+        this.setState({"unavailableClick":true});
+        this.setState({"effective":false});
     }
     render() {
         return (
             <div>
                 <div className="hongbao-box">
                     <h2 className="hongbao-nav">
-                        <a href="###" className={this.state.isShow === true ? "hongbao-active":'' } onClick={()=>{this.onClick()}}>可用红包</a>
-                        <a href="###" className={this.state.isShow === false ? "hongbao-active":''} onClick={()=>{this.onClick()}}>历史红包</a>
+                        <a href="###" className={this.state.effective === true ? "hongbao-active":'' } onClick={()=>{this.effectiveClick()}}>可用红包</a>
+                        <a href="###" className={this.state.unavailableClick === true ? "hongbao-active":''} onClick={()=>{this.unavailableClick()}}>历史红包</a>
                     </h2>
-                    <ul className="hongbao-list-available" style={{"display":this.state.isShow === true ? "block":'none'}}>
+                    <ul className="hongbao-list-available" style={{"display":this.state.effective === true ? "block":'none'}}>
                         {
                             this.state.data.map(item =>{
                                 return (
@@ -68,7 +76,7 @@ export default class HongBao extends Component {
                             })
                         }
                     </ul>
-                    <ul className="hongbao-list-unavailable"  style={{"display":this.state.isShow === false ? "block":'none'}}>
+                    <ul className="hongbao-list-unavailable"  style={{"display":this.state.unavailableClick === true ? "block":'none'}}>
                         {
                             this.state.historyData.map(item =>{
                                 return (
