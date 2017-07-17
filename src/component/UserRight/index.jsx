@@ -52,7 +52,7 @@ export default class Userright extends Component {
 
     // 点击后一页
     NextClick(){
-    if(this.state.currentPage < this.state.pageLength) {
+    if(this.state.currentPage < this.state.pageLength){
         let page = this.state.currentPage + 1;
         this.setState({"loaddingDisplay":'block'});
         this.setState({'currentPage': this.state.currentPage + 1});
@@ -137,6 +137,7 @@ export default class Userright extends Component {
                                 )
                             })
                         }
+                        <Loadding style={this.state.loaddingDisplay} />
                     </ul>
                 </div>
                 <div className="chart-page">
@@ -174,7 +175,6 @@ export default class Userright extends Component {
                     </div>
                 </div>
                 </div>
-                <Loadding style={this.state.loaddingDisplay} />
             </div>
         );
     }

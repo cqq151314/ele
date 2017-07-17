@@ -36,13 +36,22 @@ export default class Balance extends Component {
                     });
                 });
         }else{
-            this.setState({timeChecked:"今天"});
-            bsStore.getBalance(e.target.innerHTML,this.state.timeChecked)
-                .then(res =>{
-                    res.json().then(data => {
-                        this.setState({"data":data});
+            if(this.state.timeChecked === ""){
+                bsStore.getBalance(e.target.innerHTML)
+                    .then(res =>{
+                        res.json().then(data => {
+                            this.setState({"data":data});
+                        });
                     });
-                });
+            }else{
+                bsStore.getBalance(e.target.innerHTML,this.state.timeChecked )
+                    .then(res =>{
+                        res.json().then(data => {
+                            this.setState({"data":data});
+                        });
+                    });
+            }
+
         }
     }
     // 点击时间，时间切换
