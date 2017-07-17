@@ -26,6 +26,10 @@ export default class OrderDetail extends Component {
                 });
             });
         }
+    // 组件渲染后初始化数据
+    componentDidMount(){
+        this.initData(this.state.currentPage,this.state.pageSize);
+    }
     render() {
         return (
             <div className="Order-detail">

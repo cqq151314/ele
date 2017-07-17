@@ -4,7 +4,7 @@ import '../../fonts/font-awesome.min.css';
 import bsStore from '../../store/fetch-npm-node';
 import { Link } from 'react-router-dom'
 import Loadding from '../Loadding/Loadding';
-export default class Userright extends Component {
+export default class UserRight extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -19,15 +19,14 @@ export default class Userright extends Component {
         // loadding显示隐藏
         loaddingDisplay:"none",
     };
-    this.initData(this.state.pageSize,this.state.currentPage);
 }
     /**
      *  初始化,根据页码和每页显示的个数请求数据
      *  @param currentPage  当前页码
      *  @param pageSize  每页显示商品个数
      */
-    initData(pageSize,currentPage){
-        bsStore.getOrder(this.state.currentPage, pageSize)
+    initData(currentPage,pageSize){
+        bsStore.getOrder(currentPage, pageSize)
             .then(res => {
                 res.json().then(data => {
                     this.setState({"dataSource": data});
@@ -64,6 +63,9 @@ export default class Userright extends Component {
                     this.setState({"loaddingDisplay":'none'});
                 })
         }
+    }
+    componentDidMount(){
+        this.initData(this.state.currentPage,this.state.pageSize);
     }
     render() {
         return (

@@ -14,7 +14,7 @@ export default class HongBao extends Component {
             // 过期红包数据
             historyData:[],
         };
-        this.initData();
+
     }
     // 初始化
     initData(){
@@ -45,8 +45,11 @@ export default class HongBao extends Component {
     }
     // 不可用红包
     unavailableClick(){
-        this.setState({"unavailableClick":true});
         this.setState({"effective":false});
+        this.setState({"unavailableClick":true});
+    }
+    componentDidMount(){
+        this.initData();
     }
     render() {
         return (

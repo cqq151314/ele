@@ -15,14 +15,12 @@ export default class Refused extends Component {
     // 初始化,根据页码和每页显示的个数请求数据
     initData(){
         this.setState({"loaddingDisplay":'block'});
-        setTimeout(()=>{
             bsStore.refusedData()
                 .then(res =>{
                     res.json().then(data => {
                     });
                     this.setState({"loaddingDisplay":'none'});
                 });
-        },500)
     }
     // 组件渲染后初始化数据
     componentDidMount(){

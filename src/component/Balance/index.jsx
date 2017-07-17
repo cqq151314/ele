@@ -12,7 +12,6 @@ export default class Balance extends Component {
             // 数据
             data:[],
         }
-        this.initData();
     }
     // 初始化
     initData(){
@@ -23,7 +22,6 @@ export default class Balance extends Component {
                 });
             });
     }
-
     // 点击分类，分类选项切换
     classcifyClick(e){
         this.setState({"checked":e.target.innerHTML});
@@ -64,6 +62,11 @@ export default class Balance extends Component {
                 });
             });
     }
+    // 组件渲染后初始化数据
+    componentDidMount(){
+        this.initData();
+    }
+
     render() {
         return (
             <div>

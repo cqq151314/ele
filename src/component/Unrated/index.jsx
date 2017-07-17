@@ -36,7 +36,6 @@ export default class UserRight extends Component {
             this.setState({pageList:listData});
         }
         this.setState({"loaddingDisplay":'block'});
-        setTimeout(()=>{
             bsStore.getOrder(this.state.currentPage,pageSize)
                 .then(res =>{
                     res.json().then(data => {
@@ -44,7 +43,6 @@ export default class UserRight extends Component {
                     });
                     this.setState({"loaddingDisplay":'none'});
                 });
-        },500)
     }
     /**
      *  点击分页获取数据
