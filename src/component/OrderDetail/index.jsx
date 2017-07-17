@@ -66,7 +66,6 @@ export default class OrderDetail extends Component {
                     <div className="orderprogress-cardlist-l">
                         <div className="orderprogress-item"><span>菜品</span><span>数量</span><span>小计(元)</span></div>
                         {
-
                             this.state.goodsData.map((item,index) => {
                                 return (
                                     <div className="orderprogress-item" key={index}><span>{item.name}</span><span>{item.num}</span><span>{item.smalltotal}.00</span></div>
