@@ -10,7 +10,6 @@ export default class Refused extends Component {
             //  显示/隐藏
             loaddingDisplay:"block",
         };
-
     }
     // 初始化,根据页码和每页显示的个数请求数据
     initData(){

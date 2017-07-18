@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import bsStore from '../../store/fetch-npm-node';
 import './index.css';
 import '../../fonts/font-awesome.min.css';
-import { Route } from 'react-router-dom'
+import { Route, NavLink  } from 'react-router-dom'
 import Search from '../Search/Search'
-import { NavLink } from 'react-router-dom'
 import UserRight from '../../component/UserRight/index'
 import orderThree from '../../component/OrderThree/index'
 import Ubrated from '../../component/Unrated/index';
@@ -14,9 +12,6 @@ import OrderDetail from '../../component/OrderDetail/index';
 import HongBao from '../../component/HongBao/index'
 import Balance from '../../component/Balance/index'
 export default class UserCenter extends Component {
-    static propType = {
-        listData: PropTypes.array,
-    };
     constructor(props){
         super(props);
         this.state={

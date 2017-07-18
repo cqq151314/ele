@@ -1,9 +1,8 @@
-
 .center{
   width:1210px;
-  min-height: 750px;
   height:auto!important;
   margin:0 auto;
+  margin-bottom: 100px;
 }
 .clearfix{
   　content:'';

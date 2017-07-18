@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './search.css';
 import '../../fonts/font-awesome.min.css';
 import katong from '../../images/katong.png';
 export default class Search extends Component {
+    static PropTypes = {
+        show: PropTypes.string.isRequired,
+        value: PropTypes.string.isRequired,
+        onChange: PropTypes.func,
+        onClick: PropTypes.func,
+    };
     render() {
         return (
-            <div >
+            <div>
                 <div className="search">
                 <div className="seach-l">
                     <span>当前位置:</span>
@@ -28,5 +35,4 @@ export default class Search extends Component {
             </div>
         );
     }
-    return
 }

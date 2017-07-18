@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './searchlist.css';
 import '../../fonts/font-awesome.min.css';
 export default class SearchList extends Component {
+    static PropTypes = {
+        listData: PropTypes.array,
+    };
     render() {
         return (
               <div>

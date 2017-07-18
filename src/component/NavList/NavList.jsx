@@ -1,28 +1,20 @@
 import React, { Component} from 'react';
-import PropTypes from 'prop-types';
 import './navlist.css';
-import '../ProductList/productlist.css';
+import './productlist.css';
 import Loadding from '../Loadding/Loadding';
 import bsStore from '../../store/fetch-npm-node'
 export default class Store extends Component {
-    static propType = {
-        dataSource: PropTypes.array,
-    };
     constructor(props){
         super(props);
         this.state={
-            //全部数据
-            dataSource:[],
-            // 第一层数据
-            oneData: [],
-            // 第二层数据
-            twoData: [],
-            // 第三层数据
-            boxData: [],
             //索引
             index:'',
+            // 第一层导航数据
             types:[],
+            // 第二层导航数据
             sub_types:[],
+            // 第三层数据
+            boxData: [],
             // 导航选中颜色切花
             background:"#fff",
             // 字体颜色
@@ -36,7 +28,6 @@ export default class Store extends Component {
         };
         this.initData();
     }
-
     //初始化数据
     initData(){
         bsStore.getTypes()
@@ -153,7 +144,6 @@ export default class Store extends Component {
                         })
                     }
                 </div>
-                {/*loadding*/}
                 <Loadding style={this.state.loaddingDisplay} />
             </div>
         );

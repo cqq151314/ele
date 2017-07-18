@@ -14,7 +14,6 @@ export default class HongBao extends Component {
             // 过期红包数据
             historyData:[],
         };
-
     }
     // 初始化
     initData(){

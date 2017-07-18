@@ -1,13 +1,9 @@
 import React, { Component} from 'react';
-import PropTypes from 'prop-types';
 import bsStore from '../../store/fetch-npm-node'
 import Search from '../../component/Search/Search';
 import  NavList from '../../component/NavList/NavList.jsx';
 import  SearchList from '../../component/SearchList/SearchList';
 class IndexCenter extends Component {
-    static propType = {
-        listData: PropTypes.array,
-    };
     constructor(props){
         super(props);
         this.state={
@@ -53,7 +49,6 @@ class IndexCenter extends Component {
                         {
                             this.state.display==='block'? <NavList style={{"display":"none"}}/> :<SearchList listData={this.state.listData} style={{"display":"none"}} display={this.state.display}/>
                         }
-
                     </div>
         );
     }
