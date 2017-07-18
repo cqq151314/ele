@@ -4,19 +4,9 @@ import './App.css';
 import bsStore from './store/fetch-npm-node'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Header from './component/Header/Header.jsx';
-import Search from './component/Search/Search.jsx';
-import  NavList from './component/NavList/NavList.jsx';
-import  SearchList from './component/SearchList/SearchList';
-import UserRight from './component/UserRight/index'
-import UserLeft from './component/UserLeft/index'
-import orderThree from './component/OrderThree/index'
-import  Footer from './component/Footer/Footer.jsx';
-import Ubrated from './component/Unrated/index';
-import Refused from './component/Refused/index';
-import OrderDetail from './component/OrderDetail/index';
-import HongBao from './component/HongBao/index'
-import Balance from './component/Balance/index'
+import UserCenter from './component/UserCenter/index'
 import IndexCenter from './component/IndexCenter/index'
+import Footer from './component/Footer/Footer'
 class App extends Component {
     static propType = {
         listData: PropTypes.array,
@@ -60,35 +50,21 @@ class App extends Component {
             })
             }
     render(){
-                return (
-                    <div className="App">
-                        <Router>
-                            <div>
-                                <Header />
-                                    <Route exact path="/" component={IndexCenter}/>
-                                    <div className="center">
-                                        <Route exact path="/Profile" component={UserLeft}/>
-                                        <Route exact path="/Profile" component={UserRight}/>
-                                        <Route exact path="/profile/center/" component={UserLeft}/>
-                                        <Route exact path="/profile/center/" component={UserRight}/>
-                                        <Route exact path="/profile/orderThree/" component={UserLeft}/>
-                                        <Route exact path="/profile/orderThree/" component={orderThree}/>
-                                        <Route exact path="/profile/untated/" component={UserLeft}/>
-                                        <Route exact path="/profile/untated/" component={Ubrated}/>
-                                        <Route exact path="/profile/refused/" component={UserLeft}/>
-                                        <Route exact path="/profile/refused/" component={Refused}/>
-                                        <Route exact path="/profile/hongbao/" component={UserLeft}/>
-                                        <Route exact path="/profile/hongbao/" component={HongBao}/>
-                                        <Route exact path="/profile/balance/" component={UserLeft}/>
-                                        <Route exact path="/profile/balance/" component={Balance}/>
-                                        <Route exact path="/profile/orderThree/id/:id" component={OrderDetail}/>
-                                        <Route exact path="/profile/order/id/:id" component={OrderDetail}/>
-                                </div>
-                                <Footer/>
+        return (
+            <div className="App">
+                <Router>
+                    <div>
+                        <Header />
+                            <Route exact path="/" component={IndexCenter}/>
+                            <div className="center">
+                                <Route exact path="/Profile" component={UserCenter}/>
+                                <Route exact path="/Profile/*" component={UserCenter}/>
                             </div>
-                        </Router>
+                        <Footer/>
                     </div>
-                );
-            }
+                </Router>
+            </div>
+        );
+    }
     }
 export default App;

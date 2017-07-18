@@ -15,15 +15,70 @@ img{
 li{
     list-style: none;
 }
-.App {
-    text-align: center;
+.profile-sidebar{
+    float: left;
+    margin-top:28px;
+    width: 170px;
+    color: #333;
 }
-.userCenter{
-    width: 170PX;
-    min-height: 610px;
-    background: #fff!important;
-    FLOAT: LEFT;
+.profile-sidebar-section{
+    margin-bottom: 32px;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.profile-sidebar-sectiontitle{
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 18px;
 }
 .active{
-    color:#0089dc;
+    color: #0089dc;
+}
+li span.fa-file-text-o{
+    display: inline-block;
+    width: 30px;
+    color: #aaa;
+    font-size: 16px;
+    line-height: 26px;
+}
+li span.fa-home{
+    display: inline-block;
+    width: 30px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #aaa;
+}
+li span.fa-money{
+    display: inline-block;
+    width: 30px;
+    color: #aaa;
+    font-size: 16px;
+    line-height: 26px;
+}
+li span.fa-star-o{
+    display: inline-block;
+    width: 30px;
+    color: #aaa;
+    font-size: 16px;
+    line-height: 26px;
+}
+li span.fa-user-md{
+    display: inline-block;
+    width: 30px;
+    color: #aaa;
+    font-size: 16px;
+    height:20px;
+    line-height: 26px;
+}
+.profile-sidebar ul li a {
+    color: #666;
+    font-size:14px;
+}
+.profile-sidebar ul li{
+    padding: 4px 0;
+    text-align: left;
+    padding-left: 31px;
+}
+.profile-sidebar ul{
+    padding-left: 30px;
 }

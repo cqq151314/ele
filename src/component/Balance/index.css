@@ -106,10 +106,12 @@ li{
 .balance-list-title span:nth-child(1){
     display: inline-block;
     width: 256px;
+    text-align: left;
 }
 .balance-list-title span:nth-child(2){
     display: inline-block;
     width: 268px;
+    text-align: left;
 }
 .balance-list-title span:nth-child(3){
     display: inline-block;
@@ -133,10 +135,12 @@ li{
 .balance-list li:nth-child(1){
     display: inline-block;
     width: 256px;
+    text-align: left;
 }
 .balance-list li:nth-child(2){
     display: inline-block;
     width: 268px;
+    text-align: left;
 }
 .balance-list li:nth-child(3){
     display: inline-block;
