@@ -2,7 +2,7 @@ import React, { Component} from 'react';
 import PropTypes from 'prop-types';
 import './App.css';
 import bsStore from './store/fetch-npm-node'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route,IndexRoute} from 'react-router-dom'
 import Header from './component/Header/Header.jsx';
 import UserCenter from './component/UserCenter/index'
 import IndexCenter from './component/IndexCenter/index'
@@ -55,11 +55,12 @@ class App extends Component {
                 <Router>
                     <div>
                         <Header />
-                            <Route exact path="/" component={IndexCenter}/>
-                            <div className="center clearfix">
+                            <Route exact path="/" component={IndexCenter} />
+                             <div className="center clearfix">
                                 <Route exact path="/Profile" component={UserCenter}/>
-                                <Route exact path="/Profile/*" component={UserCenter}/>
-                            </div>
+                                <Route  path="/Profile/*" component={UserCenter}/>
+                                 <Route   component={IndexCenter}/>
+                             </div>
                         <Footer/>
                     </div>
                 </Router>

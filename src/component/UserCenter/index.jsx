@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import bsStore from '../../store/fetch-npm-node';
 import './index.css';
 import '../../fonts/font-awesome.min.css';
@@ -11,6 +12,7 @@ import Refused from '../../component/Refused/index';
 import OrderDetail from '../../component/OrderDetail/index';
 import HongBao from '../../component/HongBao/index'
 import Balance from '../../component/Balance/index'
+import IndexCenter from '../../component/IndexCenter/index'
 export default class UserCenter extends Component {
     constructor(props){
         super(props);
@@ -68,7 +70,7 @@ export default class UserCenter extends Component {
                     <ul className="profile-sidebar" style={{'marginTop':"0"}} >
                         <li className="profile-sidebar">
                             <h2 className="profile-sidebar-sectiontitle">
-                                <NavLink to="/profile/center/" activeStyle={{color: '##0089dc'}}><span className="fa fa-home"></span><span onClick={(e)=>{this.handClick(e)}}>个人中心</span></NavLink>
+                                <NavLink to="/profile/center" activeStyle={{color: '##0089dc'}}><span className="fa fa-home"></span><span onClick={(e)=>{this.handClick(e)}}>个人中心</span></NavLink>
                             </h2>
                         </li>
                         <li  className="profile-sidebar">
@@ -76,9 +78,9 @@ export default class UserCenter extends Component {
                                 <span className="fa fa-file-text-o"></span>我的订单
                             </h2>
                             <ul>
-                                <li><NavLink to="/profile/orderThree/"  activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>近三个月订单</NavLink></li>
-                                <li><NavLink to="/profile/untated/"  activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>待评价订单</NavLink></li>
-                                <li><NavLink to="/profile/refused/" activeStyle={{color: '#0089dc'}}  onClick={(e)=>{this.handClick(e)}}>退单记录</NavLink></li>
+                                <li><NavLink to="/profile/orderThree"  activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>近三个月订单</NavLink></li>
+                                <li><NavLink to="/profile/untated"  activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>待评价订单</NavLink></li>
+                                <li><NavLink to="/profile/refused" activeStyle={{color: '#0089dc'}}  onClick={(e)=>{this.handClick(e)}}>退单记录</NavLink></li>
                             </ul>
                         </li>
                         <li  className="profile-sidebar">
@@ -86,8 +88,8 @@ export default class UserCenter extends Component {
                                 <span className="fa fa-money"></span>我的资产
                             </h2>
                             <ul>
-                                <li><NavLink to="/profile/hongbao/" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>我的红包</NavLink></li>
-                                <li><NavLink to="/profile/balance/" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>账户余额</NavLink></li>
+                                <li><NavLink to="/profile/hongbao" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>我的红包</NavLink></li>
+                                <li><NavLink to="/profile/balance" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>账户余额</NavLink></li>
                                 <li><a>我的积分</a></li>
                             </ul>
                         </li>
@@ -108,15 +110,16 @@ export default class UserCenter extends Component {
                             </h2>
                         </li>
                     </ul>
-                    <Route exact path="/Profile/" component={UserRight}/>
-                    <Route exact path="/profile/center/" component={UserRight}/>
-                    <Route exact path="/profile/orderThree/" component={orderThree}/>
-                    <Route exact path="/profile/untated/" component={Ubrated}/>
-                    <Route exact path="/profile/refused/" component={Refused}/>
-                    <Route exact path="/profile/hongbao/" component={HongBao}/>
-                    <Route exact path="/profile/balance/" component={Balance}/>
-                    <Route exact path="/profile/orderThree/id/:id" component={OrderDetail}/>
-                    <Route exact path="/profile/order/id/:id" component={OrderDetail}/>
+                    <Route exact path="/Profile" component={UserRight}/>
+                    <Route  path="/profile/center" component={UserRight}/>
+                    <Route  path="/profile/orderThree" component={orderThree}/>
+                    <Route  path="/profile/untated/" component={Ubrated}/>
+                    <Route  path="/profile/refused/" component={Refused}/>
+                    <Route  path="/profile/hongbao/" component={HongBao}/>
+                    <Route  path="/profile/balance/" component={Balance}/>
+                    <Route  path="/profile/orderThree/id/:id" component={OrderDetail}/>
+                    <Route  path="/profile/order/id/:id" component={OrderDetail}/>
+                    <Route   component={IndexCenter}/>
                 </div>
             </div>
         );

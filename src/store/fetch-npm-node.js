@@ -4,7 +4,7 @@ class BsStore {
     // 根据type类型请求数据
     getData(type){
         if(type){
-            return  fetch(`shops/?type=${type}`);
+            return  fetch(`/shops/?type=${type}`);
         }else{
             return  fetch('/shops');
         }
@@ -15,12 +15,12 @@ class BsStore {
     }
     // 获取菜单栏数据
     getTypes(type2){
-        return  fetch('types');
+        return  fetch('/types');
     }
     // 根据关键字获取数据
     getKwordsData(keywords){
         if(keywords){
-            return  fetch(`shops/?keywords=${keywords}`);
+            return  fetch(`/shops/?keywords=${keywords}`);
         }else{
             return  fetch('/shops');
         }
@@ -31,7 +31,7 @@ class BsStore {
      *  @param _limit  每页显示的长度
      */
     getOrder(_page,_limit){
-        return  fetch(`orders/?_page=${_page}&_limit=${_limit}`);
+        return  fetch(`/orders/?_page=${_page}&_limit=${_limit}`);
     }
     // 获取退货订单的数据
     refusedData(){
