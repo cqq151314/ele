@@ -16,11 +16,12 @@ li{
   list-style: none;
 }
 .hongbao-box{
-    width:980px;
-    height:580px;
+    width: 980px;
+    height: 580px;
     float: left;
-    padding-left: 30px;
+    padding-left: 40px;
     padding-top: 20px;
+    margin-bottom: 100px;
 }
 .hongbao-nav a{
     display: inline-block;

@@ -56,7 +56,7 @@ class App extends Component {
                     <div>
                         <Header />
                             <Route exact path="/" component={IndexCenter}/>
-                            <div className="center">
+                            <div className="center clearfix">
                                 <Route exact path="/Profile" component={UserCenter}/>
                                 <Route exact path="/Profile/*" component={UserCenter}/>
                             </div>
@@ -66,5 +66,5 @@ class App extends Component {
             </div>
         );
     }
-    }
+}
 export default App;

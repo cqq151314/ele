@@ -30,11 +30,13 @@ li{
 }
 .refaused-box{
     background: url(../../images/bg.png) no-repeat  300px center;
-    line-height: 300px;
     text-align: center;
     color:#999;
     font-size: 14px;
-   margin-bottom: 370px;;
+    line-height:300px;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
 }
 .refaused-box a{
     color: #0089dc;

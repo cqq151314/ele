@@ -3,13 +3,9 @@ import PropTypes from 'prop-types';
 import bsStore from '../../store/fetch-npm-node';
 import './index.css';
 import '../../fonts/font-awesome.min.css';
-// import Test from '../Test/index';
 import Search from '../Search/Search'
 import { NavLink } from 'react-router-dom'
 export default class profile extends Component {
-    static propType = {
-        listData: PropTypes.array,
-    };
     constructor(props){
         super(props);
         this.state={
@@ -41,7 +37,6 @@ export default class profile extends Component {
     onClick(e){
         this.state.value===""? this.setState({"display":"block"}): this.setState({"display":"none"}); this.getData(e,this.state.value);
     }
-
     /**
      *  获取数据
      *  @param e  事件对象
@@ -65,8 +60,8 @@ export default class profile extends Component {
             <div>
                 <Search  state={this.state.myState} onChange={this.onChange.bind(this)} onClick={this.onClick.bind(this)} value={this.state.value} show={this.state.show}/>
                 <div className="userCenter">
-                    <ul className="profile-sidebar" style={{'marginTop':"0"}} >
-                        <li className="profile-sidebar">
+                    <ul style={{'marginTop':"0",}}  >
+                            <li className="profile-sidebar">
                             <h2 className="profile-sidebar-sectiontitle">
                                 <NavLink to="/profile/center/" activeStyle={{color: '##0089dc'}}><span className="fa fa-home"></span><span onClick={(e)=>{this.handClick(e)}}>个人中心</span></NavLink>
                             </h2>

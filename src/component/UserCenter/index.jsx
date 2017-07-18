@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import bsStore from '../../store/fetch-npm-node';
 import './index.css';
 import '../../fonts/font-awesome.min.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import Search from '../Search/Search'
 import { NavLink } from 'react-router-dom'
 import UserRight from '../../component/UserRight/index'
@@ -43,12 +43,10 @@ export default class UserCenter extends Component {
         this.setState({'value': e.target.value});
         this.getData(e, e.target.value);
     }
-
     //点击事件
     onClick(e){
         this.state.value===""? this.setState({"display":"block"}): this.setState({"display":"none"}); this.getData(e,this.state.value);
     }
-
     /**
      *  获取数据
      *  @param e  事件对象
@@ -115,7 +113,7 @@ export default class UserCenter extends Component {
                             </h2>
                         </li>
                     </ul>
-                    <Route exact path="/Profile" component={UserRight}/>
+                    <Route exact path="/Profile/" component={UserRight}/>
                     <Route exact path="/profile/center/" component={UserRight}/>
                     <Route exact path="/profile/orderThree/" component={orderThree}/>
                     <Route exact path="/profile/untated/" component={Ubrated}/>

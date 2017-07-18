@@ -66,7 +66,6 @@ export default class Balance extends Component {
     componentDidMount(){
     this.initData();
     }
-
     render() {
         return (
             <div>
