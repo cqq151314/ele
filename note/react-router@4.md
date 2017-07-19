@@ -1,8 +1,8 @@
 # React Router 4 - WEB API
 React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 
-#### ``` <BrowserRouter> ``` (浏览器路由)
-   使用 HTML5 History API（pushState，replaceState 和 popstate 事件）的 <Router> 来保持 UI 与 URL 同步。
+#### '<BrowserRouter>' (浏览器路由)
+使用 HTML5 History API（pushState，replaceState 和 popstate 事件）的 <Router> 来保持 UI 与 URL 同步。
 2. 良好的组件结构
 3. 前端所需要的 JSON 数据需要自己进行 Mock
 4. 必须使用 React 0.14 以后版本支持的 class 方式完成
