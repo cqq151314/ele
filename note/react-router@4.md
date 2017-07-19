@@ -1,7 +1,7 @@
 # React Router 4 - WEB API
 React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 
-##### 要求
+### <BrowserRouter> (浏览器路由)
 
 1. 首页还原度 90% 以上（对于具体细节，如不清楚，可以直接找我）
 2. 良好的组件结构
@@ -14,86 +14,25 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 7. 网页中的 iconfont 可以参考 http://fontawesome.io/ 能找到最好，找不到的话，可以随便放一个作为站位符
 8. 所有相关代码必须提交到 github: https://github.com
 
-##### 如何评定结果：
+### <HashRouter> (锚点路由)
 
-1. 讲解自己的代码
-2. 回答 react 相关基础问题
+### <Link> (链接组件)
 
-##### 参考资料：
+### <NavLink> (导航链接组件)
 
-1. React（第2版）: 引领未来的用户界面开发框架 https://book.douban.com/subject/26918475/ （1-9章）
+### <Prompt> (提示组件)
 
-#### ES6 写法
-```js
-import React, { Component } from 'react';
+### <MemoryRouter> (内存路由)
 
-class List extends Component {
+### <Redirect> (重定向组件)
 
-	constructor() {
-		super();
-		// state 要么是对象, 要么是 null
-		this.state = {
-			list: ['AngularJS', 'Webpack', 'React']
-		};
-	}
+### <Route> (路由组件)
 
-	render() {
-	// li 元素需要添加 key, https://facebook.github.io/react/docs/lists-and-keys.html#keys
-		return (
-			<ul>
-				{
-					(this.state.list.map((item, index) => <li key={index}> {item} </li>))
-				}
-			</ul>
-		);
-	}
-}
+#### <Router> (路由器组件)
 
-export default List;
+#### <StaticRouter> (静态路由组件)
 
-```
-
-#### props 属性
-
-props 就是传入组件的属性, 可以是任意类型
-
-可以通过 PropTypes 指定传入组件的属性类型
-
-https://facebook.github.io/react/docs/typechecking-with-proptypes.html
-
-```js
-import React, { Component, PropTypes } from 'react';
-
-const propTypes = {
-	name: PropTypes.string.isRequired,
-	age: PropTypes.number.isRequired,
-	skills: PropTypes.array
-};
-
-class Profile extends Component {
-	constructor() {
-		super();
-		this.state = null;
-	}
-
-	render() {
-		return (
-			<div className="profile">
-				<h3>Fucking Cool Name: {this.props.name} </h3>
-				<h3>Fucking Cool Age: {this.props.age} </h3>
-				<h3>Fucking Cool Skills: {this.props.skills ? this.props.skills.join(',') : 'No Skills'} </h3>
-			</div>
-		);
-	}
-}
-
-Profile.propTypes = propTypes;
-
-export default Profile;
-
-```
-
-#### state 状态
+#### <Switch> (单匹配组件)
 
 state 是组件内部状态, 它可以直接在构造函数内部使用 this.state 直接定义, 也可以使用 this.setState 修改(会自动 render)
 
