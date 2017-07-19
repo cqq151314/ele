@@ -15,14 +15,11 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
   <App/>
 </BrowserRouter>
 ```
-1. basename： string
-   ```
+1. basename： string   设置基本的url路径
    <BrowserRouter  basename="/profile">
-       <Link to="/today"/>
-      </BrowserRouter>
-      ```
-  - basename  设置基本的url路径
-  -  <Link to="/today"/> 设置路径为/profile/today
+   <Link to="/today"/>
+   </BrowserRouter>
+ -  <Link to="/today"/> 设置路径为/profile/today
 2.forceRefresh bool
 
 ### ``` <HashRouter>``` (锚点路由)
