@@ -37,7 +37,7 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 ```jsx
  <NavLink to="/center" activeStyle={{color: '##0089dc'}}>导航链接组件</NavLink>
  <NavLink to="/center"  activeClassName="selected">导航链接组件</NavLink>
-  <NavLink to="/profile/refused/" isActive={()=>{return true}}  />
+ <NavLink to="/profile/refused/" isActive={()=>{return true}}></NavLink>
   
  
  ```
