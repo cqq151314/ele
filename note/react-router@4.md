@@ -1,7 +1,7 @@
 # React Router 4 - WEB API
 React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 
-### ``` <BrowserRouter> ``` (浏览器路由)
+#### ``` <BrowserRouter> ``` (浏览器路由)
 
 1. 首页还原度 90% 以上（对于具体细节，如不清楚，可以直接找我）
 2. 良好的组件结构
@@ -14,31 +14,25 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 7. 网页中的 iconfont 可以参考 http://fontawesome.io/ 能找到最好，找不到的话，可以随便放一个作为站位符
 8. 所有相关代码必须提交到 github: https://github.com
 
-###<HashRouter>(锚点路由)
+#### ``` <HashRouter>``` (锚点路由)
 
-### '<Link>' (链接组件)
+#### ```<Link>``` (链接组件)
 
-### <NavLink> (导航链接组件)
+#### ```<NavLink>``` (导航链接组件)
 
-### <Prompt> (提示组件)
+#### ```<Prompt>``` (提示组件)
 
-### <MemoryRouter> (内存路由)
+#### ```<MemoryRouter>``` (内存路由)
 
-### <Redirect> (重定向组件)
+#### ```<Redirect>``` (重定向组件)
 
-### <Route> (路由组件)
+#### ```<Route>```  (路由组件)
 
-#### <Router> (路由器组件)
+#### ```<Router>``` (路由器组件)
 
-#### <StaticRouter> (静态路由组件)
+#### ```<StaticRouter>``` (静态路由组件)
 
-#### <Switch> (单匹配组件)
-
-state 是组件内部状态, 它可以直接在构造函数内部使用 this.state 直接定义, 也可以使用 this.setState 修改(会自动 render)
-
-#### 注册事件
-
-注意 bind
+#### ```<Switch>``` (单匹配组件)
 
 
 #### 组件生命周期
