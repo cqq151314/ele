@@ -3,7 +3,7 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 
 ### ```<BrowserRouter>``` (浏览器路由)
 使用 HTML5 History API（pushState，replaceState 和 popstate 事件）的 <Router> 来保持 UI 与 URL 同步。
-```
+```jsx
 <BrowserRouter
   basename={optionalString}
   forceRefresh={optionalBool}
@@ -12,7 +12,6 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 >
  <Link to=" "/>
 </BrowserRouter>
-```
 #### basename： string   设置基本的url路径
 ``` 
 <BrowserRouter  basename="/profile">
@@ -20,7 +19,11 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
    </BrowserRouter>
 ``` 
 - <Link to="/today"/> 设置路径为/profile/today
-#### forceRefresh bool
+#### forceRefresh bool    如果为 true，则路由器将在页面导航中使用全页刷新
+```
+const supportsHistory = 'pushState' in window.history
+<BrowserRouter forceRefresh={!supportsHistory}/>
+```
 
 ### ``` <HashRouter>``` (锚点路由)
 
