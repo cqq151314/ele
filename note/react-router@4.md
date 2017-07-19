@@ -19,6 +19,7 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 ### ``` <HashRouter>``` (锚点路由)
 
 ### ```<Link>``` (链接组件)
+类似于a标签。
 ```jsx
 <Link to="/courses" />
 <Link to={{
@@ -32,6 +33,7 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 - to object  -->  url路径为 /courses?sort=name#the-hash，通过props.location.state可以查看state的值
 
 ### ```<NavLink>``` (导航链接组件)
+与当前 URL 匹配时，可向渲染元素添加样式属性
 
 ### ```<Prompt>``` (提示组件)
 
