@@ -1,7 +1,7 @@
 # React Router 4 - WEB API
 React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 
-### <BrowserRouter> (浏览器路由)
+### ``` <BrowserRouter> ``` (浏览器路由)
 
 1. 首页还原度 90% 以上（对于具体细节，如不清楚，可以直接找我）
 2. 良好的组件结构
@@ -14,7 +14,7 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 7. 网页中的 iconfont 可以参考 http://fontawesome.io/ 能找到最好，找不到的话，可以随便放一个作为站位符
 8. 所有相关代码必须提交到 github: https://github.com
 
-### '<HashRouter>' (锚点路由)
+###<HashRouter>(锚点路由)
 
 ### '<Link>' (链接组件)
 
