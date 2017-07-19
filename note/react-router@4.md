@@ -55,7 +55,16 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 ### ```<MemoryRouter>``` (内存路由)
 
 ### ```<Redirect>``` (重定向组件)
-
+渲染 <Redirect> 将导航到新的位置。新位置将覆盖历史堆栈中的当前位置
+```jsx
+<Redirect  to='/profile/center'/>
+<Redirect  to={{pathname: '/profile/center', search: '?utm=your+face', state: { referrer: "aa" }}}/>
+<Switch>
+ <Redirect from='/profile/orderThree' to='/profile/center'/>
+ <Route  strict={true}  path="/profile/center" component={UserRight}/>
+ <Route exact  path="/profile/orderThree" component={orderThree}/>
+</Switch>
+ ```
 ### ```<Route>```  (路由组件)
 
 ### ```<Router>``` (路由器组件)
