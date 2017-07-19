@@ -19,7 +19,8 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 ```<BrowserRouter  basename="/profile">
    <Link to="/today"/>
    </BrowserRouter>
-   ``` <Link to="/today"/> 设置路径为/profile/today
+``` 
+   <Link to="/today"/> 设置路径为/profile/today
 - forceRefresh bool
 
 ### ``` <HashRouter>``` (锚点路由)
