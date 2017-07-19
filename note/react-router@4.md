@@ -73,31 +73,3 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 
 ### ```<Switch>``` (单匹配组件)
 
-
-#### 组件生命周期
-
-##### 组件初始化 https://facebook.github.io/react/docs/state-and-lifecycle.html
-    - getDefaultProps --> 在 constructor 中处理 constructor(props){super(props)}
-    - getInitialState --> 在 constructor 中处理 this.state
-    - componentWillMount --> 在 render 之前调用 一次
-    - render
-    - componentDidMount --> 在 render 之后调用 一次
-
-##### 组件 props 更新
-    - componentWillReceiveProps(object, nextProps)
-    - shouldComponentUpdate -> 返回 boolean 决定是否 render 组件
-    - componentWillUpdate
-    - render
-    - componentDidUpdate
-
-##### 组件卸载
-    - componentWillUnmount
-
-
-#### DOM
-
-this.refs.name 获取 DOM 的引用
-
-```
-<input type="text" ref="name" />
-```
