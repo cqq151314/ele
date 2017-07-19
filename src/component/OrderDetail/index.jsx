@@ -9,9 +9,10 @@ export default class OrderDetail extends Component {
             // 数据
             detailData:[],
             // 子商品数据
-            goodsData:[]
+            goodsData:[],
+            // id
+            id:props.match.params.id
         };
-        this.initData(window.location.pathname.split('id/')[1]);
     }
     /**
      *  初始化商品数据
@@ -26,6 +27,10 @@ export default class OrderDetail extends Component {
                 });
             });
         }
+    // 组件渲染后初始化数据
+    componentDidMount(){
+        this.initData(this.state.id);
+    }
     render() {
         return (
             <div className="Order-detail">

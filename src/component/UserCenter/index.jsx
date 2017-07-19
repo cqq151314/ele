@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import bsStore from '../../store/fetch-npm-node';
 import './index.css';
 import '../../fonts/font-awesome.min.css';
-import { Route, NavLink  } from 'react-router-dom'
+import { Route, NavLink,Redirect,Switch,Link  } from 'react-router-dom'
 import Search from '../Search/Search'
 import UserRight from '../../component/UserRight/index'
 import orderThree from '../../component/OrderThree/index'
@@ -13,22 +13,23 @@ import OrderDetail from '../../component/OrderDetail/index';
 import HongBao from '../../component/HongBao/index'
 import Balance from '../../component/Balance/index'
 import IndexCenter from '../../component/IndexCenter/index'
+import ListItemLink  from '../../component/Test/index'
 export default class UserCenter extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state={
+        this.state = {
             //定义搜素列表数据
-            listData:[],
+            listData: [],
             // 显示隐藏状态
-            display:"block",
+            display: "block",
             // 控制文本框的显示隐藏
-            show:'none',
+            show: 'none',
             //value的值
-            value:"",
+            value: "",
             // 地址后面的状态
-            myState:'',
+            myState: '',
             // 控制导航字体颜色变化
-            myClolor:"",
+            myClolor: "",
         };
         this.handClick = this.handClick.bind(this);
     }
@@ -62,6 +63,7 @@ export default class UserCenter extends Component {
         this.setState({onClick:!this.state.onClick});
         this.setState({myState:e.target.innerHTML});
     }
+
     render() {
         return (
             <div>
@@ -109,17 +111,23 @@ export default class UserCenter extends Component {
                                 <span className="fa fa-star-o"></span>我的收藏
                             </h2>
                         </li>
+                        <ListItemLink to="/profile/somewhere">1</ListItemLink>
+                        <ListItemLink to="/profile/somewhere-else">2</ListItemLink>
                     </ul>
-                    <Route exact path="/Profile" component={UserRight}/>
-                    <Route  path="/profile/center" component={UserRight}/>
-                    <Route  path="/profile/orderThree" component={orderThree}/>
-                    <Route  path="/profile/untated/" component={Ubrated}/>
-                    <Route  path="/profile/refused/" component={Refused}/>
-                    <Route  path="/profile/hongbao/" component={HongBao}/>
-                    <Route  path="/profile/balance/" component={Balance}/>
-                    <Route  path="/profile/orderThree/id/:id" component={OrderDetail}/>
-                    <Route  path="/profile/order/id/:id" component={OrderDetail}/>
-                    <Route   component={IndexCenter}/>
+                    <Switch>
+                        <Route exact path="/Profile" component={UserRight} />
+                        <Redirect from='/profile/orderThree' to='/profile/center'/>
+                        <Route  strict={true}  path="/profile/center" component={UserRight}/>
+                        <Route exact  path="/profile/orderThree" component={orderThree}/>
+                        <Route exact  path="/profile/somewhere" component={orderThree}/>
+                        <Route exact  path="/profile/untated/" component={Ubrated}/>
+                            {/*<Route exact  path="/profile/refused/" render={() => <div>Home</div>}/>*/}
+                        <Route exact  path="/profile/refused/" component={Refused}/>
+                        <Route  exact path="/profile/hongbao/" component={HongBao}/>
+                        <Route exact  path="/profile/balance/" component={Balance}/>
+                        <Route  path="/profile/orderThree/id/:id" component={OrderDetail}/>
+                        <Route  path="/profile/order/id/:id" component={OrderDetail}/>
+                    </Switch>
                 </div>
             </div>
         );

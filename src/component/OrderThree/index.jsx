@@ -23,6 +23,7 @@ export default class UserRight extends Component {
             // loadding显示隐藏
             loaddingDisplay:"block",
         };
+        console.log(props);
     }
     /**
      *  初始化,根据页码和每页显示的个数请求数据

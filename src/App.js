@@ -59,7 +59,6 @@ class App extends Component {
                              <div className="center clearfix">
                                 <Route exact path="/Profile" component={UserCenter}/>
                                 <Route  path="/Profile/*" component={UserCenter}/>
-                                 <Route   component={IndexCenter}/>
                              </div>
                         <Footer/>
                     </div>
