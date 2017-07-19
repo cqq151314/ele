@@ -37,9 +37,13 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 ```jsx
  <NavLink to="/center" activeStyle={{color: '##0089dc'}}>导航链接组件</NavLink>
  <NavLink to="/center"  activeClassName="selected">导航链接组件</NavLink>
+  <NavLink to="/profile/refused/" isActive={()=>{return true}}  />
+  
+ 
  ```
 - exact: bool  --> 位置完全匹配，activeStyle/activeClassName才生效
 - strict: bool --> 位置匹配，尾部有斜线，activeStyle/activeClassName才生效
+- isActive: func --> 当return的结果为true时，该导航的activeStyle/activeClassName一直生效，否则，一直不生效
 ### ```<Prompt>``` (提示组件)
 
 ### ```<MemoryRouter>``` (内存路由)
