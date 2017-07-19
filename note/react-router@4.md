@@ -7,8 +7,7 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
   basename="/profile"
   forceRefresh={!supportsHistory}
   getConfirmation={window.confirm("浏览器路由")}
-  keyLength={11}
->
+  keyLength={11}>
  <Link to="/one"/>
 </BrowserRouter>
 ```
