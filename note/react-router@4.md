@@ -14,9 +14,9 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 7. 网页中的 iconfont 可以参考 http://fontawesome.io/ 能找到最好，找不到的话，可以随便放一个作为站位符
 8. 所有相关代码必须提交到 github: https://github.com
 
-### <HashRouter> (锚点路由)
+### '<HashRouter>' (锚点路由)
 
-### <Link> (链接组件)
+### '<Link>' (链接组件)
 
 ### <NavLink> (导航链接组件)
 
