@@ -10,7 +10,7 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
   getUserConfirmation={optionalFunc}
   keyLength={optionalNumber}
 >
-  <App/>
+ <Link to=" "/>
 </BrowserRouter>
 ```
 #### basename： string   设置基本的url路径
