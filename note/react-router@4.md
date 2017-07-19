@@ -17,6 +17,8 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 - keyLength: number --> props.location.key的长度，这个key值是随机的，最大可设置的长度为11，默认长度为6
 
 ### ``` <HashRouter>``` (锚点路由)
+
+### ```<Link>``` (链接组件)
 ```jsx
 <Link to="/courses" />
 <Link to={{
@@ -28,8 +30,6 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 ```
 - basename： string  -->  设置的url路径，渲染之后to的路径为
 - to object  -->  url路径为 /courses?sort=name#the-hash，通过props.location.state可以查看state的值
-
-### ```<Link>``` (链接组件)
 
 ### ```<NavLink>``` (导航链接组件)
 
