@@ -9,11 +9,14 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
   getConfirmation={window.confirm("浏览器路由")}
   keyLength={11}
 >
- <Link to="/today"/>
+ <Link to="/one"/>
 </BrowserRouter>
 ```
 - basename： string   设置基本的url路径
 - forceRefresh bool   如果为 true，则路由器将在页面导航中使用全页刷新
+- getConfirmation func  用于弹出提示框。默认使用 window.confirm
+- keyLength: number  props.location.key的长度，这个key值是随机的，最大可设置的长度为11，默认长度为6
+
 ### ``` <HashRouter>``` (锚点路由)
 
 ### ```<Link>``` (链接组件)
