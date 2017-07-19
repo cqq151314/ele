@@ -34,6 +34,10 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 
 ### ```<NavLink>``` (导航链接组件)
 与当前 URL 匹配时，可向渲染元素添加样式属性
+```jsx
+ <NavLink to="/center" activeStyle={{color: '##0089dc'}}>导航链接组件</NavLink>
+ <NavLink to="/center"  activeClassName="selected">导航链接组件</NavLink>
+ ```
 
 ### ```<Prompt>``` (提示组件)
 
