@@ -106,7 +106,7 @@ props 分别是：
 
 
 ```javascript
-基本用法
+// 基本用法
  <Router history={history}>
       <div>
           <Route exact path="/" component={IndexCenter} />
@@ -114,7 +114,7 @@ props 分别是：
       </div>
 </Router>
 
-当嵌套子路由时，子页面NavLink和route不需要Router包裹
+// 当嵌套子路由时，子页面NavLink和route不需要Router包裹
  render() {
   return (
    <div>
@@ -152,7 +152,7 @@ const BoxRouter = ({ component: Component}) => (
 );
 export default BoxRouter;
 
-=== 包装路由的使用 ===
+// 包装路由的使用
 
 <BoxRouter path="/cool" component={组件} />
 
