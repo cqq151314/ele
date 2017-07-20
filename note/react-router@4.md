@@ -45,15 +45,15 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 - strict: bool --> 位置匹配，尾部有斜线，activeStyle/activeClassName才生效
 - isActive: func --> 当return的结果为true时，该导航的activeStyle/activeClassName一直生效，否则，一直不生效
 ###  五 ```<Prompt>``` (提示组件)
-当路径发生改变时，弹出提示框
+当用户离开当前页面前做出一些提示
 ```jsx
 <Prompt message="Are you sure you want to leave?"/>
 <Prompt  when={true} message="Are you sure you want to leave?" />
 <Prompt message={location => (Are you sure you want to go to ${location.pathname}?`)}/>
  ```
-- message: string --> 提示框的内容
-- message: func --> 提示框的内容可以动态设置
-- when: bool  --> when={true}提示框生效，when={false}提示框失效 
+- message: string --> 当用户离开当前页面时，设置的提示信息
+- message: func --> 当用户离开当前页面时，设置的回掉函数
+- when: bool  --> 通过设置一定条件要决定是否启用 Prompt,when={true}提示框生效，when={false}提示框失效 
 ### 六 ```<MemoryRouter>``` (内存路由)
 
 ### 七 ```<Redirect>``` (重定向组件)
