@@ -138,6 +138,26 @@ props 分别是：
  }
 
 ```
+#### 1. render
+
+```javascript
+
+// 内联渲染
+
+<Route path="/home" render={() => <h1>Home</h1} />
+
+// 包装 组合
+const BoxRouter = ({ component: Component}) => (
+  <Route   render={(props) => (<div><Component {...props} /></div> )} />
+);
+export default BoxRouter;
+
+=== 包装组件的使用 ===
+<BoxRouter path="/cool" component={组件} />
+
+```
+
+
 
 
 ### 九 ```<Router>``` (路由器组件)
