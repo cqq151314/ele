@@ -67,6 +67,7 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 ``` 
 - to: string 要重定向到的网址
 - to: object 要重定向到的位置，网址变为/profile/center?type=keywords 页面进项刷新
+
 ![](https://github.com/cqq151314/ele/blob/master/note/img/a1.png)
 
 
