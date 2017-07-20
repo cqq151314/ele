@@ -206,5 +206,5 @@ path |	location.pathname | strict | matches?
   <Route component={orderThree}/>
 </Switch>
 
- 【总结】 <Switch> 包裹的默认匹配第一个符合要求，当不设置path时，则为默认路由，当没有匹配的path时，则走默认路由。 
+ 【总结】 <Switch> 下的子节点只能是 <Route> 或 <Redirect> 元素。只有与当前访问地址匹配的第一个子节点才会被渲染。<Route> 元素用它们的 path 属性匹配，<Redirect> 元素使用它们的 from 属性匹配。如果没有对应的 path 或 from，那么它们将匹配任何当前访问地址。
 
