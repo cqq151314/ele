@@ -234,7 +234,7 @@ import createBrowserHistory from 'history/createBrowserHistory'
       </div>
     );
 ```
-【总结】：history.push后，跳转到push的路径里。
+【总结】history.push后，跳转到push的路径里。
 
 ### 十 ```<StaticRouter>``` (静态路由组件)
 
