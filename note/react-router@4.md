@@ -211,6 +211,30 @@ path |	location.pathname | strict | matches?
 
 ### 九 ```<Router>``` (路由器组件)
 - history: object  
+```jsx
+import createBrowserHistory from 'history/createBrowserHistory'
+  render(){
+    const customHistory = createBrowserHistory();
+    const history = createBrowserHistory();
+    // 将新入口放入历史堆栈
+    history.push({
+        pathname: '/',
+        search: '?a=query',
+        // 一些不存在url参数上面的当前url的状态值
+        state: { the: 'state' }
+    })
+    return (
+      <div className="App">
+          <Router history={history}>
+              <div>
+                 <Route exact path="/" component={IndexCenter} />
+                 <Route exact path="/Profile" component={UserCenter}/>
+              </div>
+          </Router>
+      </div>
+    );
+```
+【总结】：history.push后，跳转到push的路径里。
 
 ### 十 ```<StaticRouter>``` (静态路由组件)
 
