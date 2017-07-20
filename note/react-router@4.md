@@ -180,7 +180,7 @@ path |	location.pathname | strict | matches?
 /a/b/ | /a/b  | true  |  no 
 /a/b | /a/b/  | true  |  yes  
 
-【总结】如果strict为true，在路径层级相同或location.pathname比path多一层时，location.pathname后面带有斜杠时则匹配成功,如果想确保路由没有斜杠，则exact和strict都必须为true            
+【总结】如果strict为true，在路径层级相同或location.pathname比path多一层时，location.pathname后面带有斜杠时则匹配成功，如果想确保路由没有斜杠，则exact和strict都必须为true            
 
 
 ### 九 ```<Router>``` (路由器组件)
