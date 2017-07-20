@@ -168,6 +168,8 @@ path |	location.pathname | exact | matches?
 /a | /a/  | no  |  yes  
 /a | /a/b  | no  |  yes  
 
+【总结】如果 /a 不设置exact，则每次匹配/a/b时都会先把/a的组件渲染出来，再把/b的组件渲染出来，如果exact为false，则每次渲染时只渲染/b.
+
               
 
 
