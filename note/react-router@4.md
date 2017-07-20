@@ -172,6 +172,14 @@ path |	location.pathname | exact | matches?
 
 - strict: bool 
 
+path |	location.pathname | strict | matches?
+----|------|----|------
+/a | /a/  | true |  yes
+/a/ | /a  | true |   no
+/a | /a/b  | true  |  yes
+/a/b/ | /a/b  | true  |  no 
+/a/b | /a/b/  | true  |  yes  
+
               
 
 
