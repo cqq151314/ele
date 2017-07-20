@@ -207,5 +207,5 @@ path |	location.pathname | strict | matches?
     <Route component={orderThree}/>
   </Switch>
   ```
- 【总结】 ```<Switch>``` 包裹的默认匹配第一个符合要求，当不设置path时，则为默认路由，当没有匹配的path时，则走默认路由。 
+ 【总结】 <Switch> 包裹的默认匹配第一个符合要求，当不设置path时，则为默认路由，当没有匹配的path时，则走默认路由。 
 
