@@ -146,13 +146,14 @@ props 分别是：
 
 <Route path="/home" render={() => <h1>Home</h1} />
 
-// 包装 组合
+// 路由包装
 const BoxRouter = ({ component: Component}) => (
   <Route   render={(props) => (<div><Component {...props} /></div> )} />
 );
 export default BoxRouter;
 
-=== 包装组件的使用 ===
+=== 包装路由的使用 ===
+
 <BoxRouter path="/cool" component={组件} />
 
 ```
