@@ -11,7 +11,6 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
   keyLength={11}>
  <Link to="/one"/>
 </BrowserRouter>
-```
 - basename： string  -->  设置基本的url路径，渲染之后to的路径为/profile/one
 - forceRefresh bool  -->  如果为 true，则路由器将在页面导航中使用全页刷新
 - getConfirmation func  -->  用于弹出提示框。默认使用 window.confirm
