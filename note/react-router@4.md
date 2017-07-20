@@ -187,13 +187,16 @@ path |	location.pathname | strict | matches?
 
 常用的三种history
 
-// HTML5 history, 推荐
+// HTML5 history
+
 import createHistory from 'history/lib/createBrowserHistory'
 
 // Hash history
+
 import createHistory from 'history/lib/createHashHistory'
 
 // 内存 history （如：node环境）
+
 import createHistory from 'history/lib/createMemoryHistory
 
 ### 十 ```<StaticRouter>``` (静态路由组件)
