@@ -17,6 +17,16 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 - keyLength: number --> props.location.key的长度，这个key值是随机的，最大可设置的长度为11，默认长度为6
 
 ### 二 ``` <HashRouter>``` (锚点路由)
+Hash history 不支持 location.key 和 location.state。另外由于该技术只是用来支持旧版浏览器，因此更推荐大家使用 BrowserRouter。
+
+```jsx
+location:Object
+  hash:"#/?a=query"
+  pathname:"/"
+  search:"?a=query"
+  state:undefined
+ __proto__:Object
+ ```
 
 ### 三```<Link>``` (链接组件)
 
