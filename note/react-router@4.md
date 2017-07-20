@@ -61,7 +61,7 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 <Redirect  to={{pathname: '/profile/center', search: '?type=keywords', state: { referrer: "aa" }}}/>
 <Switch>
  <Redirect from='/profile/orderThree' to='/profile/center'/>
- <Route  strict={true}  path="/profile/center" component={UserRight}/>
+ <Route  path="/profile/center" component={UserRight}/>
  <Route exact  path="/profile/orderThree" component={orderThree}/>
 </Switch>
 ``` 
