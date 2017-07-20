@@ -71,9 +71,9 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 ![](https://github.com/cqq151314/ele/blob/master/note/img/a1.png)
 
 - push: bool -->当为 true 时，重定向会将新条目推入历史记录，而不是替换当前条目
-1：有push时
+1.有push时
 ![](https://github.com/cqq151314/ele/blob/master/note/img/a2.png)
-2：没有push时
+1.没有push时
 ![](https://github.com/cqq151314/ele/blob/master/note/img/a3.png)
 
 ### 八 ```<Route>```  (路由组件)
