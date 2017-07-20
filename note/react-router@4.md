@@ -182,8 +182,19 @@ path |	location.pathname | strict | matches?
 
 【总结】如果strict为true，在路径层级相同或location.pathname比path多一层时，location.pathname后面带有斜杠时则匹配成功，如果想确保路由没有斜杠，则exact和strict都必须为true            
 
-
 ### 九 ```<Router>``` (路由器组件)
+- history: object  
+
+常用的三种history
+
+// HTML5 history, 推荐
+import createHistory from 'history/lib/createBrowserHistory'
+
+// Hash history
+import createHistory from 'history/lib/createHashHistory'
+
+// 内存 history （如：node环境）
+import createHistory from 'history/lib/createMemoryHistory
 
 ### 十 ```<StaticRouter>``` (静态路由组件)
 
