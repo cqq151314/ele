@@ -18,8 +18,8 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 
 ### 二 ``` <HashRouter>``` (锚点路由)
 Hash history 不支持 location.key 和 location.state。另外由于该技术只是用来支持旧版浏览器，因此更推荐大家使用 BrowserRouter。
-```js
- <HashRouter  basename="/Profile" getConfirmation={window.confirm("哈希路由")} >  
+```jsx
+ <HashRouter  basename="/Profile" getConfirmation={window.confirm("哈希路由")} >  
     <li><NavLink to="/orderThree" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>近三个月订单</NavLink></li>
     <li><NavLink to="/untated"  activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>待评价订单</NavLink></li>
     <li><NavLink to="/refused" activeStyle={{color: '#0089dc'}}  onClick={(e)=>{this.handClick(e)}}>退单记录</NavLink></li>
