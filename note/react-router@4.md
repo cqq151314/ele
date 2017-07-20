@@ -85,6 +85,17 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 - from: string 要重定向的路径名,使用时时必须搭配<Switch>使用，否则不生效
 
 ### 八 ```<Route>```  (路由组件)
+<Route> 也许是 RR4 中最重要的组件了,它最基本的职责就是当页面的访问地址与 Route 上的 path 匹配时，就渲染出对应的 UI 界面。
+
+<Route> 自带三个 render method 和三个 props 
+
+render methods 分别是：
+```jsx
+ - <Route component>
+ - <Route render>
+- <Route children>
+```
+#### 每种 render method 都有不同的应用场景，同一个<Route> 应该只使用一种 render method ，大部分情况下你将使用 component 。
 
 ### 九 ```<Router>``` (路由器组件)
 
