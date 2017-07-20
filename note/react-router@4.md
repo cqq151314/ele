@@ -158,12 +158,13 @@ export default BoxRouter;
 
 ```
 - path: string  URL 路径,如果不给path，那么路由将一直匹配。
-- exact: bool  
-| path        | location.pathname | exact     |  matches? |
-| ----------- |:-----------------:| ---------:| ---------:|
-| col 3 is    | right-aligned     | $1600     |           |
-| col 2 is    | centered          |   $12     |           |
-| zebra strip | are neat          |    $1     |           |
+- exact: bool 
+
+dog | bird | cat
+----|------|----
+foo | foo  | foo
+bar | bar  | bar
+baz | baz  | baz
 
               
 
