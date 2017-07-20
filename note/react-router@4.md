@@ -189,3 +189,24 @@ path |	location.pathname | strict | matches?
 
 ### 十一 ```<Switch>``` (单匹配组件)
 
+只渲染出第一个与当前访问地址匹配的 <Route> 或 <Redirect>,只会渲染第一个匹配奥！
+
+```jsx
+  <Route exact path="/Profile" component={UserRight}/>
+  <Route  path="/Profile/center" component={UserRight}/>
+  <Route   path="/Profile/orderThree" component={orderThree}/>
+  
+```
+// 在上面这段代码中，如果你访问 /about，那么组件 UserRight，UserRight，orderThree 都将被渲染出来，因为他们对应的路由与访问的地址 /about 匹配。这显然不是我们想要的，我们只想渲染出第一个匹配的路由就可以了，于是 <Switch> 应运而生！
+
+```jsx
+ <Switch>
+    <Route path="/Profile" component={UserRight}/>
+    <Route path="/Profile/center" component={UserRight}/>
+    <Route path="/Profile/orderThree" component={orderThree}/>
+    <Route component={orderThree}/>
+  </Switch>
+  
+  ```
+ 【总结】```<Switch>```包裹的默认匹配第一个符合要求，当不设置path时，则为默认路由，当没有匹配的path时，则走默认路由。 
+
