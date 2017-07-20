@@ -18,15 +18,28 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 
 ### 二 ``` <HashRouter>``` (锚点路由)
 Hash history 不支持 location.key 和 location.state。另外由于该技术只是用来支持旧版浏览器，因此更推荐大家使用 BrowserRouter。
+```js
+ <HashRouter  basename="/Profile" getConfirmation={window.confirm("哈希路由")} >  
+    <li><NavLink to="/orderThree" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>近三个月订单</NavLink></li>
+    <li><NavLink to="/untated"  activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>待评价订单</NavLink></li>
+    <li><NavLink to="/refused" activeStyle={{color: '#0089dc'}}  onClick={(e)=>{this.handClick(e)}}>退单记录</NavLink></li>
+    <li><NavLink to="/Profile/hongbao" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>我的红包</NavLink></li>
+    <li><NavLink to="/Profile/balance" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>账户余额</NavLink></li>
+    <Switch>
+        <Route exact path="/" component={UserRight}/>
+        <Route  path="/center" component={UserRight}/>
+        <Route   path="/orderThree" component={orderThree}/>
+        <Route   path="/untated" component={Ubrated}/>
+        <Route   path="/refused" component={Refused}/>
+        <Route  component={IndexCenter}/>
+    </Switch>
+  </HashRouter>
+  ```
+- basename： string  -->  设置基本的url路径，渲染之后to的路径为<a href="#/Profile/orderThree" />
+- getConfirmation func  -->  用于弹出提示框。默认使用 window.confirm
+- children: node --> 一个HashRouter只能有一个子节点，建议用<div>将多个节点包裹起来。
 
-```jsx
-location:Object
-  hash:"#/?a=query"
-  pathname:"/"
-  search:"?a=query"
-  state:undefined
- __proto__:Object
- ```
+【注意】在使用HashRouter时，to后面的地址为哈希值，（#/Profile/orderThree）,进行路由切换时，改变的是哈希值，  
 
 ### 三```<Link>``` (链接组件)
 
