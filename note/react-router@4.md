@@ -170,6 +170,8 @@ path |	location.pathname | exact | matches?
 
 【总结】如果exact为false，则每次匹配/a/b时都会先把/a的组件渲染出来，再把/b的组件渲染出来，如果exact为true，则每次渲染时只渲染/b.
 
+- strict: bool 
+
               
 
 
