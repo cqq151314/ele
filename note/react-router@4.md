@@ -138,7 +138,7 @@ props 分别是：
  }
 
 ```
-#### 1. render
+#### 2. render
 
 ```javascript
 
