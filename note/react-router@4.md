@@ -90,9 +90,9 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 <Route> 自带三个 render method 和三个 props 
 
 render methods 分别是：
- - ```jsx <Route component>```
- - ```jsx <Route render>>```
- - ```jsx<Route children>```
+ - ``` <Route component>```
+ - ``` <Route render>>```
+ - ``` <Route children>```
 
 【注意】 每种 render method 都有不同的应用场景，同一个<Route> 应该只使用一种 render method ，大部分情况下你将使用 component 。
 
