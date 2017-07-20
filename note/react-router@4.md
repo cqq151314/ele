@@ -101,7 +101,7 @@ props 分别是：
  - location
  - history
  
-1.#### component
+#### 1. component
 当访问地址和路由匹配时，一个 React component 被渲染，此时此组件接受 route props (match, location, history)
 
 
