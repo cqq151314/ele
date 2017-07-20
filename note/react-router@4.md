@@ -70,9 +70,6 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 
 ![](https://github.com/cqq151314/ele/blob/master/note/img/a1.png)
 
-
-
-
 ### 八 ```<Route>```  (路由组件)
 
 ### 九 ```<Router>``` (路由器组件)
