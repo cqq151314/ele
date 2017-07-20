@@ -103,7 +103,8 @@ props 分别是：
  
 #### component
 当访问地址和路由匹配时，一个 React component 被渲染，此时此组件接受 route props (match, location, history)
-```
+
+
 ```javascript
 基本用法
  <Router history={history}>
@@ -115,26 +116,26 @@ props 分别是：
 
 当嵌套子路由时，子页面NavLink和route不需要Router包裹
  render() {
-        return (
-            <div>
-            <li><NavLink to="/Profile/orderThree" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>近三个月订单</NavLink></li>
-            <li><NavLink to="/Profile/untated"  activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>待评价订单</NavLink></li>
-            <li><NavLink to="/Profile/refused" activeStyle={{color: '#0089dc'}}  onClick={(e)=>{this.handClick(e)}}>退单记录</NavLink></li>
-            <li><NavLink to="/Profile/hongbao" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>我的红包</NavLink></li>
-            <li><NavLink to="/Profile/balance" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>账户余额</NavLink></li>
-            <Link to={'/profile/order/id/'+item.id}>订单详情</Link>
-            <Route exact path="/Profile" component={UserRight}/>
-            <Route  path="/Profile/center" component={UserRight}/>
-            <Route   path="/Profile/orderThree" component={orderThree}/>
-            <Route   path="/Profile/untated" component={Ubrated}/>
-            <Route   path="/Profile/refused" component={Refused}/>
-            <Route exact  path="/Profile/refused" component={Refused}/>
-            <Route  exact path="/Profile/hongbao" component={HongBao}/>
-            <Route exact  path="/Profile/balance" component={Balance}/>
-            <Route  path="/profile/order/id/:id" component={OrderDetail}/>
-       </div>
-        );
-
+  return (
+   <div>
+    <li><NavLink to="/Profile/orderThree" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>近三个月订单</NavLink></li>
+    <li><NavLink to="/Profile/untated"  activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>待评价订单</NavLink></li>
+    <li><NavLink to="/Profile/refused" activeStyle={{color: '#0089dc'}}  onClick={(e)=>{this.handClick(e)}}>退单记录</NavLink></li>
+    <li><NavLink to="/Profile/hongbao" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>我的红包</NavLink></li>
+    <li><NavLink to="/Profile/balance" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>账户余额</NavLink></li>
+    <Link to={'/profile/order/id/'+item.id}>订单详情</Link>
+    <Route exact path="/Profile" component={UserRight}/>
+    <Route  path="/Profile/center" component={UserRight}/>
+    <Route   path="/Profile/orderThree" component={orderThree}/>
+    <Route   path="/Profile/untated" component={Ubrated}/>
+    <Route   path="/Profile/refused" component={Refused}/>
+    <Route exact  path="/Profile/refused" component={Refused}/>
+    <Route  exact path="/Profile/hongbao" component={HongBao}/>
+    <Route exact  path="/Profile/balance" component={Balance}/>
+    <Route  path="/profile/order/id/:id" component={OrderDetail}/>
+  </div>
+  );
+ }
 
 ```
 
