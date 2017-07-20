@@ -57,7 +57,7 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 ### 六 ```<MemoryRouter>``` (内存路由)
 
 ### 七 ```<Redirect>``` (重定向组件)
-渲染 ```<Redirect>``` 将导航到新的位置。进行重新定向
+渲染 ```<Redirect>``` 渲染时将导航到一个新地址，这个新地址覆盖本该访问的那个地址
 ```jsx
 <Redirect  to='/profile/center'/>
 <Redirect  to={{pathname: '/profile/center', search: '?type=keywords', state: { referrer: "aa" }}}/>
@@ -68,11 +68,11 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 </Switch>
 ``` 
 - to: string 要重定向到的网址
-- to: object 要重定向到的位置，网址变为/profile/center?type=keywords 页面进项跳转
+- to: object 重定向的 location 对象，网址变为/profile/center?type=keywords 页面进项跳转
 
 ![](https://github.com/cqq151314/ele/blob/master/note/img/a1.png)
 
-- push: bool -->当为 true 时，重定向会将新条目推入历史记录，而不是替换当前条目
+- push: bool -->当为 true 时，重定向会将新条目推入历史记录，而不是替换当前条目,无法回退到前面的页面
 
 1.有push时
 
