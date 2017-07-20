@@ -38,8 +38,8 @@ Hash history 不支持 location.key 和 location.state。另外由于该技术�
     </Switch>
   </HashRouter>
   ```
-
-- basename： string  -->  设置基本的url路径，渲染之后to的路径为<a href="#/Profile/orderThree" />
+  
+- basename： string  -->  设置基本的url路径，渲染之后to的路径为 ```<a href="#/Profile/orderThree" />```
 - getConfirmation func  -->  用于弹出提示框。默认使用 window.confirm
 - children: node --> 一个HashRouter只能有一个子节点，建议用<div>将多个节点包裹起来。
 
