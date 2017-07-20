@@ -189,7 +189,7 @@ path |	location.pathname | strict | matches?
 
 ### 十一 ```<Switch>``` (单匹配组件)
 
-只渲染出第一个与当前访问地址匹配的 <Route> 或 <Redirect>,只会渲染第一个匹配奥！
+只渲染出第一个与当前访问地址匹配的 ```<Route>``` 或 ```<Redirect>```,只会渲染第一个匹配奥！
 
 ```jsx
   <Route exact path="/Profile" component={UserRight}/>
