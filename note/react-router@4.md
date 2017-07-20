@@ -157,8 +157,15 @@ export default BoxRouter;
 <BoxRouter path="/cool" component={组件} />
 
 ```
+- path: string  URL 路径,如果不给path，那么路由将一直匹配。
+- exact: bool  
+| path        | location.pathname | exact     |  matches? |
+| ----------- |:-----------------:| ---------:| ---------:|
+| col 3 is    | right-aligned     | $1600     |           |
+| col 2 is    | centered          |   $12     |           |
+| zebra strip | are neat          |    $1     |           |
 
-
+              
 
 
 ### 九 ```<Router>``` (路由器组件)
