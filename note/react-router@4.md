@@ -160,11 +160,13 @@ export default BoxRouter;
 - path: string  URL 路径,如果不给path，那么路由将一直匹配。
 - exact: bool 
 
-dog | bird | cat
-----|------|----
-foo | foo  | foo
-bar | bar  | bar
-baz | baz  | baz
+path |	location.pathname | exact | matches?
+----|------|----|------
+/a | /a  | true |  yes
+/a | /a/  | true |   no
+/a | /a/b  | true  |  no
+/a | /a/  | no  |  yes  
+/a | /a/b  | no  |  yes  
 
               
 
