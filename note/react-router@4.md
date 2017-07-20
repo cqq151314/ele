@@ -218,7 +218,7 @@ import createBrowserHistory from 'history/createBrowserHistory'
     const history = createBrowserHistory();
     // 将新入口放入历史堆栈
     history.push({
-        pathname: '/',
+        pathname: '/profile',
         search: '?a=query',
         // 一些不存在url参数上面的当前url的状态值
         state: { the: 'state' }
@@ -234,7 +234,7 @@ import createBrowserHistory from 'history/createBrowserHistory'
       </div>
     );
 ```
-【总结】history.push后，跳转到push的路径里。
+【总结】history.push后，跳转到push的路径里。url地址为：/profile?a=query#/
 
 ### 十 ```<StaticRouter>``` (静态路由组件)
 
