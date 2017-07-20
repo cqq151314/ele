@@ -189,22 +189,20 @@ path |	location.pathname | strict | matches?
 
 ### 十一 ```<Switch>``` (单匹配组件)
 
-只渲染出第一个与当前访问地址匹配的 ```<Route>``` 或 ```<Redirect>```,只会渲染第一个匹配奥！
-
+只渲染出第一个与当前访问地址匹配的 ```<Route>或<Redirect>```,只会渲染第一个匹配奥！
 ```jsx
   <Route exact path="/Profile" component={UserRight}/>
   <Route  path="/Profile/center" component={UserRight}/>
   <Route   path="/Profile/orderThree" component={orderThree}/>
   
-```
 // 在上面这段代码中，如果你访问 /about，那么组件 UserRight，UserRight，orderThree 都将被渲染出来，因为他们对应的路由与访问的地址 /about 匹配。这显然不是我们想要的，我们只想渲染出第一个匹配的路由就可以了，于是 <Switch> 应运而生！
-```jsx
+
 <Switch>
   <Route path="/Profile" component={UserRight}/>
   <Route path="/Profile/center" component={UserRight}/>
   <Route path="/Profile/orderThree" component={orderThree}/>
   <Route component={orderThree}/>
 </Switch>
-
+```jsx
  【总结】 <Switch> 下的子节点只能是 <Route> 或 <Redirect> 元素。只有与当前访问地址匹配的第一个子节点才会被渲染。<Route> 元素用它们的 path 属性匹配，<Redirect> 元素使用它们的 from 属性匹配。如果没有对应的 path 或 from，那么它们将匹配任何当前访问地址。
 
