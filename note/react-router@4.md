@@ -100,6 +100,7 @@ props 分别是：
  - match
  - location
  - history
+===component===
 
 ### 九 ```<Router>``` (路由器组件)
 
