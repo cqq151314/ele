@@ -31,7 +31,7 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
   state: { fromDashboard: true }
 }}/>
 ```
-- basename： string  -->  设置的url路径，渲染之后to的路径为
+- basename： string  -->  设置的url路径，跳转到指定路径。
 - to object  -->  url路径为 /courses?sort=name#the-hash，通过props.location.state可以查看state的值
 
 ### 四 ```<NavLink>``` (导航链接组件)
