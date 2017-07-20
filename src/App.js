@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './App.css';
 import bsStore from './store/fetch-npm-node'
 import { BrowserRouter as Router, Route,IndexRoute} from 'react-router-dom'
+import createBrowserHistory from 'history/createBrowserHistory'
 import Header from './component/Header/Header.jsx';
 import UserCenter from './component/UserCenter/index'
 import IndexCenter from './component/IndexCenter/index'
@@ -50,9 +51,11 @@ class App extends Component {
             })
             }
     render(){
+        // const customHistory = createBrowserHistory();
+        const history = createBrowserHistory();
         return (
             <div className="App">
-                <Router>
+                <Router history={history}>
                     <div>
                         <Header />
                             <Route exact path="/" component={IndexCenter} />
