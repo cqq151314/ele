@@ -19,7 +19,9 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 ### 二 ``` <HashRouter>``` (锚点路由)
 
 ### 三```<Link>``` (链接组件)
+
 类似于a标签
+
 ```jsx
 <Link to="/courses" />
 <Link to={{
@@ -79,6 +81,8 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 1.没有push时
 
 ![](https://github.com/cqq151314/ele/blob/master/note/img/a3.png)
+
+- from: string 要重定向的路径名,使用时时必须搭配<Switch>使用，否则不生效
 
 ### 八 ```<Route>```  (路由组件)
 
