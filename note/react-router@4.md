@@ -1,7 +1,7 @@
 # React Router 4 - WEB API
 
-  React Router 4 API 分为 WEB/Native/Core 三部分，以下是 React Router 4.0的一些独立的包
-   - react-router      -->   React Router 核心
+  React Router 4 API 分为 WEB/Native/Core 三部分，以下是 React Router 4.0的一些独立的包：
+   - react-router      -->   React Router 核心
    - react-router-dom       -->   用于 DOM 绑定的 React Router
     - react-router-native    -->  用于 React Native 的 React Router
     - react-router-redux     -->   React Router 和 Redux 的集成
