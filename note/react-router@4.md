@@ -1,29 +1,27 @@
 # React Router 4 - WEB API
-React Router 4 API 分为 WEB/Native/Core 三部分，以下是 React Router 4.0的一些独立的包
-- react-router      -->   React Router 核心
-- react-router-dom       -->   用于 DOM 绑定的 React Router
-- react-router-native    -->  用于 React Native 的 React Router
-- react-router-redux     -->   React Router 和 Redux 的集成
-- react-router-config     -->  静态路由配置的小助手
+  React Router 4 API 分为 WEB/Native/Core 三部分，以下是 React Router 4.0的一些独立的包
+    - react-router      -->   React Router 核心
+    - react-router-dom       -->   用于 DOM 绑定的 React Router
+    - react-router-native    -->  用于 React Native 的 React Router
+    - react-router-redux     -->   React Router 和 Redux 的集成
+    - react-router-config     -->  静态路由配置的小助手
 ### 引用react-router 还是 react-router-dom ？
-他们两个只要引用一个就行了，不同之处就是后者比前者多出了 <Link> <BrowserRouter> 这样的 DOM 类组件。因此我们只需引用 react-router-dom 这个包就行了。
+  他们两个只要引用一个就行了，不同之处就是后者比前者多出了 <Link> <BrowserRouter> 这样的 DOM 类组件。因此我们只需引用 react-router-dom 这个包就行了。
 ### 一、```<BrowserRouter>``` (浏览器路由)
-使用 HTML5 History API（pushState，replaceState 和 popstate 事件）的 <Router> 来保持 UI 与 URL 同步。
-
-```jsx
-<BrowserRouter
-  basename="/profile"
-  forceRefresh={!supportsHistory}
-  getConfirmation={window.confirm("浏览器路由")}
-  keyLength={11}>
- <Link to="/one"/>
-</BrowserRouter>
-```
-
-- basename： string  -->  设置基本的url路径，渲染之后to的路径为/profile/one
-- forceRefresh bool  -->  如果为 true，则路由器将在页面导航中使用全页刷新
-- getConfirmation func  -->  用于弹出提示框。默认使用 window.confirm
-- keyLength: number --> props.location.key的长度，这个key值是随机的，最大可设置的长度为11，默认长度为6
+  使用 HTML5 History API（pushState，replaceState 和 popstate 事件）的 <Router> 来保持 UI 与 URL 同步。
+  ```jsx
+  <BrowserRouter
+    basename="/profile"
+    forceRefresh={!supportsHistory}
+    getConfirmation={window.confirm("浏览器路由")}
+    keyLength={11}>
+   <Link to="/one"/>
+  </BrowserRouter>
+  ```
+  - basename： string  -->  设置基本的url路径，渲染之后to的路径为/profile/one
+  - forceRefresh bool  -->  如果为 true，则路由器将在页面导航中使用全页刷新
+  - getConfirmation func  -->  用于弹出提示框。默认使用 window.confirm
+  - keyLength: number --> props.location.key的长度，这个key值是随机的，最大可设置的长度为11，默认长度为6
 
 ### 二、 ``` <HashRouter>``` (锚点路由)
 Hash history 不支持 location.key 和 location.state。另外由于该技术只是用来支持旧版浏览器，因此更推荐大家使用 BrowserRouter。
