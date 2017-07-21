@@ -68,7 +68,7 @@ Hash history 不支持 location.key 和 location.state。另外由于该技术�
 - to object  -->  url路径为 /courses?sort=name#the-hash，通过props.location.state可以查看state的值
 
 ### 四、  ```<NavLink>``` (导航链接组件)
-与当前 URL 匹配时，可向渲染元素添加样式属性
+这是  ```<Link> ``` 的特殊版，顾名思义这就是为页面导航准备的。因为导航需要有 “激活状态”，
 ```jsx
  <NavLink to="/center" activeStyle={{color: '##0089dc'}}>导航链接组件</NavLink>
  <NavLink to="/center"  activeClassName="selected">导航链接组件</NavLink>
