@@ -241,11 +241,7 @@ import createBrowserHistory from 'history/createBrowserHistory'
 ```
 【总结】history.push后，跳转到push的路径里。url地址为：/profile?a=query#/
 
-### 九、 ```<StaticRouter>``` (静态路由组件)
-
-### 十、 ```<MemoryRouter>``` (内存路由)
-
-### 十一、 ```<Switch>``` (单匹配组件)
+### 九、 ```<Switch>``` (单匹配组件)
 
 只渲染出第一个与当前访问地址匹配的 ```<Route>或<Redirect>```,只会渲染第一个匹配奥！
 ```jsx
