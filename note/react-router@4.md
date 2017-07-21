@@ -117,7 +117,7 @@ Hash history 不支持 location.key 和 location.state。另外由于该技术�
 - from: string 要重定向的路径名,使用时时必须搭配<Switch>使用，否则不生效
 
 #### 七、```<Route>```  (路由组件)
-<Route> 也许是 RR4 中最重要的组件了,它最基本的职责就是当页面的访问地址与 Route 上的 path 匹配时，就渲染出对应的 UI 界面。
+```<Route>```  也许是 RR4 中最重要的组件了,它最基本的职责就是当页面的访问地址与 Route 上的 path 匹配时，就渲染出对应的 UI 界面。
 
 ```<Route>``` 自带三个 render method 和三个 props 
 
