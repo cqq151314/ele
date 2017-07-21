@@ -242,9 +242,7 @@ import createBrowserHistory from 'history/createBrowserHistory'
 【总结】history.push后，跳转到push的路径里。url地址为：/profile?a=query#/
 
 3.props的所有信息如下所示。
-
 ![](https://github.com/cqq151314/ele/blob/master/note/img/a4.png)
-
 ### 九、 ```<Switch>``` (单匹配组件)
 
 只渲染出第一个与当前访问地址匹配的 ```<Route>或<Redirect>```,只会渲染第一个匹配奥！
