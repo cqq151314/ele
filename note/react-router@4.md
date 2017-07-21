@@ -83,7 +83,7 @@ Hash history 不支持 location.key 和 location.state。另外由于该技术�
 ```jsx
 <Prompt message="Are you sure you want to leave?"/>
 <Prompt  when={true} message="Are you sure you want to leave?" />
- <Prompt message={location => (`Are you sue you want to go to ${location.pathname}?`)} />
+<Prompt message={location => (`Are you sue you want to go to ${location.pathname}?`)} />
  ```
 - message: string --> 当用户离开当前页面时，设置的提示信息
 - message: func --> 当用户离开当前页面时，设置的回掉函数
