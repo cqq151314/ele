@@ -78,7 +78,7 @@ Hash history 不支持 location.key 和 location.state。另外由于该技术�
 - strict: bool --> 位置匹配，尾部有斜线，activeStyle/activeClassName才生效
 - isActive: func --> 当return的结果为true时，该导航的activeStyle/activeClassName一直生效，否则，一直不生效
 ###  五、 ```<Prompt>``` (提示组件)
-当用户离开当前页面前做出一些提示
+当用户离开当前页面前做出一些提示，用在render方法中，当做提示框标签使用。
 ```jsx
 <Prompt message="Are you sure you want to leave?"/>
 <Prompt  when={true} message="Are you sure you want to leave?" />
