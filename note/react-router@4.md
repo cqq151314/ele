@@ -14,11 +14,11 @@
   使用 HTML5 History API（pushState，replaceState 和 popstate 事件）的 <Router> 来保持 UI 与 URL 同步。
   ```jsx
   <BrowserRouter
-    basename="/profile"
-    forceRefresh={!supportsHistory}
-    getConfirmation={window.confirm("浏览器路由")}
-    keyLength={11}>
-   <Link to="/one"/>
+      basename="/profile"
+      forceRefresh={!supportsHistory}
+      getConfirmation={window.confirm("浏览器路由")}
+      keyLength={11}>
+     <Link to="/one"/>
   </BrowserRouter>
   ```
   - basename： string  -->  设置基本的url路径，渲染之后to的路径为/profile/one
