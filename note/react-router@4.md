@@ -1,5 +1,12 @@
 # React Router 4 - WEB API
 React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
+- react-router React Router 核心
+- react-router-dom 用于 DOM 绑定的 React Router
+- react-router-native 用于 React Native 的 React Router
+- react-router-redux React Router 和 Redux 的集成
+- react-router-config 静态路由配置的小助手
+### 引用react-router 还是 react-router-dom ？
+他们两个只要引用一个就行了，不同之处就是后者比前者多出了 <Link> <BrowserRouter> 这样的 DOM 类组件。因此我们只需引用 react-router-dom 这个包就行了。
 ### 一、```<BrowserRouter>``` (浏览器路由)
 使用 HTML5 History API（pushState，replaceState 和 popstate 事件）的 <Router> 来保持 UI 与 URL 同步。
 
