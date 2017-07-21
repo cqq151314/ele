@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './index.css';
 import '../../fonts/font-awesome.min.css';
 import bsStore from '../../store/fetch-npm-node';
-import { Link } from 'react-router-dom'
+import createBrowserHistory from 'history/createBrowserHistory'
+import { Link,Prompt } from 'react-router-dom'
 import Loadding from '../Loadding/Loadding';
 export default class UserRight extends Component {
     constructor(props) {
@@ -19,6 +20,7 @@ export default class UserRight extends Component {
         // loadding显示隐藏
         loaddingDisplay:"none",
     };
+        console.log(props);
 }
     /**
      *  初始化,根据页码和每页显示的个数请求数据
@@ -67,8 +69,18 @@ export default class UserRight extends Component {
         this.initData(this.state.currentPage,this.state.pageSize);
     }
     render() {
+        const customHistory = createBrowserHistory();
+        const history = createBrowserHistory();
+        // 将新入口放入历史堆栈
+        // history.push({
+        //     pathname: '/profile',
+        //     search: '?a=query',
+        //     // 一些不存在url参数上面的当前url的状态值
+        //     state: { the: 'state' }
+        // })
         return (
             <div>
+
             <div className="profile-panel" style={{"display":this.state.loaddingDisplay==='none'?'block':'none'}}>
                 <div  className="user-top">
                 <div className="profile-info">

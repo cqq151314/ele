@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import bsStore from '../../store/fetch-npm-node';
 import './index.css';
 import '../../fonts/font-awesome.min.css';
-import { BrowserRouter, Route, NavLink,Redirect,Switch,Link  } from 'react-router-dom'
+import { BrowserRouter, Route, NavLink,Redirect,Switch,Link, HashRouter,Prompt } from 'react-router-dom'
+import createHashHistory from 'history/createHashHistory'
 import Search from '../Search/Search'
 import UserRight from '../../component/UserRight/index'
 import orderThree from '../../component/OrderThree/index'
@@ -65,17 +66,14 @@ export default class UserCenter extends Component {
     }
 
     render() {
-        const supportsHistory = 'pushState' in window.history;
-        console.log(supportsHistory);
         return (
-            <BrowserRouter basename="/profile"  keyLength={10} forceRefresh={!supportsHistory}>
             <div>
                 <Search  state={this.state.myState} onChange={this.onChange.bind(this)} onClick={this.onClick.bind(this)} value={this.state.value} show={this.state.show}/>
                 <div className="userCenter">
                     <ul className="profile-sidebar" style={{'marginTop':"0"}} >
                         <li className="profile-sidebar">
                             <h2 className="profile-sidebar-sectiontitle">
-                                <NavLink to="/center" activeStyle={{color: '##0089dc'}}><span className="fa fa-home"></span><span onClick={(e)=>{this.handClick(e)}}>个人中心</span></NavLink>
+                                <NavLink to="/profile/center" activeStyle={{color: '##0089dc'}}><span className="fa fa-home"></span><span onClick={(e)=>{this.handClick(e)}}>个人中心</span></NavLink>
                             </h2>
                         </li>
                         <li  className="profile-sidebar">
@@ -83,9 +81,9 @@ export default class UserCenter extends Component {
                                 <span className="fa fa-file-text-o"></span>我的订单
                             </h2>
                             <ul>
-                                <li><Link to="/orderThree" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>近三个月订单</Link></li>
-                                <li><NavLink to="/untated"  activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>待评价订单</NavLink></li>
-                                <li><NavLink to="/refused" activeStyle={{color: '#0089dc'}}  onClick={(e)=>{this.handClick(e)}}>退单记录</NavLink></li>
+                                <li><NavLink  to="/profile/orderThree" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>近三个月订单</NavLink></li>
+                                <li><NavLink  to="/profile/untated"  activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>待评价订单</NavLink></li>
+                                <li><NavLink  to="/profile/refused" activeStyle={{color: '#0089dc'}}  onClick={(e)=>{this.handClick(e)}}>退单记录</NavLink></li>
                             </ul>
                         </li>
                         <li  className="profile-sidebar">
@@ -93,8 +91,8 @@ export default class UserCenter extends Component {
                                 <span className="fa fa-money"></span>我的资产
                             </h2>
                             <ul>
-                                <li><NavLink to="/hongbao" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>我的红包</NavLink></li>
-                                <li><NavLink to="/balance" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>账户余额</NavLink></li>
+                                <li><NavLink to="/Profile/hongbao" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>我的红包</NavLink></li>
+                                <li><NavLink to="/Profile/balance" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>账户余额</NavLink></li>
                                 <li><a>我的积分</a></li>
                             </ul>
                         </li>
@@ -114,28 +112,22 @@ export default class UserCenter extends Component {
                                 <span className="fa fa-star-o"></span>我的收藏
                             </h2>
                         </li>
-                        <ListItemLink to="/profile/somewhere">1</ListItemLink>
-                        <ListItemLink to="/profile/somewhere-else">2</ListItemLink>
                     </ul>
-                    {/*<Switch>*/}
-                    <Route exact path="/Profile" component={UserRight}/>
-                    {/*<Redirect from='/profile/orderThree' to='/profile/center'/>*/}
-                    {/*<Redirect  to='/center'/>*/}
-                    <Redirect  to={{pathname: '/center', search: '?type=keywords', state: { referrer: "aa" }}}/>
-                    <Route  path="/center" component={UserRight}/>
-                    <Route exact  path="/orderThree" component={orderThree}/>
-                    <Route exact  path="/somewhere" component={orderThree}/>
-                    <Route exact  path="/untated" component={Ubrated}/>
-                        {/*<Route exact  path="/profile/refused/" render={() => <div>Home</div>}/>*/}
-                    <Route exact  path="/refused" component={Refused}/>
-                    <Route  exact path="/hongbao" component={HongBao}/>
-                    <Route exact  path="/balance" component={Balance}/>
-                    <Route  path="/profile/orderThree/id/:id" component={OrderDetail}/>
-                    <Route  path="/profile/order/id/:id" component={OrderDetail}/>
-                    {/*</Switch>*/}
+                    <Switch>
+                        <Route exact path="/profile" component={UserRight}/>
+                        <Route   path="/profile/center" component={UserRight}/>
+                        <Route   path="/profile/orderThree" component={orderThree}/>
+                        <Route   path="/profile/untated" component={Ubrated}/>
+                        <Route   path="/profile/refused" component={Refused}/>
+                        <Route  exact path="/Profile/hongbao" component={HongBao}/>
+                        <Route  exact  path="/Profile/balance" component={Balance}/>
+                        <Route  path="/profile/orderThree/id/:id" component={OrderDetail}/>
+                        <Route  path="/profile/order/id/:id" component={OrderDetail}/>
+                        {/*<Route  component={UserRight}/>*/}
+                    </Switch>
                 </div>
             </div>
-            </BrowserRouter>
         );
     }
 }
+
