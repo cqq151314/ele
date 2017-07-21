@@ -27,8 +27,7 @@
   - keyLength: number --> props.location.key的长度，这个key值是随机的，最大可设置的长度为11，默认长度为6
 
 ### 二、 ``` <HashRouter>``` (锚点路由)
-Hash history 不支持 location.key 和 location.state。另外由于该技术只是用来支持旧版浏览器，因此更推荐大家使用 BrowserRouter。
-
+Hash history 不支持 location.key 和 location.state。另外由于该技术只是用来支持旧版浏览器，因此更推荐大家使用 BrowserRouter。这里给大家简单看下HashRouter的用法。
 ```jsx
  <HashRouter  basename="/Profile" getConfirmation={window.confirm("哈希路由")} >  
     <li><NavLink to="/orderThree" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>近三个月订单</NavLink></li>
@@ -46,7 +45,6 @@ Hash history 不支持 location.key 和 location.state。另外由于该技术�
     </Switch>
   </HashRouter>
   ```
-  
 - basename： string  -->  设置基本的url路径，渲染之后to的路径为 ```<a href="#/Profile/orderThree" />```
 - getConfirmation func  -->  用于弹出提示框。默认使用 window.confirm
 - children: node --> 一个HashRouter只能有一个子节点，建议用<div>将多个节点包裹起来。
