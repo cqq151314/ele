@@ -1,6 +1,6 @@
 # React Router 4 - WEB API
 React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
-### 一```<BrowserRouter>``` (浏览器路由)
+### 一、```<BrowserRouter>``` (浏览器路由)
 使用 HTML5 History API（pushState，replaceState 和 popstate 事件）的 <Router> 来保持 UI 与 URL 同步。
 
 ```jsx
@@ -18,7 +18,7 @@ React Router 4 API 分为 WEB/Native/Core 三部分，以下是 WEB API
 - getConfirmation func  -->  用于弹出提示框。默认使用 window.confirm
 - keyLength: number --> props.location.key的长度，这个key值是随机的，最大可设置的长度为11，默认长度为6
 
-### 二 ``` <HashRouter>``` (锚点路由)
+### 二、 ``` <HashRouter>``` (锚点路由)
 Hash history 不支持 location.key 和 location.state。另外由于该技术只是用来支持旧版浏览器，因此更推荐大家使用 BrowserRouter。
 
 ```jsx
@@ -45,7 +45,7 @@ Hash history 不支持 location.key 和 location.state。另外由于该技术�
 
 【注意】在使用HashRouter时，to后面的地址为哈希值，（#/Profile/orderThree）,进行路由切换时，改变的是哈希值，  
 
-### 三```<Link>``` (链接组件)
+### 三、 ```<Link>``` (链接组件)
 
 类似于a标签
 
@@ -61,7 +61,7 @@ Hash history 不支持 location.key 和 location.state。另外由于该技术�
 - basename： string  -->  设置的url路径，跳转到指定路径。
 - to object  -->  url路径为 /courses?sort=name#the-hash，通过props.location.state可以查看state的值
 
-### 四 ```<NavLink>``` (导航链接组件)
+### 四、  ```<NavLink>``` (导航链接组件)
 与当前 URL 匹配时，可向渲染元素添加样式属性
 ```jsx
  <NavLink to="/center" activeStyle={{color: '##0089dc'}}>导航链接组件</NavLink>
@@ -71,7 +71,7 @@ Hash history 不支持 location.key 和 location.state。另外由于该技术�
 - exact: bool  --> 位置完全匹配，activeStyle/activeClassName才生效
 - strict: bool --> 位置匹配，尾部有斜线，activeStyle/activeClassName才生效
 - isActive: func --> 当return的结果为true时，该导航的activeStyle/activeClassName一直生效，否则，一直不生效
-###  五 ```<Prompt>``` (提示组件)
+###  五、 ```<Prompt>``` (提示组件)
 当用户离开当前页面前做出一些提示
 ```jsx
 <Prompt message="Are you sure you want to leave?"/>
@@ -81,9 +81,8 @@ Hash history 不支持 location.key 和 location.state。另外由于该技术�
 - message: string --> 当用户离开当前页面时，设置的提示信息
 - message: func --> 当用户离开当前页面时，设置的回掉函数
 - when: bool  --> 通过设置一定条件要决定是否启用 Prompt,when={true}提示框生效，when={false}提示框失效 
-### 六 ```<MemoryRouter>``` (内存路由)
 
-### 七 ```<Redirect>``` (重定向组件)
+### 六、 ```<Redirect>``` (重定向组件)
 渲染 ```<Redirect>``` 渲染时将导航到一个新地址，这个新地址覆盖本该访问的那个地址
 ```jsx
 <Redirect  to='/profile/center'/>
@@ -111,7 +110,7 @@ Hash history 不支持 location.key 和 location.state。另外由于该技术�
 
 - from: string 要重定向的路径名,使用时时必须搭配<Switch>使用，否则不生效
 
-### 八 ```<Route>```  (路由组件)
+### 七、 ```<Route>```  (路由组件)
 <Route> 也许是 RR4 中最重要的组件了,它最基本的职责就是当页面的访问地址与 Route 上的 path 匹配时，就渲染出对应的 UI 界面。
 
 ```<Route>``` 自带三个 render method 和三个 props 
@@ -209,7 +208,7 @@ path |	location.pathname | strict | matches?
 
 【总结】如果strict为true，在路径层级相同或location.pathname比path多一层时，location.pathname后面带有斜杠时则匹配成功，如果想确保路由没有斜杠，则exact和strict都必须为true            
 
-### 九 ```<Router>``` (路由器组件)
+### 八、 ```<Router>``` (路由器组件)
 - history: object  
 ```jsx
 import createBrowserHistory from 'history/createBrowserHistory'
@@ -236,9 +235,11 @@ import createBrowserHistory from 'history/createBrowserHistory'
 ```
 【总结】history.push后，跳转到push的路径里。url地址为：/profile?a=query#/
 
-### 十 ```<StaticRouter>``` (静态路由组件)
+### 九、 ```<StaticRouter>``` (静态路由组件)
 
-### 十一 ```<Switch>``` (单匹配组件)
+### 十、 ```<MemoryRouter>``` (内存路由)
+
+### 十一、 ```<Switch>``` (单匹配组件)
 
 只渲染出第一个与当前访问地址匹配的 ```<Route>或<Redirect>```,只会渲染第一个匹配奥！
 ```jsx
