@@ -100,7 +100,7 @@ Hash history 不支持 location.key 和 location.state。另外由于该技术�
 </Switch>
 ``` 
 - to: string 要重定向到的网址
-- to: object 重定向的 location 对象，网址变为/profile/center?type=keywords 页面进项跳转
+- to: object 重定向的 location 对象，网址变为/profile/center?type=keywords 页面进项跳转，跳转时可以把一些需要的参数传递过去。
 
 ![](https://github.com/cqq151314/ele/blob/master/note/img/a1.png)
 
