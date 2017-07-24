@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import bsStore from '../../store/fetch-npm-node';
 import './index.css';
 import '../../fonts/font-awesome.min.css';
-import { BrowserRouter, Route, NavLink,Redirect,Switch,Link, HashRouter,Prompt } from 'react-router-dom'
-import createHashHistory from 'history/createHashHistory'
+import { Route, NavLink,Switch } from 'react-router-dom'
 import Search from '../Search/Search'
 import UserRight from '../../component/UserRight/index'
 import orderThree from '../../component/OrderThree/index'
@@ -14,7 +12,6 @@ import OrderDetail from '../../component/OrderDetail/index';
 import HongBao from '../../component/HongBao/index'
 import Balance from '../../component/Balance/index'
 import IndexCenter from '../../component/IndexCenter/index'
-import ListItemLink  from '../../component/Test/index'
 export default class UserCenter extends Component {
     constructor(props) {
         super(props);
@@ -123,7 +120,7 @@ export default class UserCenter extends Component {
                         <Route  exact  path="/Profile/balance" component={Balance}/>
                         <Route  path="/profile/orderThree/id/:id" component={OrderDetail}/>
                         <Route  path="/profile/order/id/:id" component={OrderDetail}/>
-                        {/*<Route  component={UserRight}/>*/}
+                        <Route  component={IndexCenter}/>
                     </Switch>
                 </div>
             </div>

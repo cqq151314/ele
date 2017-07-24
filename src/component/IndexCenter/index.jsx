@@ -16,7 +16,6 @@ class IndexCenter extends Component {
             //value的值
             value:"",
         }
-        console.log(props);
     }
     /**
      *  input框输入值发生改变获取数据

@@ -2,13 +2,11 @@ import React, { Component} from 'react';
 import PropTypes from 'prop-types';
 import './App.css';
 import bsStore from './store/fetch-npm-node'
-import { BrowserRouter as Router,  Route,Switch,BrowserRouter} from 'react-router-dom'
-import createBrowserHistory from 'history/createBrowserHistory'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Header from './component/Header/Header.jsx';
 import UserCenter from './component/UserCenter/index'
 import IndexCenter from './component/IndexCenter/index'
 import Footer from './component/Footer/Footer'
-import FadingRoute from './component/FadingRoute/index'
 class App extends Component {
     static propType = {
         listData: PropTypes.array,
@@ -52,18 +50,9 @@ class App extends Component {
             })
             }
     render(){
-        const customHistory = createBrowserHistory();
-        const history = createBrowserHistory();
-        // 将新入口放入历史堆栈
-        history.push({
-            pathname: '/profile',
-            search: '?a=query',
-            // 一些不存在url参数上面的当前url的状态值
-            state: { the: 'state' }
-        })
         return (
             <div className="App">
-                <BrowserRouter history={history}>
+                <Router >
                     <div>
                         <Header />
                             <Route exact path="/" component={IndexCenter} />
@@ -71,10 +60,9 @@ class App extends Component {
                                 <Route exact path="/Profile" component={UserCenter}/>
                                 <Route  path="/Profile/*" component={UserCenter}/>
                              </div>
-                        {/*<FadingRoute  path="/cool" component={Footer}>点我</FadingRoute>*/}
                         <Footer/>
                     </div>
-                </BrowserRouter>
+                </Router>
             </div>
         );
     }
