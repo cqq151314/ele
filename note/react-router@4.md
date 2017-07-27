@@ -1,6 +1,7 @@
 # React Router 4 - WEB API
+V4 版的 router 进行了代码完全重写, 其遵循 React 的 Just Component;声明式;可组合性的设计理念, 所有的东西都是一个组件: Router, Link, Switch. 而且
 
-  React Router 4 API 分为 WEB/Native/Core 三部分，以下是 React Router 4.0的一些独立的包。
+其代码库进行了拆分, 拆分成五个库:
   
   - react-router      -->   React Router 核心
   - react-router-dom       -->   用于 DOM 绑定的 React Router
