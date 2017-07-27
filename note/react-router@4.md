@@ -1,6 +1,5 @@
 # React Router 4 - WEB API
 V4 版的 router 进行了代码完全重写, 其遵循 React 的 Just Component;声明式;可组合性的设计理念, 所有的东西都是一个组件: Router, Link, Switch. 而且
-
 其代码库进行了拆分, 拆分成五个库:
   
   - react-router      -->   React Router 核心
@@ -8,6 +7,9 @@ V4 版的 router 进行了代码完全重写, 其遵循 React 的 Just Component
   - react-router-native    -->  用于 React Native 的 React Router
   - react-router-redux     -->   React Router 和 Redux 的集成
   - react-router-config     -->  静态路由配置的小助手
+  
+ React-router 是核心基础库, router-dom 则用于 web 开发, router-native 用于React native 开发. 在 v4 中有两种基本的方法指定 url 对应的组件.
+ 一是component, 二是render.
 ### 引用react-router 还是 react-router-dom ？
 
   他们两个只要引用一个就行了，不同之处就是后者比前者多出了 ``` <Link> <BrowserRouter>  ```这样的 DOM 类组件。因此我们只需引用 react-router-dom 这个包就行了。
