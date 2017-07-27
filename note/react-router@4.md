@@ -205,8 +205,7 @@ export default BoxRouter;
   <EmptyPage {...props} />
 )}/>
 ```
-【注意】：通常component参数与render参数被更经常地使用。children参数偶尔会被使用，它更常用在path无法匹配时呈现的'空'状态。在本例中并不会有额外的状态，所以我们将使用<Route>的component参数。
-
+【注意】：通常component参数与render参数被更经常地使用。children参数偶尔会被使用，它更常用在path无法匹配时呈现的'空'状态。
 - path: string  URL 路径,如果不给path，那么路由将一直匹配。
 - exact: bool 
 
