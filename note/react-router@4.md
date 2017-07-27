@@ -1,5 +1,5 @@
 # React Router 4 - WEB API
-V4 版的 router 进行了代码完全重写, 其遵循 React 的 Just Component;声明式;可组合性的设计理念, 所有的东西都是一个组件: Router, Link, Switch. 而且
+React Router 是 React 广泛使用的“路由”库，路由做的事情，可以简单理解为：根据 URL 规则渲染对应的 组件。之前最常用的是v2、v3版本，而新出的V4 版的 router 进行了代码完全重写, 其遵循 React 的 Just Component;声明式;可组合性的设计理念, 所有的东西都是一个组件: Router, Link, Switch. 而且
 其代码库进行了拆分, 拆分成五个库:
   
   - react-router      -->   React Router 核心
@@ -178,9 +178,12 @@ props 分别是：
 
 ```javascript
 
-// 内联渲染
+// 基本用法
 
 <Route path="/home" render={() => <h1>Home</h1} />
+<Route path='/page' render={(props) => (
+  <Page {...props} data={extraProps}/>
+)}/>
 
 // 路由包装
 const BoxRouter = ({ component: Component}) => (
@@ -193,6 +196,17 @@ export default BoxRouter;
 <BoxRouter path="/cool" component={组件} />
 
 ```
+##### 3. children
+
+```javascript
+// 基本用法
+
+<Route path='/page' children={(props) => (
+  <EmptyPage {...props} />
+)}/>
+```
+【注意】：通常component参数与render参数被更经常地使用。children参数偶尔会被使用，它更常用在path无法匹配时呈现的'空'状态。在本例中并不会有额外的状态，所以我们将使用<Route>的component参数。
+
 - path: string  URL 路径,如果不给path，那么路由将一直匹配。
 - exact: bool 
 
