@@ -6,13 +6,13 @@ export default class HongBao extends Component {
         super(props);
         this.state={
             // 可用红包
-            effective:true,
+            effective: true,
             // 过期红包
-            unavailableClick:false,
+            unAvailableClick: false,
             // 可用红包数据
-            data:[],
+            data: [],
             // 过期红包数据
-            historyData:[],
+            historyData: [],
         };
     }
     // 初始化
@@ -24,15 +24,15 @@ export default class HongBao extends Component {
                     let arr=[];
                     // 存放过期红包数据
                     let arr2=[];
-                     for( let i=0;i<data.length;i++){
-                         if(data[i].end_date >(new Date().toLocaleDateString()+"T"+new Date().toLocaleTimeString()+"+0800")){
+                     for( let i = 0; i < data.length; i++){
+                         if(data[i].end_date > (new Date().toLocaleDateString()+"T"+new Date().toLocaleTimeString()+"+0800")){
                              arr.push(data[i]);
                          }else{
                              arr2.push(data[i]);
                          }
                      }
-                    this.setState({"data":arr});
-                    this.setState({"historyData":arr2});
+                    this.setState({data:arr});
+                    this.setState({historyData:arr2});
                 });
             });
 
@@ -40,12 +40,12 @@ export default class HongBao extends Component {
     // 可用红包和历史红包进行切换
     effectiveClick(){
         this.setState({"effective":true});
-        this.setState({"unavailableClick":false});
+        this.setState({unAvailableClick:false});
     }
     // 不可用红包
-    unavailableClick(){
+    unAvailableClick(){
         this.setState({"effective":false});
-        this.setState({"unavailableClick":true});
+        this.setState({unAvailableClick:true});
     }
     componentDidMount(){
         this.initData();
@@ -56,7 +56,7 @@ export default class HongBao extends Component {
                 <div className="hongbao-box">
                     <h2 className="hongbao-nav">
                         <a href="###" className={this.state.effective === true ? "hongbao-active":'' } onClick={()=>{this.effectiveClick()}}>可用红包</a>
-                        <a href="###" className={this.state.unavailableClick === true ? "hongbao-active":''} onClick={()=>{this.unavailableClick()}}>历史红包</a>
+                        <a href="###" className={this.state.unAvailableClick === true ? "hongbao-active":''} onClick={()=>{this.unAvailableClick()}}>历史红包</a>
                     </h2>
                     <ul className="hongbao-list-available" style={{"display":this.state.effective === true ? "block":'none'}}>
                         {
@@ -78,7 +78,7 @@ export default class HongBao extends Component {
                             })
                         }
                     </ul>
-                    <ul className="hongbao-list-unavailable"  style={{"display":this.state.unavailableClick === true ? "block":'none'}}>
+                    <ul className="hongbao-list-unavailable"  style={{"display":this.state.unAvailableClick === true ? "block":'none'}}>
                         {
                             this.state.historyData.map(item =>{
                                 return (

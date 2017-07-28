@@ -1,20 +1,20 @@
 import React, { Component} from 'react';
 import bsStore from '../../store/fetch-npm-node'
-import Search from '../../component/Search/Search';
-import  NavList from '../../component/NavList/NavList.jsx';
-import  SearchList from '../../component/SearchList/SearchList';
+import Search from '../Search';
+import  NavList from '../NavList';
+import  SearchList from '../SearchList';
 class IndexCenter extends Component {
     constructor(props){
         super(props);
-        this.state={
+        this.state = {
             //定义搜素列表数据
-            listData:[],
+            listData: [],
             // 显示隐藏状态
-            display:"block",
+            display: "block",
             // 控制文本框的显示隐藏
-            show:'show',
+            show: 'show',
             //value的值
-            value:"",
+            value: "",
         }
     }
     /**
@@ -22,12 +22,12 @@ class IndexCenter extends Component {
      *  @param e  事件对象
      */
     onChange(e) {
-        this.setState({'value': e.target.value});
+        this.setState({value: e.target.value});
         this.getData(e, e.target.value);
     }
     //点击事件
     onClick(e){
-        this.state.value===""? this.setState({"display":"block"}): this.setState({"display":"none"}); this.getData(e,this.state.value);
+        this.state.value === "" ? this.setState({display:"block"}) : this.setState({display:"none"}); this.getData(e,this.state.value);
     }
     /**
      *  获取数据
@@ -36,20 +36,25 @@ class IndexCenter extends Component {
      */
     getData(e, keywords){
         bsStore.getKwordsData(keywords)
-            .then(res =>{
+            .then(res => {
                 res.json().then(data => {
-                    this.setState({'listData': data});
+                    this.setState({listData: data});
                 });
             })
     }
     render(){
         return (
-                    <div>
-                        <Search onChange={this.onChange.bind(this)} onClick={this.onClick.bind(this)} value={this.state.value} show={this.state.show}/>
-                        {
-                            this.state.display==='block'? <NavList style={{"display":"none"}}/> :<SearchList listData={this.state.listData} style={{"display":"none"}} display={this.state.display}/>
-                        }
-                    </div>
+            <div>
+                <Search
+                    onChange = {this.onChange.bind(this)}
+                    onClick = {this.onClick.bind(this)}
+                    value = {this.state.value}
+                    show = {this.state.show}
+                />
+                {
+                    this.state.display ==='block' ? <NavList style = {{"display":"none"}} /> : <SearchList listData={this.state.listData} style={{"display":"none"}} />
+                }
+            </div>
         );
     }
 }

@@ -3,7 +3,7 @@ import './index.css';
 import '../../fonts/font-awesome.min.css';
 import bsStore from '../../store/fetch-npm-node';
 import { Link} from 'react-router-dom'
-import Loadding from '../Loadding/Loadding';
+import Loading from '../Loading';
 export default class UserRight extends Component {
     constructor(props) {
         super(props);
@@ -16,8 +16,8 @@ export default class UserRight extends Component {
         pageLength:15,
         // 数据
         dataSource:[],
-        // loadding显示隐藏
-        loaddingDisplay:"none",
+        // loading显示隐藏
+        loadingDisplay:"none",
     };
         console.log(props);
 }
@@ -39,13 +39,13 @@ export default class UserRight extends Component {
          if(this.state.currentPage > 1) {
              this.setState({'currentPage': this.state.currentPage - 1});
              let page = this.state.currentPage - 1;
-             this.setState({"loaddingDisplay":'block'});
+             this.setState({"loadingDisplay":'block'});
              bsStore.getOrder(page, this.state.pageSize)
                  .then(res => {
                      res.json().then(data => {
                              this.setState({"dataSource": data});
                      });
-                     this.setState({"loaddingDisplay":'none'});
+                     this.setState({"loadingDisplay":'none'});
                  })
          }
     }
@@ -53,14 +53,14 @@ export default class UserRight extends Component {
     NextClick(){
         if(this.state.currentPage < this.state.pageLength){
             let page = this.state.currentPage + 1;
-            this.setState({"loaddingDisplay":'block'});
+            this.setState({"loadingDisplay":'block'});
             this.setState({'currentPage': this.state.currentPage + 1});
                 bsStore.getOrder(page, this.state.pageSize)
                     .then(res => {
                         res.json().then(data => {
                             this.setState({"dataSource": data});
                         });
-                        this.setState({"loaddingDisplay":'none'});
+                        this.setState({"loadingDisplay":'none'});
                     })
             }
     }
@@ -70,7 +70,7 @@ export default class UserRight extends Component {
     render() {
         return (
             <div>
-                <div className="profile-panel" style={{"display":this.state.loaddingDisplay==='none'?'block':'none'}}>
+                <div className="profile-panel" style={{"display":this.state.loadingDisplay==='none'?'block':'none'}}>
                     <div  className="user-top">
                     <div className="profile-info">
                             <div className="profile-avatarwrap">
@@ -139,7 +139,7 @@ export default class UserRight extends Component {
                                     )
                                 })
                             }
-                            <Loadding style={this.state.loaddingDisplay} />
+                            <Loading style={this.state.loadingDisplay} />
                         </ul>
                     </div>
                     <div className="chart-page">

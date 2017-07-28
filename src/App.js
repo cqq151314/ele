@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import './App.css';
 import bsStore from './store/fetch-npm-node'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Header from './component/Header/Header.jsx';
+import Header from './component/Header';
+import Footer from './component/Footer';
 import UserCenter from './component/UserCenter/index'
 import IndexCenter from './component/IndexCenter/index'
-import Footer from './component/Footer/Footer'
+
 class App extends Component {
     static propType = {
         listData: PropTypes.array,

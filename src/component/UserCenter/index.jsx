@@ -3,15 +3,15 @@ import bsStore from '../../store/fetch-npm-node';
 import './index.css';
 import '../../fonts/font-awesome.min.css';
 import { Route, NavLink,Switch } from 'react-router-dom'
-import Search from '../Search/Search'
-import UserRight from '../../component/UserRight/index'
-import orderThree from '../../component/OrderThree/index'
-import Ubrated from '../../component/Unrated/index';
-import Refused from '../../component/Refused/index';
-import OrderDetail from '../../component/OrderDetail/index';
-import HongBao from '../../component/HongBao/index'
-import Balance from '../../component/Balance/index'
-import IndexCenter from '../../component/IndexCenter/index'
+import Search from '../Search'
+import UserRight from '../UserRight'
+import OrderThree from '../OrderThree'
+import Ubrated from '../Unrated';
+import Refused from '../Refused';
+import OrderDetail from '../OrderDetail';
+import HongBao from '../HongBao'
+import Balance from '../Balance'
+import IndexCenter from '../IndexCenter'
 export default class UserCenter extends Component {
     constructor(props) {
         super(props);
@@ -113,7 +113,7 @@ export default class UserCenter extends Component {
                     <Switch>
                         <Route exact path="/profile" component={UserRight}/>
                         <Route   path="/profile/center" component={UserRight}/>
-                        <Route   path="/profile/orderThree" component={orderThree}/>
+                        <Route   path="/profile/orderThree" component={OrderThree}/>
                         <Route   path="/profile/untated" component={Ubrated}/>
                         <Route   path="/profile/refused" component={Refused}/>
                         <Route  exact path="/Profile/hongbao" component={HongBao}/>

@@ -3,7 +3,7 @@ import './index.css';
 import '../../fonts/font-awesome.min.css';
 import bsStore from '../../store/fetch-npm-node';
 import {Link} from 'react-router-dom'
-import Loadding from '../Loadding/Loadding';
+import Loading from '../Loading';
 export default class UserRight extends Component {
     constructor(props) {
         super(props);
@@ -20,8 +20,8 @@ export default class UserRight extends Component {
             pageList:[],
             // 当前点击的索引
             currentIndex:1,
-            // loadding显示隐藏
-            loaddingDisplay:"block",
+            // loading显示隐藏
+            loadingDisplay:"block",
         };
     }
     /**
@@ -35,13 +35,13 @@ export default class UserRight extends Component {
             listData.push(i);
             this.setState({pageList:listData});
         }
-        this.setState({"loaddingDisplay":'block'});
+        this.setState({"loadingDisplay":'block'});
             bsStore.getOrder(this.state.currentPage,pageSize)
                 .then(res =>{
                     res.json().then(data => {
                         this.setState({"data":data});
                     });
-                    this.setState({"loaddingDisplay":'none'});
+                    this.setState({"loadingDisplay":'none'});
                 });
     }
     /**
@@ -50,14 +50,14 @@ export default class UserRight extends Component {
      */
     getPageData(currentPage){
         this.setState({"currentIndex":currentPage});
-        this.setState({"loaddingDisplay":'block'});
+        this.setState({"loadingDisplay":'block'});
         setTimeout(()=>{
             bsStore.getOrder(currentPage,this.state.pageSize)
                 .then(res =>{
                     res.json().then(data => {
                         this.setState({"data":data});
                     });
-                    this.setState({"loaddingDisplay":'none'});
+                    this.setState({"loadingDisplay":'none'});
                 });
         },500)
     }
@@ -68,7 +68,7 @@ export default class UserRight extends Component {
     render() {
         return (
             <div>
-            <div className="profile-three" style={{"display":this.state.loaddingDisplay === 'none'?'block':'none'}}>
+            <div className="profile-three" style={{"display":this.state.loadingDisplay === 'none'?'block':'none'}}>
                 <h2 className="threeOrder-title">待评价定单<span>带(<a style={{"color":"#f00"}}>*</a>)标志为必填项</span></h2>
                 <div className="order-pic"></div>
                 <p className="pic-title">热门话题，随时关注订单状态</p>
@@ -138,7 +138,7 @@ export default class UserRight extends Component {
                     </div>
                 </div>
             </div>
-                <Loadding style={this.state.loaddingDisplay} />
+                <Loading style={this.state.loadingDisplay} />
             </div>
 
         );
