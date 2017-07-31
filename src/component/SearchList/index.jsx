@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './index.css';
 import '../../fonts/font-awesome.min.css';
@@ -39,5 +39,8 @@ function SearchList(props) {
 }
 SearchList.PropTypes = {
     listData: PropTypes.array,
+};
+SearchList.defaultProps = {
+    listData:[],
 };
 export default SearchList;

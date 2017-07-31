@@ -11,7 +11,7 @@ export default class OrderDetail extends Component {
             // 子商品数据
             goodsData:[],
             // id
-            id:props.match.params.id
+            id: props.match.params.id
         };
     }
     /**
@@ -22,8 +22,8 @@ export default class OrderDetail extends Component {
         bsStore.getIDData(id)
             .then(res =>{
                 res.json().then(data => {
-                    this.setState({"detailData":data[0]})
-                    this.setState({"goodsData":data[0].goods})
+                    this.setState({detailData: data[0]})
+                    this.setState({goodsData: data[0].goods})
                 });
             });
         }
@@ -53,7 +53,7 @@ export default class OrderDetail extends Component {
                 </div>
                 <div className="detail-products">
                     <div className="detail-products-l">
-                        <img  src={require("../../images/small.png")} alt=""/>
+                        <img  src={require("../../images/small.png")} alt="加载图片"/>
                         <div className="detail-products-l-title">
                             <p>{this.state.detailData.title}</p>
                             <p>订单号：{this.state.detailData.orderNumber}</p>

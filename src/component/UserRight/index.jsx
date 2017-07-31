@@ -65,16 +65,16 @@ export default class UserRight extends Component {
             }
     }
     componentDidMount(){
-        this.initData(this.state.currentPage,this.state.pageSize);
+        this.initData(this.state.currentPage, this.state.pageSize);
     }
     render() {
         return (
             <div>
-                <div className="profile-panel" style={{"display":this.state.loadingDisplay==='none'?'block':'none'}}>
+                <div className="profile-panel" style={{"display": this.state.loadingDisplay === 'none' ? 'block' : 'none'}}>
                     <div  className="user-top">
                     <div className="profile-info">
                             <div className="profile-avatarwrap">
-                                <img src={require("../../images/user.jpg")} alt=""/>
+                                <img src={require("../../images/user.jpg")} alt="提示信息"/>
                             </div>
                             <div className="profile-perosondata">
                                 <h3 className="profile-name">晚上好，<strong>45c5aaed7</strong></h3>
@@ -156,7 +156,7 @@ export default class UserRight extends Component {
                         </div>
                         <div className="nearest-goods">
                             <a className="nearest-goods-pic">
-                                 <img src={require("../../images/sc.jpeg")} alt=""/>
+                                 <img src={require("../../images/sc.jpeg")} alt="未加载成功"/>
                                 <p>39分钟</p>
                             </a>
                             <a className="nearest-goods-detail">
@@ -167,7 +167,8 @@ export default class UserRight extends Component {
                                     <span className="fa fa-star"></span>
                                     <span className="fa fa-star"></span>
                                     <span className="fa fa-star"></span>
-                                    <span className="shownum">月售444单</span></p>
+                                    <span className="shownum">月售444单</span>
+                                </p>
                                 <p className="Delivery-fee">配送费￥4</p>
                                 <div>
                                     <i className="shop-zhun">准</i>

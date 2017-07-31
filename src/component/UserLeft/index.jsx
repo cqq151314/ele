@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import bsStore from '../../store/fetch-npm-node';
 import './index.css';
 import '../../fonts/font-awesome.min.css';
@@ -35,7 +34,7 @@ export default class Userleft extends Component {
 
     //点击事件
     onClick(e){
-        this.state.value === ""? this.setState({display:"block"}): this.setState({display:"none"}); this.getData(e,this.state.value);
+        this.state.value === "" ? this.setState({display:"block"}) : this.setState({display:"none"}); this.getData(e,this.state.value);
     }
     /**
      *  获取数据
@@ -80,33 +79,33 @@ export default class Userleft extends Component {
                                 <span className="fa fa-file-text-o"></span>我的订单
                             </h2>
                             <ul>
-                                <li><NavLink to="/profile/orderThree/"  activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>近三个月订单</NavLink></li>
+                                <li><NavLink to="/profile/orderThree/" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>近三个月订单</NavLink></li>
                                 <li><NavLink to="/profile/untated/"  activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>待评价订单</NavLink></li>
                                 <li><NavLink to="/profile/refused/" activeStyle={{color: '#0089dc'}}  onClick={(e)=>{this.handClick(e)}}>退单记录</NavLink></li>
                             </ul>
                         </li>
-                        <li  className="profile-sidebar">
+                        <li className="profile-sidebar">
                             <h2 className="profile-sidebar-sectiontitle">
                                 <span className="fa fa-money"></span>我的资产
                             </h2>
                             <ul>
                                 <li><NavLink to="/profile/hongbao/" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>我的红包</NavLink></li>
                                 <li><NavLink to="/profile/balance/" activeStyle={{color: '#0089dc'}} onClick={(e)=>{this.handClick(e)}}>账户余额</NavLink></li>
-                                <li><a>我的积分</a></li>
+                                <li><a href="">我的积分</a></li>
                             </ul>
                         </li>
-                        <li  className="profile-sidebar">
+                        <li className="profile-sidebar">
                             <h2 className="profile-sidebar-sectiontitle">
                                 <span className="fa fa-user-md"></span>我的资料
                             </h2>
                             <ul>
-                                <li><a>个人资料</a></li>
-                                <li><a>地址管理</a></li>
-                                <li><a>安全中心</a></li>
-                                <li><a>修改密码</a></li>
+                                <li><a href="">个人资料</a></li>
+                                <li><a href="">地址管理</a></li>
+                                <li><a href="">安全中心</a></li>
+                                <li><a href="">修改密码</a></li>
                             </ul>
                         </li>
-                        <li  className="profile-sidebar">
+                        <li className="profile-sidebar">
                             <h2 className="profile-sidebar-sectiontitle">
                                 <span className="fa fa-star-o"></span>我的收藏
                             </h2>

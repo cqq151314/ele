@@ -69,7 +69,7 @@ export default class Store extends Component {
                     this.setState({'boxData': data});
                     this.setState({"background":'#0089dc'});
                     this.setState({"color":'#fff'});
-                    this.setState({'display':'none'})
+                    this.setState({'display':'none'});
                     this.setState({"loadingDisplay":'none'})
                 });
             })},500)

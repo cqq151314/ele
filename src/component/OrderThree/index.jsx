@@ -9,19 +9,19 @@ export default class UserRight extends Component {
         super(props);
         this.state = {
             // pageSize 个数
-            pageSize:10,
+            pageSize: 10,
             // 页码
-            currentPage:1,
+            currentPage: 1,
             // 数据长度
-            datalength:3,
+            datalength: 3,
             // 数据
-            data:[],
+            dataSource: [],
             // 分页列表
-            pageList:[],
+            pageList: [],
             // 当前点击的索引
-            currentIndex:1,
+            currentIndex: 1,
             // loading显示隐藏
-            loadingDisplay:"block",
+            loadingDisplay:'block',
         };
     }
     /**
@@ -35,13 +35,13 @@ export default class UserRight extends Component {
             listData.push(i);
             this.setState({pageList:listData});
         }
-        this.setState({"loadingDisplay":'block'});
+        this.setState({loadingDisplay: 'block'});
             bsStore.getOrder(this.state.currentPage,pageSize)
                 .then(res =>{
                     res.json().then(data => {
-                        this.setState({"data":data});
+                        this.setState({dataSource: data});
                     });
-                    this.setState({"loadingDisplay":'none'});
+                    this.setState({loadingDisplay: 'none'});
                 });
     }
     /**
@@ -55,9 +55,9 @@ export default class UserRight extends Component {
             bsStore.getOrder(currentPage,this.state.pageSize)
                 .then(res =>{
                     res.json().then(data => {
-                        this.setState({"data":data});
+                        this.setState({dataSource: data});
                     });
-                    this.setState({"loadingDisplay":'none'});
+                    this.setState({loadingDisplay: 'none'});
                 });
         },500)
     }
@@ -68,7 +68,7 @@ export default class UserRight extends Component {
     render() {
         return (
             <div>
-            <div className="profile-three" style={{"display":this.state.loadingDisplay === 'none'?'block':'none'}}>
+            <div className="profile-three" style={{display: this.state.loadingDisplay === 'none' ? 'block' : 'none'}}>
                 <h2 className="threeOrder-title">近三个月订单</h2>
                 <div className="order-pic"></div>
                 <p className="pic-title">热门话题，随时关注订单状态</p>
@@ -83,24 +83,24 @@ export default class UserRight extends Component {
                             <li>操作</li>
                         </ul>
                         {
-                            this.state.data.map((item,index) =>{
+                            this.state.dataSource.map((item,index) => {
                                 return (
-                                    <li className="shop-item" key={item.id} id={item.id}>
+                                    <li className="shop-item" key={item.id} >
                                         <ul className="shop-item-even">
                                             <li className="order-time">
                                                 <p>{item.orderDay}</p>
                                                 <p>{item.orderTime}</p>
                                             </li>
                                             <li className="order-icon">
-                                                <img src={require("../../images/"+item.id+".jpg")} alt=""/>
+                                                <img src={require("../../images/"+item.id+".jpg")} alt="加载失败" />
                                             </li>
                                             <li  className="order-detail" >
                                                 <h3>{item.title}</h3>
                                                 <p>
                                                     {
-                                                        item.goods.map((item2,index)=>{
+                                                        item.goods.map((item2,index) => {
                                                             return (
-                                                                <span key={index}>{item2.name}{item2.num}份&nbsp;/&nbsp;</span>
+                                                                <span key = {index}>{item2.name}{item2.num}份&nbsp;/&nbsp;</span>
                                                                 )
                                                         })
                                                     }
@@ -115,7 +115,7 @@ export default class UserRight extends Component {
                                                 <p>订单已提交</p>
                                             </li>
                                             <li className="order-backagain">
-                                                <p><Link to={"/profile/orderThree/id/"+ item.id } onClick={()=>{this.getDataDetail(item.id)}}>订单详情</Link></p>
+                                                <p><Link to={"/profile/orderThree/id/"+ item.id } onClick={() => {this.getDataDetail(item.id)}}>订单详情</Link></p>
                                                 <p><a href="/">再来一份</a></p>
                                             </li>
                                         </ul>
