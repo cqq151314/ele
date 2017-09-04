@@ -51,9 +51,8 @@ class IndexCenter extends Component {
                     value = {this.state.value}
                     show = {this.state.show}
                 />
-                {
-                    this.state.display ==='block' ? <NavList style = {{"display":"none"}} /> : <SearchList listData={this.state.listData} style={{"display":"none"}} />
-                }
+                {this.state.display === 'block' && <NavList style = {{"display":"none"}} /> }
+                {this.state.display !== 'block' && <SearchList listData={this.state.listData} style={{"display":"none"}} /> }
             </div>
         );
     }
